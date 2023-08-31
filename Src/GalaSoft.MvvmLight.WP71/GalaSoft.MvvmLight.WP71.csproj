@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\GalaSoft.MvvmLight.WP71.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD175ABD-1739-4AC7-BDFA-3EF2AC44AF79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>GalaSoft.MvvmLight.WP71</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <ApplicationVersion>3.0.0.19988</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>GalaSoft.MvvmLight</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ICleanup.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="Command\RelayCommand`1.cs" />
+    <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Messaging\MessageBase.cs" />
+    <Compile Include="Messaging\NotificationMessage.cs" />
+    <Compile Include="Messaging\NotificationMessageWithCallback.cs" />
+    <Compile Include="Messaging\PropertyChangedMessageBase.cs" />
+    <Compile Include="Messaging\PropertyChangedMessage`1.cs" />
+    <Compile Include="Messaging\NotificationMessageAction`1.cs" />
+    <Compile Include="Messaging\IMessenger.cs" />
+    <Compile Include="Messaging\Messenger.cs" />
+    <Compile Include="Messaging\GenericMessage`1.cs" />
+    <Compile Include="Messaging\NotificationMessage`1.cs" />
+    <Compile Include="Messaging\DialogMessage.cs" />
+    <Compile Include="Messaging\NotificationMessageAction.cs" />
+    <Compile Include="Helpers\WeakAction.cs" />
+    <Compile Include="Helpers\IExecuteWithObject.cs" />
+    <Compile Include="Helpers\WeakAction`1.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

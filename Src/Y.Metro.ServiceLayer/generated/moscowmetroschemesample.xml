@@ -1,0 +1,6321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheme-pack id="1" ver="1.02">
+	<scheme locale="ru" type="default">
+		<options>
+			<name>Moscow</name>
+			<size width="1500.000000" height="1500.000000"/>
+			<defaultRegion latitude="55.743347" longitude="37.617188" latitudeDelta="0.321580" longitudeDelta="0.439453"/>
+			<initialPosition x="0.000000" y="0.000000"/>
+		</options>
+		<lines>
+			<line id="1">
+				<name>Сокольническая линия</name>
+				<color>#EF1E25</color>
+			</line>
+			<line id="2">
+				<name>Замоскворецкая линия</name>
+				<color>#029A55</color>
+			</line>
+			<line id="3">
+				<name>Арбатско-Покровская линия</name>
+				<color>#0252A2</color>
+			</line>
+			<line id="4">
+				<name>Филевская линия</name>
+				<color>#019EE0</color>
+			</line>
+			<line id="5">
+				<name>Кольцевая линия</name>
+				<color>#745C2F</color>
+			</line>
+			<line id="6">
+				<name>Калужско-Рижская линия</name>
+				<color>#FBAA33</color>
+			</line>
+			<line id="7">
+				<name>Таганско-Краснопресненская линия</name>
+				<color>#B61D8E</color>
+			</line>
+			<line id="8">
+				<name>Калининская линия</name>
+				<color>#FFD803</color>
+			</line>
+			<line id="9">
+				<name>Серпуховско-Тимирязевская линия</name>
+				<color>#ACADAF</color>
+			</line>
+			<line id="10">
+				<name>Люблинская линия</name>
+				<color>#B1D332</color>
+			</line>
+			<line id="11">
+				<name>Каховская линия</name>
+				<color>#5091BB</color>
+			</line>
+			<line id="12">
+				<name>Бутовская линия</name>
+				<color>#85D4F3</color>
+			</line>
+		</lines>
+		<stations>
+			<station id="1">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="730.000000" y="110.000000"/>
+				<geoCoordinates latitude="55.814401" longitude="37.734003"/>
+				<name>
+					<text>Улица Подбельского</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="2">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="730.000000" y="130.000000"/>
+				<geoCoordinates latitude="55.803789" longitude="37.744732"/>
+				<name>
+					<text>Черкизовская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="3">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="730.000000" y="150.000000"/>
+				<geoCoordinates latitude="55.796070" longitude="37.715635"/>
+				<name>
+					<text>Преображенская площадь</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="4">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="730.000000" y="170.000000"/>
+				<geoCoordinates latitude="55.789255" longitude="37.679737"/>
+				<name>
+					<text>Сокольники</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="5">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="730.000000" y="190.000000"/>
+				<geoCoordinates latitude="55.779955" longitude="37.665966"/>
+				<name>
+					<text>Красносельская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="6">
+				<line>1</line>
+				<type>transfer</type>
+				<schemePosition x="660.000000" y="260.000000"/>
+				<geoCoordinates latitude="55.774274" longitude="37.656160"/>
+				<name>
+					<text>Комсомольская</text>
+					<alignment>left</alignment>
+					<customSchemePosition x="670.000000" y="260.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="77">
+							<pos>1</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="7">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="620.000000" y="300.000000"/>
+				<geoCoordinates latitude="55.768800" longitude="37.649117"/>
+				<name>
+					<text>Красные ворота</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19620529"/>
+					<oldName usedBefore="19860825">Лермонтовская</oldName>
+				</oldNames>
+			</station>
+			<station id="8">
+				<line>1</line>
+				<type>transfer</type>
+				<schemePosition x="595.000000" y="325.000000"/>
+				<geoCoordinates latitude="55.765665" longitude="37.638704"/>
+				<name>
+					<text>Чистые пруды</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="92">
+							<pos>2</pos>
+						</boardPositions>
+						<boardPositions toStation="159">
+							<pos>5</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19901105">Кировская</oldName>
+				</oldNames>
+			</station>
+			<station id="9">
+				<line>1</line>
+				<type>transfer</type>
+				<schemePosition x="532.000000" y="388.000000"/>
+				<geoCoordinates latitude="55.759287" longitude="37.626886"/>
+				<name>
+					<text>Лубянка</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="117">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19901105">Дзержинская</oldName>
+				</oldNames>
+			</station>
+			<station id="10">
+				<line>1</line>
+				<type>station</type>
+<!--BigTheatre
+				<type>transfer</type>
+-->
+				<schemePosition x="471.000000" y="449.000000"/>
+				<geoCoordinates latitude="55.757377" longitude="37.615938"/>
+				<name>
+					<text>Охотный ряд</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+<!--BigTheatre
+					<transfer>
+						<boardPositions toStation="29">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+-->
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19551125"/>
+					<oldName usedBefore="19570901">Имени Кагановича</oldName>
+					<oldName usedBefore="19611130"/>
+					<oldName usedBefore="19901105">Проспект Маркса</oldName>
+				</oldNames>
+			</station>
+			<station id="11">
+				<line>1</line>
+				<type>transfer</type>
+				<schemePosition x="395.000000" y="525.000000"/>
+				<geoCoordinates latitude="55.751584" longitude="37.610058"/>
+				<name>
+					<text>Библиотека имени Ленина</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="49">
+							<pos>5</pos>
+						</boardPositions>
+						<boardPositions toStation="68">
+							<pos>5</pos>
+						</boardPositions>
+						<boardPositions toStation="144">
+							<pos>1</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="12">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="370.000000" y="550.000000"/>
+				<geoCoordinates latitude="55.745346" longitude="37.603835"/>
+				<name>
+					<text>Кропоткинская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19571008">Дворец Советов</oldName>
+				</oldNames>
+			</station>
+<!--ParkKult			
+			<station id="13">
+				<line>1</line>
+				<type>transfer</type>
+				<schemePosition x="341.000000" y="579.000000"/>
+				<geoCoordinates latitude="55.735513" longitude="37.594394"/>
+				<name>
+					<text>Парк культуры</text>
+					<alignment>right</alignment>
+					<customSchemePosition x="331.000000" y="564.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="71">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19800101">Парк культуры имени Горького</oldName>
+				</oldNames>
+		    </station>
+-->
+			<station id="13">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="335.000000" y="585.000000"/>
+				<geoCoordinates latitude="55.735513" longitude="37.594394"/>
+				<name>
+					<text>Парк культуры</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19800101">Парк культуры имени Горького</oldName>
+				</oldNames>
+		    </station>
+			<station id="14">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="300.000000" y="620.000000"/>
+				<geoCoordinates latitude="55.727454" longitude="37.580500"/>
+				<name>
+					<text>Фрунзенская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="15">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="280.000000" y="640.000000"/>
+				<geoCoordinates latitude="55.723050" longitude="37.563801"/>
+				<name>
+					<text>Спортивная</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="16">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="260.000000" y="660.000000"/>
+				<geoCoordinates latitude="55.710238" longitude="37.559252"/>
+				<name>
+					<text>Воробьёвы горы</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19990512">Ленинские горы</oldName>
+				</oldNames>
+			</station>
+			<station id="17">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="240.000000" y="680.000000"/>
+				<geoCoordinates latitude="55.692587" longitude="37.534785"/>
+				<name>
+					<text>Университет</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>3</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="18">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="220.000000" y="700.000000"/>
+				<geoCoordinates latitude="55.676665" longitude="37.505608"/>
+				<name>
+					<text>Проспект Вернадского</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="19">
+				<line>1</line>
+				<type>station</type>
+				<schemePosition x="200.000000" y="720.000000"/>
+				<geoCoordinates latitude="55.663644" longitude="37.483206"/>
+				<name>
+					<text>Юго-Западная</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="20">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="335.000000" y="20.000000"/>
+				<geoCoordinates latitude="55.854938" longitude="37.476168"/>
+				<name>
+					<text>Речной вокзал</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="21">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="335.000000" y="40.000000"/>
+				<geoCoordinates latitude="55.839856" longitude="37.486832"/>
+				<name>
+					<text>Водный стадион</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="22">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="335.000000" y="60.000000"/>
+				<geoCoordinates latitude="55.818500" longitude="37.498055"/>
+				<name>
+					<text>Войковская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="23">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="335.000000" y="80.000000"/>
+				<geoCoordinates latitude="55.805029" longitude="37.515247"/>
+				<name>
+					<text>Сокол</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="24">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="335.000000" y="100.000000"/>
+				<geoCoordinates latitude="55.800606" longitude="37.532220"/>
+				<name>
+					<text>Аэропорт</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="25">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="335.000000" y="120.000000"/>
+				<geoCoordinates latitude="55.789701" longitude="37.558222"/>
+				<name>
+					<text>Динамо</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="26">
+				<line>2</line>
+				<type>transfer</type>
+				<schemePosition x="395.000000" y="247.000000"/>
+				<geoCoordinates latitude="55.777285" longitude="37.582201"/>
+				<name>
+					<text>Белорусская</text>
+					<alignment>right</alignment>
+					<customSchemePosition x="385.000000" y="232.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="80">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+<!--BigTheatre
+			<station id="27">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="395.000000" y="333.000000"/>
+				<geoCoordinates latitude="55.770273" longitude="37.595644"/>
+				<name>
+					<text>Маяковская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="28">
+				<line>2</line>
+				<type>transfer</type>
+				<schemePosition x="395.000000" y="358.000000"/>
+				<geoCoordinates latitude="55.764599" longitude="37.605686"/>
+				<name>
+					<text>Тверская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="116">
+							<pos>4</pos>
+						</boardPositions>
+						<boardPositions toStation="143">
+							<pos>1</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19901105">Горьковская</oldName>
+				</oldNames>
+			</station>
+			<station id="29">
+				<line>2</line>
+				<type>transfer</type>
+				<schemePosition x="471.000000" y="434.000000"/>
+				<geoCoordinates latitude="55.757742" longitude="37.618893"/>
+				<name>
+					<text>Театральная</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="10">
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions toStation="48">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19901105">Площадь Свердлова</oldName>
+				</oldNames>
+			</station>
+-->
+			<station id="30">
+				<line>2</line>
+				<type>transfer</type>
+				<schemePosition x="558.000000" y="521.000000"/>
+				<geoCoordinates latitude="55.742332" longitude="37.629086"/>
+				<name>
+					<text>Новокузнецкая</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="94" nextStation="95">
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions toStation="94" nextStation="93">
+							<pos>2</pos>
+						</boardPositions>
+						<boardPositions toStation="132">
+							<pos>2</pos>
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions toStation="132" nextStation="131">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="31">
+				<line>2</line>
+				<type>transfer</type>
+				<schemePosition x="637.000000" y="600.000000"/>
+				<geoCoordinates latitude="55.730466" longitude="37.637256"/>
+				<name>
+					<text>Павелецкая</text>
+					<alignment>left</alignment>
+					<customSchemePosition x="647.000000" y="585.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="74">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="32">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="665.000000" y="660.000000"/>
+				<geoCoordinates latitude="55.707675" longitude="37.657528"/>
+				<name>
+					<text>Автозаводская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19560705">Завод имени Сталина</oldName>
+				</oldNames>
+			</station>
+			<station id="33">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="665.000000" y="680.000000"/>
+				<geoCoordinates latitude="55.677875" longitude="37.663708"/>
+				<name>
+					<text>Коломенская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="34">
+				<line>2</line>
+				<type>transfer</type>
+				<schemePosition x="665.000000" y="700.000000"/>
+				<geoCoordinates latitude="55.655047" longitude="37.649428"/>
+				<name>
+					<text>Каширская</text>
+					<alignment>right</alignment>
+					<customSchemePosition x="655.000000" y="700.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="170"/>
+						<boardPositions prevStation="33" toStation="170" nextStation="171">
+							<pos>1</pos>
+							<pos>2</pos>
+							<pos>3</pos>
+							<pos>4</pos>
+							<pos>5</pos>
+						</boardPositions>
+						<boardPositions prevStation="35" toStation="170" nextStation="171">
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="35">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="665.000000" y="785.000000"/>
+				<geoCoordinates latitude="55.635748" longitude="37.656498"/>
+				<name>
+					<text>Кантемировская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="36">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="665.000000" y="805.000000"/>
+				<geoCoordinates latitude="55.621018" longitude="37.669458"/>
+				<name>
+					<text>Царицыно</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19901105">Ленино</oldName>
+				</oldNames>
+			</station>
+			<station id="37">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="665.000000" y="825.000000"/>
+				<geoCoordinates latitude="55.613408" longitude="37.694521"/>
+				<name>
+					<text>Орехово</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="38">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="665.000000" y="845.000000"/>
+				<geoCoordinates latitude="55.610596" longitude="37.718039"/>
+				<name>
+					<text>Домодедовская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="39">
+				<line>2</line>
+				<type>station</type>
+				<schemePosition x="665.000000" y="865.000000"/>
+				<geoCoordinates latitude="55.613796" longitude="37.744474"/>
+				<name>
+					<text>Красногвардейская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="40">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="796.000000" y="227.000000"/>
+				<geoCoordinates latitude="55.809530" longitude="37.798634"/>
+				<name>
+					<text>Щёлковская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="41">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="796.000000" y="247.000000"/>
+				<geoCoordinates latitude="55.794575" longitude="37.799320"/>
+				<name>
+					<text>Первомайская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="42">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="796.000000" y="267.000000"/>
+				<geoCoordinates latitude="55.787674" longitude="37.781639"/>
+				<name>
+					<text>Измайловская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19630820">Измайловский парк</oldName>
+				</oldNames>
+			</station>
+			<station id="43">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="796.000000" y="287.000000"/>
+				<geoCoordinates latitude="55.788498" longitude="37.749603"/>
+				<name>
+					<text>Партизанская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19630820">Измайловская</oldName>
+					<oldName usedBefore="20050503">Измайловский парк</oldName>
+				</oldNames>
+			</station>
+			<station id="44">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="796.000000" y="307.000000"/>
+				<geoCoordinates latitude="55.783056" longitude="37.719374"/>
+				<name>
+					<text>Семёновская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19611130">Сталинская</oldName>
+				</oldNames>
+			</station>
+			<station id="45">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="796.000000" y="327.000000"/>
+				<geoCoordinates latitude="55.782124" longitude="37.705438"/>
+				<name>
+					<text>Электрозаводская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="46">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="796.000000" y="347.000000"/>
+				<geoCoordinates latitude="55.772352" longitude="37.678787"/>
+				<name>
+					<text>Бауманская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="47">
+				<line>3</line>
+				<type>transfer</type>
+				<schemePosition x="714.000000" y="429.000000"/>
+				<geoCoordinates latitude="55.757830" longitude="37.657828"/>
+				<name>
+					<text>Курская</text>
+					<alignment>left</alignment>
+					<customSchemePosition x="724.000000" y="429.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="76">
+							<pos>2</pos>
+						</boardPositions>
+						<boardPositions toStation="160">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="48">
+				<line>3</line>
+				<type>station</type>
+<!--BigTheatre
+				<type>transfer</type>
+-->
+				<schemePosition x="471.000000" y="469.000000"/>
+				<geoCoordinates latitude="55.756676" longitude="37.622085"/>
+				<name>
+					<text>Площадь Революции</text>
+					<alignment>left</alignment>
+					<textLines>
+						<textLine>Площадь</textLine>
+						<textLine>Революции</textLine>
+					</textLines>
+					<customSchemePosition x="481.000000" y="457.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+<!--BigTheatre
+					<transfer>
+						<boardPositions toStation="29">
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+-->
+				</boardInfo>
+			</station>
+			<station id="49">
+				<line>3</line>
+				<type>transfer</type>
+				<schemePosition x="395.000000" y="510.000000"/>
+				<geoCoordinates latitude="55.752284" longitude="37.604662"/>
+				<name>
+					<text>Арбатская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="11">
+							<pos>5</pos>
+						</boardPositions>
+						<boardPositions toStation="68">
+							<pos>5</pos>
+						</boardPositions>
+						<boardPositions toStation="144">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="50">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="335.000000" y="450.000000"/>
+				<geoCoordinates latitude="55.747894" longitude="37.583569"/>
+				<name>
+					<text>Смоленская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="51">
+				<line>3</line>
+				<type>transfer</type>
+				<schemePosition x="287.000000" y="402.000000"/>
+				<geoCoordinates latitude="55.743036" longitude="37.564976"/>
+				<name>
+					<text>Киевская</text>
+					<alignment>right</alignment>
+					<customSchemePosition x="277.000000" y="380.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="82">
+							<pos>5</pos>
+						</boardPositions>
+						<boardPositions toStation="65">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="52">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="132.000000" y="295.000000"/>
+				<geoCoordinates latitude="55.736244" longitude="37.517023"/>
+				<name>
+					<text>Парк Победы</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="53">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="132.000000" y="275.000000"/>
+				<geoCoordinates latitude="55.729817" longitude="37.472048"/>
+				<name>
+					<text>Славянский бульвар</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="54">
+				<line>3</line>
+				<type>transfer</type>
+				<schemePosition x="132.000000" y="170.000000"/>
+				<geoCoordinates latitude="55.730669" longitude="37.445440"/>
+				<name>
+					<text>Кунцевская</text>
+					<alignment>right</alignment>
+					<customSchemePosition x="122.000000" y="155.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="58">
+							<pos>5</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="55">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="132.000000" y="120.000000"/>
+				<geoCoordinates latitude="55.740738" longitude="37.416859"/>
+				<name>
+					<text>Молодёжная</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="56">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="132.000000" y="100.000000"/>
+				<geoCoordinates latitude="55.756728" longitude="37.408104"/>
+				<name>
+					<text>Крылатское</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="57">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="132.000000" y="80.000000"/>
+				<geoCoordinates latitude="55.803741" longitude="37.402697"/>
+				<name>
+					<text>Строгино</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="178">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="132.000000" y="60.000000"/>
+				<geoCoordinates latitude="55.823593" longitude="37.385176"/>
+				<name>
+					<text>Мякинино</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="179">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="132.000000" y="40.000000"/>
+				<geoCoordinates latitude="55.835530" longitude="37.382398"/>
+				<name>
+					<text>Волоколамская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="180">
+				<line>3</line>
+				<type>station</type>
+				<schemePosition x="132.000000" y="20.000000"/>
+				<geoCoordinates latitude="55.846145" longitude="37.361981"/>
+				<name>
+					<text>Митино</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="58">
+				<line>4</line>
+				<type>transfer</type>
+				<schemePosition x="132.000000" y="155.000000"/>
+				<geoCoordinates latitude="55.730666" longitude="37.446535"/>
+				<name sameAsForStation="54"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="54">
+							<pos>1</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="59">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="172.000000" y="195.000000"/>
+				<geoCoordinates latitude="55.735990" longitude="37.467150"/>
+				<name>
+					<text>Пионерская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="60">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="172.000000" y="215.000000"/>
+				<geoCoordinates latitude="55.739518" longitude="37.483356"/>
+				<name>
+					<text>Филёвский парк</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="61">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="172.000000" y="235.000000"/>
+				<geoCoordinates latitude="55.743731" longitude="37.497765"/>
+				<name>
+					<text>Багратионовская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="62">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="172.000000" y="255.000000"/>
+				<geoCoordinates latitude="55.746004" longitude="37.514877"/>
+				<name>
+					<text>Фили</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="63">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="172.000000" y="275.000000"/>
+				<geoCoordinates latitude="55.739965" longitude="37.534618"/>
+				<name>
+					<text>Кутузовская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="64">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="172.000000" y="295.000000"/>
+				<geoCoordinates latitude="55.738881" longitude="37.548357"/>
+				<name>
+					<text>Студенческая</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="65">
+				<line>4</line>
+				<type>transfer</type>
+				<schemePosition x="287.000000" y="372.000000"/>
+				<geoCoordinates latitude="55.743779" longitude="37.566102"/>
+				<name sameAsForStation="51"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="82">
+							<pos>1</pos>
+						</boardPositions>
+						<boardPositions toStation="51">
+							<pos>5</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="66">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="335.000000" y="420.000000"/>
+				<geoCoordinates latitude="55.748987" longitude="37.582169"/>
+				<name>
+					<text>Смоленская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="67">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="365.000000" y="450.000000"/>
+				<geoCoordinates latitude="55.752121" longitude="37.601556"/>
+				<name>
+					<text>Арбатская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="68">
+				<line>4</line>
+				<type>transfer</type>
+				<schemePosition x="395.000000" y="480.000000"/>
+				<geoCoordinates latitude="55.752689" longitude="37.607816"/>
+				<name>
+					<text>Александровский сад</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="11">
+							<pos>1</pos>
+						</boardPositions>
+						<boardPositions toStation="49">
+							<pos>1</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19461224">Улица Коминтерна</oldName>
+					<oldName usedBefore="19901105">Калининская</oldName>
+				</oldNames>
+			</station>
+			<station id="69">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="267.000000" y="352.000000"/>
+				<geoCoordinates latitude="55.749144" longitude="37.543287"/>
+				<name>
+					<text>Выставочная</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="20090601">Деловой центр</oldName>
+				</oldNames>
+			</station>
+			<station id="70">
+				<line>4</line>
+				<type>station</type>
+				<schemePosition x="247.000000" y="332.000000"/>
+				<geoCoordinates latitude="55.748568" longitude="37.532880"/>
+				<name>
+					<text>Международная</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+<!--ParkKult			
+			<station id="71">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="341.000000" y="564.000000"/>
+				<geoCoordinates latitude="55.735211" longitude="37.592994"/>
+				<name sameAsForStation="13"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="13">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19800101">Парк культуры имени Горького</oldName>
+				</oldNames>
+		    </station>
+-->
+			<station id="72">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="416.000000" y="618.000000"/>
+				<geoCoordinates latitude="55.729255" longitude="37.611555"/>
+				<name>
+					<text>Октябрьская</text>
+					<alignment>right</alignment>
+					<customSchemePosition x="406.000000" y="618.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>3</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="95">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19610606">Калужская</oldName>
+				</oldNames>
+			</station>
+			<station id="73">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="545.000000" y="630.000000"/>
+				<geoCoordinates latitude="55.728995" longitude="37.622895"/>
+				<name>
+					<text>Добрынинская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="146">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19610606">Серпуховская</oldName>
+				</oldNames>
+			</station>
+			<station id="74">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="637.000000" y="585.000000"/>
+				<geoCoordinates latitude="55.730934" longitude="37.635823"/>
+				<name sameAsForStation="31"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="31">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="75">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="680.000000" y="536.000000"/>
+				<geoCoordinates latitude="55.742372" longitude="37.653612"/>
+				<name>
+					<text>Таганская</text>
+					<alignment>right</alignment>
+					<customSchemePosition x="670.000000" y="521.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="119">
+							<pos>4</pos>
+						</boardPositions>
+						<boardPositions toStation="131">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="76">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="714.000000" y="444.000000"/>
+				<geoCoordinates latitude="55.757338" longitude="37.659330"/>
+				<name sameAsForStation="47"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="47">
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions toStation="160">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="77">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="660.000000" y="275.000000"/>
+				<geoCoordinates latitude="55.775976" longitude="37.656369"/>
+				<name sameAsForStation="6"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="6">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="78">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="595.000000" y="227.000000"/>
+				<geoCoordinates latitude="55.779647" longitude="37.633533"/>
+				<name>
+					<text>Проспект Мира</text>
+					<alignment>left</alignment>
+					<customSchemePosition x="605.000000" y="212.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="90">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19660620">Ботанический сад</oldName>
+				</oldNames>
+			</station>
+			<station id="79">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="462.000000" y="208.000000"/>
+				<geoCoordinates latitude="55.779490" longitude="37.601035"/>
+				<name>
+					<text>Новослободская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="141">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="80">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="395.000000" y="232.000000"/>
+				<geoCoordinates latitude="55.776235" longitude="37.583950"/>
+				<name sameAsForStation="26"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="26">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="81">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="328.000000" y="291.000000"/>
+				<geoCoordinates latitude="55.760317" longitude="37.576933"/>
+				<name>
+					<text>Краснопресненская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="115">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="82">
+				<line>5</line>
+				<type>transfer</type>
+				<schemePosition x="287.000000" y="387.000000"/>
+				<geoCoordinates latitude="55.744467" longitude="37.567357"/>
+				<name sameAsForStation="51"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>3</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="51">
+							<pos>2</pos>
+						</boardPositions>
+						<boardPositions toStation="65">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="83">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="595.000000" y="20.000000"/>
+				<geoCoordinates latitude="55.887010" longitude="37.661390"/>
+				<name>
+					<text>Медведково</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="84">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="595.000000" y="40.000000"/>
+				<geoCoordinates latitude="55.869821" longitude="37.664223"/>
+				<name>
+					<text>Бабушкинская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="85">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="595.000000" y="60.000000"/>
+				<geoCoordinates latitude="55.855130" longitude="37.652721"/>
+				<name>
+					<text>Свиблово</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="86">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="595.000000" y="80.000000"/>
+				<geoCoordinates latitude="55.845446" longitude="37.638388"/>
+				<name>
+					<text>Ботанический сад</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="87">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="595.000000" y="100.000000"/>
+				<geoCoordinates latitude="55.820670" longitude="37.640705"/>
+				<name>
+					<text>ВДНХ</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19591212">ВСХВ</oldName>
+				</oldNames>
+			</station>
+			<station id="88">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="595.000000" y="120.000000"/>
+				<geoCoordinates latitude="55.807808" longitude="37.638447"/>
+				<name>
+					<text>Алексеевская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19660620">Мир</oldName>
+					<oldName usedBefore="19901105">Щербаковская</oldName>
+				</oldNames>
+			</station>
+			<station id="89">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="595.000000" y="140.000000"/>
+				<geoCoordinates latitude="55.792479" longitude="37.635829"/>
+				<name>
+					<text>Рижская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="90">
+				<line>6</line>
+				<type>transfer</type>
+				<schemePosition x="595.000000" y="212.000000"/>
+				<geoCoordinates latitude="55.781798" longitude="37.633232"/>
+				<name sameAsForStation="78"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="78">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19660620">Ботанический сад</oldName>
+				</oldNames>
+			</station>
+			<station id="91">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="595.000000" y="250.000000"/>
+				<geoCoordinates latitude="55.772569" longitude="37.632557"/>
+				<name>
+					<text>Сухаревская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19901105">Колхозная</oldName>
+				</oldNames>
+			</station>
+			<station id="92">
+				<line>6</line>
+				<type>transfer</type>
+				<schemePosition x="595.000000" y="310.000000"/>
+				<geoCoordinates latitude="55.766489" longitude="37.637175"/>
+				<name>
+					<text>Тургеневская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="8">
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions toStation="159">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="93">
+				<line>6</line>
+				<type>transfer</type>
+				<schemePosition x="595.000000" y="451.000000"/>
+				<geoCoordinates latitude="55.756076" longitude="37.631811"/>
+				<name>
+					<text>Китай-город</text>
+					<alignment>left</alignment>
+					<customSchemePosition x="605.000000" y="436.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions prevStation="92" toStation="118" nextStation="119">
+							<pos>1</pos>
+							<pos>2</pos>
+							<pos>3</pos>
+							<pos>4</pos>
+							<pos>5</pos>
+						</boardPositions>
+						<boardPositions prevStation="92" toStation="118" nextStation="117">
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions prevStation="94" toStation="118" nextStation="119">
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions prevStation="94" toStation="118" nextStation="117">
+							<pos>1</pos>
+							<pos>2</pos>
+							<pos>3</pos>
+							<pos>4</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19901105">Площадь Ногина</oldName>
+				</oldNames>
+			</station>
+			<station id="94">
+				<line>6</line>
+				<type>transfer</type>
+				<schemePosition x="558.000000" y="491.000000"/>
+				<geoCoordinates latitude="55.740765" longitude="37.625111"/>
+				<name>
+					<text>Третьяковская</text>
+					<alignment>right</alignment>
+					<customSchemePosition x="548.000000" y="491.000000"/>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions prevStation="93" toStation="30">
+							<pos>4</pos>
+						</boardPositions>
+						<boardPositions prevStation="95" toStation="30">
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions toStation="132">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19831104">Новокузнецкая</oldName>
+				</oldNames>
+			</station>
+			<station id="95">
+				<line>6</line>
+				<type>transfer</type>
+				<schemePosition x="416.000000" y="633.000000"/>
+				<geoCoordinates latitude="55.731309" longitude="37.612687"/>
+				<name sameAsForStation="72"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="72">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="96">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="675.000000"/>
+				<geoCoordinates latitude="55.718775" longitude="37.608132"/>
+				<name>
+					<text>Шаболовская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="97">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="695.000000"/>
+				<geoCoordinates latitude="55.707627" longitude="37.586203"/>
+				<name>
+					<text>Ленинский проспект</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="98">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="715.000000"/>
+				<geoCoordinates latitude="55.687746" longitude="37.573414"/>
+				<name>
+					<text>Академическая</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="99">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="735.000000"/>
+				<geoCoordinates latitude="55.677875" longitude="37.562857"/>
+				<name>
+					<text>Профсоюзная</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="100">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="755.000000"/>
+				<geoCoordinates latitude="55.670228" longitude="37.554617"/>
+				<name>
+					<text>Новые Черёмушки</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="101">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="775.000000"/>
+				<geoCoordinates latitude="55.656527" longitude="37.539940"/>
+				<name>
+					<text>Калужская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="102">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="795.000000"/>
+				<geoCoordinates latitude="55.642579" longitude="37.526293"/>
+				<name>
+					<text>Беляево</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="103">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="815.000000"/>
+				<geoCoordinates latitude="55.633520" longitude="37.519426"/>
+				<name>
+					<text>Коньково</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="104">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="835.000000"/>
+				<geoCoordinates latitude="55.618837" longitude="37.507067"/>
+				<name>
+					<text>Теплый Стан</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="105">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="855.000000"/>
+				<geoCoordinates latitude="55.606233" longitude="37.533460"/>
+				<name>
+					<text>Ясенево</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="106">
+				<line>6</line>
+				<type>station</type>
+				<schemePosition x="383.000000" y="875.000000"/>
+				<geoCoordinates latitude="55.600869" longitude="37.555084"/>
+				<name>
+					<text>Новоясеневская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="20090106">Битцевский парк</oldName>
+				</oldNames>
+			</station>
+			<station id="107">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="295.000000" y="20.000000"/>
+				<geoCoordinates latitude="55.860574" longitude="37.436342"/>
+				<name>
+					<text>Планерная</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="108">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="295.000000" y="40.000000"/>
+				<geoCoordinates latitude="55.850216" longitude="37.439947"/>
+				<name>
+					<text>Сходненская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="109">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="295.000000" y="60.000000"/>
+				<geoCoordinates latitude="55.826889" longitude="37.437372"/>
+				<name>
+					<text>Тушинская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="110">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="295.000000" y="80.000000"/>
+				<geoCoordinates latitude="55.808468" longitude="37.464323"/>
+				<name>
+					<text>Щукинская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="111">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="295.000000" y="100.000000"/>
+				<geoCoordinates latitude="55.793465" longitude="37.493420"/>
+				<name>
+					<text>Октябрьское поле</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="112">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="295.000000" y="120.000000"/>
+				<geoCoordinates latitude="55.777490" longitude="37.518911"/>
+				<name>
+					<text>Полежаевская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="113">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="295.000000" y="140.000000"/>
+				<geoCoordinates latitude="55.773532" longitude="37.547150"/>
+				<name>
+					<text>Беговая</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="114">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="295.000000" y="160.000000"/>
+				<geoCoordinates latitude="55.764696" longitude="37.561398"/>
+				<name>
+					<text>Улица 1905 года</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="115">
+				<line>7</line>
+				<type>transfer</type>
+				<schemePosition x="328.000000" y="306.000000"/>
+				<geoCoordinates latitude="55.760667" longitude="37.581294"/>
+				<name>
+					<text>Баррикадная</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="81">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="116">
+				<line>7</line>
+				<type>transfer</type>
+				<schemePosition x="395.000000" y="373.000000"/>
+				<geoCoordinates latitude="55.765638" longitude="37.605085"/>
+				<name>
+					<text>Пушкинская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+<!--BigTheatre
+						<boardPositions toStation="28">
+							<pos>3</pos>
+						</boardPositions>
+-->
+						<boardPositions toStation="143">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="117">
+				<line>7</line>
+				<type>transfer</type>
+				<schemePosition x="532.000000" y="373.000000"/>
+				<geoCoordinates latitude="55.761569" longitude="37.624279"/>
+				<name>
+					<text>Кузнецкий мост</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="9">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="118">
+				<line>7</line>
+				<type>transfer</type>
+				<schemePosition x="595.000000" y="436.000000"/>
+				<geoCoordinates latitude="55.755285" longitude="37.633002"/>
+				<name sameAsForStation="93"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions prevStation="117" toStation="93" nextStation="94">
+							<pos>1</pos>
+							<pos>2</pos>
+							<pos>3</pos>
+							<pos>4</pos>
+							<pos>5</pos>
+						</boardPositions>
+						<boardPositions prevStation="117" toStation="93" nextStation="92">
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions prevStation="119" toStation="93" nextStation="94">
+							<pos>3</pos>
+						</boardPositions>
+						<boardPositions prevStation="119" toStation="93" nextStation="92">
+							<pos>1</pos>
+							<pos>2</pos>
+							<pos>3</pos>
+							<pos>4</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19901105">Площадь Ногина</oldName>
+				</oldNames>
+			</station>
+			<station id="119">
+				<line>7</line>
+				<type>transfer</type>
+				<schemePosition x="680.000000" y="521.000000"/>
+				<geoCoordinates latitude="55.739485" longitude="37.653252"/>
+				<name sameAsForStation="75"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="75">
+							<pos>4</pos>
+						</boardPositions>
+						<boardPositions toStation="131">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="120">
+				<line>7</line>
+				<type>transfer</type>
+				<schemePosition x="776.000000" y="576.000000"/>
+				<geoCoordinates latitude="55.731952" longitude="37.665880"/>
+				<name>
+					<text>Пролетарская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="162">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="121">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="835.000000" y="635.000000"/>
+				<geoCoordinates latitude="55.724838" longitude="37.687140"/>
+				<name>
+					<text>Волгоградский проспект</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="122">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="835.000000" y="655.000000"/>
+				<geoCoordinates latitude="55.708642" longitude="37.730742"/>
+				<name>
+					<text>Текстильщики</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="123">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="835.000000" y="675.000000"/>
+				<geoCoordinates latitude="55.705354" longitude="37.765675"/>
+				<name>
+					<text>Кузьминки</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="124">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="835.000000" y="695.000000"/>
+				<geoCoordinates latitude="55.716910" longitude="37.793226"/>
+				<name>
+					<text>Рязанский проспект</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="125">
+				<line>7</line>
+				<type>station</type>
+				<schemePosition x="835.000000" y="715.000000"/>
+				<geoCoordinates latitude="55.715699" longitude="37.818106"/>
+				<name>
+					<text>Выхино</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+				<oldNames>
+					<oldName usedBefore="19890113">Ждановская</oldName>
+				</oldNames>
+			</station>
+			<station id="126">
+				<line>8</line>
+				<type>station</type>
+				<schemePosition x="835.000000" y="387.000000"/>
+				<geoCoordinates latitude="55.751753" longitude="37.816057"/>
+				<name>
+					<text>Новогиреево</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="127">
+				<line>8</line>
+				<type>station</type>
+				<schemePosition x="835.000000" y="407.000000"/>
+				<geoCoordinates latitude="55.751028" longitude="37.785931"/>
+				<name>
+					<text>Перово</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="128">
+				<line>8</line>
+				<type>station</type>
+				<schemePosition x="835.000000" y="427.000000"/>
+				<geoCoordinates latitude="55.758128" longitude="37.751684"/>
+				<name>
+					<text>Шоссе Энтузиастов</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="129">
+				<line>8</line>
+				<type>station</type>
+				<schemePosition x="835.000000" y="447.000000"/>
+				<geoCoordinates latitude="55.751511" longitude="37.717009"/>
+				<name>
+					<text>Авиамоторная</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="130">
+				<line>8</line>
+				<type>transfer</type>
+				<schemePosition x="776.000000" y="506.000000"/>
+				<geoCoordinates latitude="55.747478" longitude="37.682312"/>
+				<name>
+					<text>Площадь Ильича</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="161">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="131">
+				<line>8</line>
+				<type>transfer</type>
+				<schemePosition x="680.000000" y="506.000000"/>
+				<geoCoordinates latitude="55.740795" longitude="37.656519"/>
+				<name>
+					<text>Марксистская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="75">
+							<pos>1</pos>
+						</boardPositions>
+						<boardPositions toStation="119">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="132">
+				<line>8</line>
+				<type>transfer</type>
+				<schemePosition x="558.000000" y="506.000000"/>
+				<geoCoordinates latitude="55.740711" longitude="37.625663"/>
+				<name sameAsForStation="94"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions prevStation="131" toStation="30">
+							<pos>4</pos>
+						</boardPositions>
+						<boardPositions toStation="94">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="133">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="462.000000" y="20.000000"/>
+				<geoCoordinates latitude="55.897646" longitude="37.587147"/>
+				<name>
+					<text>Алтуфьево</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="134">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="462.000000" y="40.000000"/>
+				<geoCoordinates latitude="55.883881" longitude="37.603626"/>
+				<name>
+					<text>Бибирево</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="135">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="462.000000" y="60.000000"/>
+				<geoCoordinates latitude="55.863271" longitude="37.604742"/>
+				<name>
+					<text>Отрадное</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="136">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="462.000000" y="80.000000"/>
+				<geoCoordinates latitude="55.847132" longitude="37.589893"/>
+				<name>
+					<text>Владыкино</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="137">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="462.000000" y="100.000000"/>
+				<geoCoordinates latitude="55.836627" longitude="37.575517"/>
+				<name>
+					<text>Петровско-Разумовская</text>
+					<alignment>left</alignment>
+					<textLines>
+						<textLine>Петровско-</textLine>
+						<textLine>Разумовская</textLine>
+					</textLines>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="138">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="462.000000" y="120.000000"/>
+				<geoCoordinates latitude="55.819057" longitude="37.575431"/>
+				<name>
+					<text>Тимирязевская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="139">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="462.000000" y="140.000000"/>
+				<geoCoordinates latitude="55.807938" longitude="37.581053"/>
+				<name>
+					<text>Дмитровская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="140">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="462.000000" y="160.000000"/>
+				<geoCoordinates latitude="55.793996" longitude="37.589207"/>
+				<name>
+					<text>Савёловская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="141">
+				<line>9</line>
+				<type>transfer</type>
+				<schemePosition x="462.000000" y="193.000000"/>
+				<geoCoordinates latitude="55.781792" longitude="37.598777"/>
+				<name>
+					<text>Менделеевская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="79">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="142">
+				<line>9</line>
+				<type>transfer</type>
+				<schemePosition x="511.000000" y="272.000000"/>
+				<geoCoordinates latitude="55.771640" longitude="37.620358"/>
+				<name>
+					<text>Цветной бульвар</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="158">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="143">
+				<line>9</line>
+				<type>transfer</type>
+				<schemePosition x="395.000000" y="388.000000"/>
+				<geoCoordinates latitude="55.765807" longitude="37.608175"/>
+				<name>
+					<text>Чеховская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+<!--BigTheatre
+						<boardPositions toStation="28">
+							<pos>1</pos>
+						</boardPositions>
+-->
+						<boardPositions toStation="116">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="144">
+				<line>9</line>
+				<type>transfer</type>
+				<schemePosition x="395.000000" y="495.000000"/>
+				<geoCoordinates latitude="55.750871" longitude="37.606781"/>
+				<name>
+					<text>Боровицкая</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="11">
+							<pos>2</pos>
+						</boardPositions>
+						<boardPositions toStation="49">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="145">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="500.000000" y="600.000000"/>
+				<geoCoordinates latitude="55.736803" longitude="37.618679"/>
+				<name>
+					<text>Полянка</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="146">
+				<line>9</line>
+				<type>transfer</type>
+				<schemePosition x="545.000000" y="645.000000"/>
+				<geoCoordinates latitude="55.726811" longitude="37.625159"/>
+				<name>
+					<text>Серпуховская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="73">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="147">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="680.000000"/>
+				<geoCoordinates latitude="55.708642" longitude="37.622509"/>
+				<name>
+					<text>Тульская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="148">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="700.000000"/>
+				<geoCoordinates latitude="55.682666" longitude="37.621822"/>
+				<name>
+					<text>Нагатинская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="149">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="720.000000"/>
+				<geoCoordinates latitude="55.672938" longitude="37.610750"/>
+				<name>
+					<text>Нагорная</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="150">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="740.000000"/>
+				<geoCoordinates latitude="55.662773" longitude="37.605600"/>
+				<name>
+					<text>Нахимовский проспект</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="151">
+				<line>9</line>
+				<type>transfer</type>
+				<schemePosition x="545.000000" y="775.000000"/>
+				<geoCoordinates latitude="55.651330" longitude="37.598385"/>
+				<name>
+					<text>Севастопольская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="172">
+							<pos>3</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="152">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="795.000000"/>
+				<geoCoordinates latitude="55.640399" longitude="37.605772"/>
+				<name>
+					<text>Чертановская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="153">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="815.000000"/>
+				<geoCoordinates latitude="55.622229" longitude="37.609034"/>
+				<name>
+					<text>Южная</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="154">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="835.000000"/>
+				<geoCoordinates latitude="55.611856" longitude="37.603798"/>
+				<name>
+					<text>Пражская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="155">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="855.000000"/>
+				<geoCoordinates latitude="55.595419" longitude="37.601223"/>
+				<name>
+					<text>Ул. Академика Янгеля</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="156">
+				<line>9</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="875.000000"/>
+				<geoCoordinates latitude="55.583633" longitude="37.596760"/>
+				<name>
+					<text>Аннино</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="157">
+				<line>9</line>
+				<type>transfer</type>
+				<schemePosition x="545.000000" y="895.000000"/>
+				<geoCoordinates latitude="55.570193" longitude="37.577190"/>
+				<name>
+					<text>Бульвар Дмитрия Донского</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="173">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="181">
+				<line>10</line>
+				<type>station</type>
+				<schemePosition x="527.000000" y="166.000000"/>
+				<geoCoordinates latitude="55.795467" longitude="37.616093"/>
+				<name>
+					<text>Марьина Роща</text>
+					<alignment>left</alignment>
+				</name>
+			</station>
+			<station id="182">
+				<line>10</line>
+				<type>station</type>
+				<schemePosition x="527.000000" y="186.000000"/>
+				<geoCoordinates latitude="55.781352" longitude="37.613695"/>
+				<name>
+					<text>Достоевская</text>
+					<alignment>left</alignment>
+				</name>
+			</station>
+			<station id="158">
+				<line>10</line>
+				<type>transfer</type>
+				<schemePosition x="527.000000" y="272.000000"/>
+				<geoCoordinates latitude="55.767629" longitude="37.621908"/>
+				<name>
+					<text>Трубная</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="142">
+							<pos>5</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="159">
+				<line>10</line>
+				<type>transfer</type>
+				<schemePosition x="595.000000" y="340.000000"/>
+				<geoCoordinates latitude="55.767521" longitude="37.639123"/>
+				<name>
+					<text>Сретенский бульвар</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="8">
+							<pos>2</pos>
+						</boardPositions>
+						<boardPositions toStation="92">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="160">
+				<line>10</line>
+				<type>transfer</type>
+				<schemePosition x="714.000000" y="459.000000"/>
+				<geoCoordinates latitude="55.756251" longitude="37.657764"/>
+				<name>
+					<text>Чкаловская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="76">
+							<pos>2</pos>
+						</boardPositions>
+						<boardPositions toStation="47">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="161">
+				<line>10</line>
+				<type>transfer</type>
+				<schemePosition x="776.000000" y="521.000000"/>
+				<geoCoordinates latitude="55.746403" longitude="37.683036"/>
+				<name>
+					<text>Римская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="130">
+							<pos>4</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="162">
+				<line>10</line>
+				<type>transfer</type>
+				<schemePosition x="776.000000" y="561.000000"/>
+				<geoCoordinates latitude="55.732967" longitude="37.666985"/>
+				<name>
+					<text>Крестьянская застава</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="120">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="163">
+				<line>10</line>
+				<type>station</type>
+				<schemePosition x="776.000000" y="635.000000"/>
+				<geoCoordinates latitude="55.717780" longitude="37.676582"/>
+				<name>
+					<text>Дубровка</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>2</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="164">
+				<line>10</line>
+				<type>station</type>
+				<schemePosition x="776.000000" y="655.000000"/>
+				<geoCoordinates latitude="55.706133" longitude="37.685493"/>
+				<name>
+					<text>Кожуховская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="165">
+				<line>10</line>
+				<type>station</type>
+				<schemePosition x="776.000000" y="675.000000"/>
+				<geoCoordinates latitude="55.692874" longitude="37.727652"/>
+				<name>
+					<text>Печатники</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="166">
+				<line>10</line>
+				<type>station</type>
+				<schemePosition x="776.000000" y="695.000000"/>
+				<geoCoordinates latitude="55.690840" longitude="37.754260"/>
+				<name>
+					<text>Волжская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="167">
+				<line>10</line>
+				<type>station</type>
+				<schemePosition x="776.000000" y="715.000000"/>
+				<geoCoordinates latitude="55.676229" longitude="37.761898"/>
+				<name>
+					<text>Люблино</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="168">
+				<line>10</line>
+				<type>station</type>
+				<schemePosition x="776.000000" y="735.000000"/>
+				<geoCoordinates latitude="55.659432" longitude="37.750483"/>
+				<name>
+					<text>Братиславская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="169">
+				<line>10</line>
+				<type>station</type>
+				<schemePosition x="776.000000" y="755.000000"/>
+				<geoCoordinates latitude="55.650086" longitude="37.743788"/>
+				<name>
+					<text>Марьино</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="170">
+				<line>11</line>
+				<type>transfer</type>
+				<schemePosition x="665.000000" y="715.000000"/>
+				<geoCoordinates latitude="55.655119" longitude="37.648274"/>
+				<name sameAsForStation="34"/>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="34"/>
+						<boardPositions prevStation="171" toStation="34" nextStation="35">
+							<pos>2</pos>
+							<pos>4</pos>
+						</boardPositions>
+						<boardPositions prevStation="171" toStation="34" nextStation="33">
+							<pos>1</pos>
+							<pos>2</pos>
+							<pos>3</pos>
+							<pos>4</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="171">
+				<line>11</line>
+				<type>station</type>
+				<schemePosition x="579.000000" y="747.000000"/>
+				<geoCoordinates latitude="55.653476" longitude="37.620449"/>
+				<name>
+					<text>Варшавская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="172">
+				<line>11</line>
+				<type>transfer</type>
+				<schemePosition x="545.000000" y="760.000000"/>
+				<geoCoordinates latitude="55.653061" longitude="37.598305"/>
+				<name>
+					<text>Каховская</text>
+					<alignment>right</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="151">
+							<pos>2</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="173">
+				<line>12</line>
+				<type>transfer</type>
+				<schemePosition x="545.000000" y="910.000000"/>
+				<geoCoordinates latitude="55.568397" longitude="37.575903"/>
+				<name>
+					<text>Ул. Старокачаловская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+					<transfer>
+						<boardPositions toStation="157">
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</transfer>
+				</boardInfo>
+			</station>
+			<station id="174">
+				<line>12</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="930.000000"/>
+				<geoCoordinates latitude="55.548058" longitude="37.554617"/>
+				<name>
+					<text>Ул. Скобелевская</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="175">
+				<line>12</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="950.000000"/>
+				<geoCoordinates latitude="55.545448" longitude="37.543250"/>
+				<name>
+					<text>Бульвар Адмирала Ушакова</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="176">
+				<line>12</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="970.000000"/>
+				<geoCoordinates latitude="55.541751" longitude="37.530804"/>
+				<name>
+					<text>Ул. Горчакова</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>5</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+			<station id="177">
+				<line>12</line>
+				<type>station</type>
+				<schemePosition x="545.000000" y="990.000000"/>
+				<geoCoordinates latitude="55.538163" longitude="37.516513"/>
+				<name>
+					<text>Бунинская Аллея</text>
+					<alignment>left</alignment>
+				</name>
+				<boardInfo>
+					<exit>
+						<boardPositions>
+							<pos>1</pos>
+						</boardPositions>
+					</exit>
+				</boardInfo>
+			</station>
+		</stations>
+		<links>
+			<link fromStation="1" toStation="2">
+				<type>link</type>
+				<weights>
+					<weight type="time">190</weight>
+				</weights>
+			</link>
+			<link fromStation="2" toStation="3">
+				<type>link</type>
+				<weights>
+					<weight type="time">145</weight>
+				</weights>
+			</link>
+			<link fromStation="3" toStation="4">
+				<type>link</type>
+				<weights>
+					<weight type="time">200</weight>
+				</weights>
+			</link>
+			<link fromStation="4" toStation="5">
+				<type>link</type>
+				<weights>
+					<weight type="time">135</weight>
+				</weights>
+			</link>
+			<link fromStation="5" toStation="6">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="6" toStation="7">
+				<type>link</type>
+				<weights>
+					<weight type="time">110</weight>
+				</weights>
+			</link>
+			<link fromStation="7" toStation="8">
+				<type>link</type>
+				<weights>
+					<weight type="time">100</weight>
+				</weights>
+			</link>
+			<link fromStation="8" toStation="9">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="8" toStation="92">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="8" toStation="159">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="9" toStation="10">
+				<type>link</type>
+				<weights>
+					<weight type="time">100</weight>
+				</weights>
+			</link>
+			<link fromStation="9" toStation="117">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="10" toStation="11">
+				<type>link</type>
+				<weights>
+					<weight type="time">105</weight>
+				</weights>
+			</link>
+<!--BigTheatre
+			<link fromStation="10" toStation="29">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">300</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+-->
+			<link fromStation="11" toStation="144">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">360</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="11" toStation="12">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="11" toStation="68">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="11" toStation="49">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">300</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="12" toStation="13">
+				<type>link</type>
+				<weights>
+					<weight type="time">130</weight>
+				</weights>
+			</link>
+			<link fromStation="13" toStation="14">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="14" toStation="15">
+				<type>link</type>
+				<weights>
+					<weight type="time">95</weight>
+				</weights>
+			</link>
+			<link fromStation="15" toStation="16">
+				<type>link</type>
+				<weights>
+					<weight type="time">185</weight>
+				</weights>
+			</link>
+			<link fromStation="16" toStation="17">
+				<type>link</type>
+				<weights>
+					<weight type="time">225</weight>
+				</weights>
+			</link>
+			<link fromStation="17" toStation="18">
+				<type>link</type>
+				<weights>
+					<weight type="time">180</weight>
+				</weights>
+			</link>
+			<link fromStation="18" toStation="19">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="20" toStation="21">
+				<type>link</type>
+				<weights>
+					<weight type="time">155</weight>
+				</weights>
+			</link>
+			<link fromStation="21" toStation="22">
+				<type>link</type>
+				<weights>
+					<weight type="time">190</weight>
+				</weights>
+			</link>
+			<link fromStation="22" toStation="23">
+				<type>link</type>
+				<weights>
+					<weight type="time">175</weight>
+				</weights>
+			</link>
+			<link fromStation="23" toStation="24">
+				<type>link</type>
+				<weights>
+					<weight type="time">130</weight>
+				</weights>
+			</link>
+			<link fromStation="24" toStation="25">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="25" toStation="26">
+				<type>link</type>
+				<weights>
+					<weight type="time">185</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="335.000000" y="187.000000"/>
+					<customDrawElement type="line" x="395.000000" y="247.000000"/>
+				</customDraw>
+			</link>
+<!--BigTheatre
+			<link fromStation="26" toStation="27">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+-->
+			<link fromStation="26" toStation="80">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+<!--BigTheatre
+			<link fromStation="27" toStation="28">
+				<type>link</type>
+				<weights>
+					<weight type="time">105</weight>
+				</weights>
+			</link>
+			<link fromStation="28" toStation="29">
+				<type>link</type>
+				<weights>
+					<weight type="time">105</weight>
+				</weights>
+			</link>
+			<link fromStation="28" toStation="116">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="28" toStation="143">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">240</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="29" toStation="30">
+				<type>link</type>
+				<weights>
+					<weight type="time">165</weight>
+				</weights>
+			</link>
+			<link fromStation="29" toStation="48">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">240</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+-->
+			<link fromStation="30" toStation="132">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="30" toStation="31">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+			</link>
+			<link fromStation="30" toStation="94">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="31" toStation="32">
+				<type>link</type>
+				<weights>
+					<weight type="time">205</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="665.000000" y="628.000000"/>
+					<customDrawElement type="line" x="665.000000" y="660.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="32" toStation="33">
+				<type>link</type>
+				<weights>
+					<weight type="time">275</weight>
+				</weights>
+			</link>
+			<link fromStation="33" toStation="34">
+				<type>link</type>
+				<weights>
+					<weight type="time">230</weight>
+				</weights>
+			</link>
+			<link fromStation="34" toStation="35">
+				<type>link</type>
+				<weights>
+					<weight type="time">205</weight>
+				</weights>
+			</link>
+			<link fromStation="34" toStation="170">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">120</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="35" toStation="36">
+				<type>link</type>
+				<weights>
+					<weight type="time">145</weight>
+				</weights>
+			</link>
+			<link fromStation="36" toStation="37">
+				<type>link</type>
+				<weights>
+					<weight type="time">165</weight>
+				</weights>
+			</link>
+			<link fromStation="37" toStation="38">
+				<type>link</type>
+				<weights>
+					<weight type="time">145</weight>
+				</weights>
+			</link>
+			<link fromStation="38" toStation="39">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="40" toStation="41">
+				<type>link</type>
+				<weights>
+					<weight type="time">135</weight>
+				</weights>
+			</link>
+			<link fromStation="41" toStation="42">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="42" toStation="43">
+				<type>link</type>
+				<weights>
+					<weight type="time">190</weight>
+				</weights>
+			</link>
+			<link fromStation="43" toStation="44">
+				<type>link</type>
+				<weights>
+					<weight type="time">165</weight>
+				</weights>
+			</link>
+			<link fromStation="44" toStation="45">
+				<type>link</type>
+				<weights>
+					<weight type="time">110</weight>
+				</weights>
+			</link>
+			<link fromStation="45" toStation="46">
+				<type>link</type>
+				<weights>
+					<weight type="time">145</weight>
+				</weights>
+			</link>
+			<link fromStation="46" toStation="47">
+				<type>link</type>
+				<weights>
+					<weight type="time">175</weight>
+				</weights>
+			</link>
+			<link fromStation="47" toStation="160">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="47" toStation="48">
+				<type>link</type>
+				<weights>
+					<weight type="time">185</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="684.000000" y="469.000000"/>
+					<customDrawElement type="line" x="471.000000" y="469.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="48" toStation="49">
+				<type>link</type>
+				<weights>
+					<weight type="time">125</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="430.000000" y="510.000000"/>
+					<customDrawElement type="line" x="395.000000" y="510.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="49" toStation="144">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="49" toStation="68">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="49" toStation="50">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+			</link>
+			<link fromStation="50" toStation="51">
+				<type>link</type>
+				<weights>
+					<weight type="time">105</weight>
+				</weights>
+			</link>
+			<link fromStation="51" toStation="65">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">240</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="51" toStation="52">
+				<type>link</type>
+				<weights>
+					<weight type="time">270</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="202.000000" y="402.000000"/>
+					<customDrawElement type="line" x="132.000000" y="332.000000"/>
+					<customDrawElement type="line" x="132.000000" y="295.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="52" toStation="53">
+				<type>link</type>
+				<weights>
+					<weight type="time">260</weight>
+				</weights>
+			</link>
+			<link fromStation="53" toStation="54">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="54" toStation="58">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="54" toStation="55">
+				<type>link</type>
+				<weights>
+					<weight type="time">180</weight>
+				</weights>
+			</link>
+			<link fromStation="55" toStation="56">
+				<type>link</type>
+				<weights>
+					<weight type="time">195</weight>
+				</weights>
+			</link>
+			<link fromStation="56" toStation="57">
+				<type>link</type>
+				<weights>
+					<weight type="time">535</weight>
+				</weights>
+			</link>
+			<link fromStation="57" toStation="178">
+				<type>link</type>
+				<weights>
+					<weight type="time">205</weight>
+				</weights>
+			</link>
+			<link fromStation="178" toStation="179">
+				<type>link</type>
+				<weights>
+					<weight type="time">180</weight>
+				</weights>
+			</link>
+			<link fromStation="179" toStation="180">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="58" toStation="59">
+				<type>link</type>
+				<weights>
+					<weight type="time">130</weight>
+				</weights>
+			</link>
+			<link fromStation="59" toStation="60">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="60" toStation="61">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="61" toStation="62">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+			</link>
+			<link fromStation="62" toStation="63">
+				<type>link</type>
+				<weights>
+					<weight type="time">145</weight>
+				</weights>
+			</link>
+			<link fromStation="63" toStation="64">
+				<type>link</type>
+				<weights>
+					<weight type="time">120</weight>
+				</weights>
+			</link>
+			<link fromStation="64" toStation="65">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="172.000000" y="323.000000"/>
+					<customDrawElement type="line" x="221.000000" y="372.000000"/>
+					<customDrawElement type="line" x="287.000000" y="372.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="65" toStation="69">
+				<type>link</type>
+				<weights>
+					<weight type="time">395</weight>
+				</weights>
+			</link>
+			<link fromStation="65" toStation="66">
+				<type>link</type>
+				<weights>
+					<weight type="time">130</weight>
+				</weights>
+			</link>
+			<link fromStation="66" toStation="67">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="67" toStation="68">
+				<type>link</type>
+				<weights>
+					<weight type="time">65</weight>
+				</weights>
+			</link>
+			<link fromStation="69" toStation="70">
+				<type>link</type>
+				<weights>
+					<weight type="time">120</weight>
+				</weights>
+			</link>
+<!--ParkKult			
+			<link fromStation="71" toStation="72">
+				<type>link</type>
+				<weights>
+					<weight type="time">120</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="137.799995" endAngle="113.000009"/>
+				</customDraw>
+			</link>
+			<link fromStation="71" toStation="13">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">300</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+-->
+			<link fromStation="72" toStation="73">
+				<type>link</type>
+				<weights>
+					<weight type="time">105</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="113.000009" endAngle="77.899995"/>
+				</customDraw>
+			</link>
+			<link fromStation="72" toStation="95">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="73" toStation="146">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="73" toStation="74">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="77.899995" endAngle="50.299989"/>
+				</customDraw>
+			</link>
+			<link fromStation="74" toStation="31">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">240</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="74" toStation="75">
+				<type>link</type>
+				<weights>
+					<weight type="time">135</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="50.299989" endAngle="32.799979"/>
+				</customDraw>
+			</link>
+			<link fromStation="75" toStation="119">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="75" toStation="131">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="75" toStation="76">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="32.799979" endAngle="6.399987"/>
+				</customDraw>
+			</link>
+			<link fromStation="76" toStation="160">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">360</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="76" toStation="47">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">240</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="76" toStation="77">
+				<type>link</type>
+				<weights>
+					<weight type="time">175</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="6.399987" endAngle="317.800014"/>
+				</customDraw>
+			</link>
+			<link fromStation="77" toStation="78">
+				<type>link</type>
+				<weights>
+					<weight type="time">160</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="317.800014" endAngle="296.200005"/>
+				</customDraw>
+			</link>
+			<link fromStation="77" toStation="6">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">360</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="78" toStation="79">
+				<type>link</type>
+				<weights>
+					<weight type="time">160</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="296.200005" endAngle="259.900009"/>
+				</customDraw>
+			</link>
+			<link fromStation="78" toStation="90">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="79" toStation="141">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="79" toStation="80">
+				<type>link</type>
+				<weights>
+					<weight type="time">135</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="259.900009" endAngle="240.800013"/>
+				</customDraw>
+			</link>
+			<link fromStation="80" toStation="81">
+				<type>link</type>
+				<weights>
+					<weight type="time">165</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="240.800013" endAngle="217.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="81" toStation="82">
+				<type>link</type>
+				<weights>
+					<weight type="time">160</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="217.000000" endAngle="188.799993"/>
+				</customDraw>
+			</link>
+			<link fromStation="81" toStation="115">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="82" toStation="65">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">360</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="82" toStation="51">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+<!--ParkKult			
+			<link fromStation="82" toStation="71">
+				<type>link</type>
+				<weights>
+					<weight type="time">175</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="188.799993" endAngle="137.799995"/>
+				</customDraw>
+			</link>
+-->
+			<link fromStation="82" toStation="72">
+				<type>link</type>
+				<weights>
+					<weight type="time">290</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="arc" x="500.000000" y="420.000000" radius="215.000000" startAngle="188.799993" endAngle="113.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="83" toStation="84">
+				<type>link</type>
+				<weights>
+					<weight type="time">160</weight>
+				</weights>
+			</link>
+			<link fromStation="84" toStation="85">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+			</link>
+			<link fromStation="85" toStation="86">
+				<type>link</type>
+				<weights>
+					<weight type="time">135</weight>
+				</weights>
+			</link>
+			<link fromStation="86" toStation="87">
+				<type>link</type>
+				<weights>
+					<weight type="time">210</weight>
+				</weights>
+			</link>
+			<link fromStation="87" toStation="88">
+				<type>link</type>
+				<weights>
+					<weight type="time">135</weight>
+				</weights>
+			</link>
+			<link fromStation="88" toStation="89">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+			</link>
+			<link fromStation="89" toStation="90">
+				<type>link</type>
+				<weights>
+					<weight type="time">130</weight>
+				</weights>
+			</link>
+			<link fromStation="90" toStation="91">
+				<type>link</type>
+				<weights>
+					<weight type="time">120</weight>
+				</weights>
+			</link>
+			<link fromStation="91" toStation="92">
+				<type>link</type>
+				<weights>
+					<weight type="time">100</weight>
+				</weights>
+			</link>
+			<link fromStation="92" toStation="93">
+				<type>link</type>
+				<weights>
+					<weight type="time">125</weight>
+				</weights>
+			</link>
+			<link fromStation="92" toStation="159">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="93" toStation="94">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="595.000000" y="454.000000"/>
+					<customDrawElement type="line" x="558.000000" y="491.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="93" toStation="118">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">120</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="94" toStation="95">
+				<type>link</type>
+				<weights>
+					<weight type="time">155</weight>
+				</weights>
+			</link>
+			<link fromStation="94" toStation="132">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">120</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="95" toStation="96">
+				<type>link</type>
+				<weights>
+					<weight type="time">130</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="383.000000" y="666.000000"/>
+					<customDrawElement type="line" x="383.000000" y="675.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="96" toStation="97">
+				<type>link</type>
+				<weights>
+					<weight type="time">190</weight>
+				</weights>
+			</link>
+			<link fromStation="97" toStation="98">
+				<type>link</type>
+				<weights>
+					<weight type="time">185</weight>
+				</weights>
+			</link>
+			<link fromStation="98" toStation="99">
+				<type>link</type>
+				<weights>
+					<weight type="time">120</weight>
+				</weights>
+			</link>
+			<link fromStation="99" toStation="100">
+				<type>link</type>
+				<weights>
+					<weight type="time">100</weight>
+				</weights>
+			</link>
+			<link fromStation="100" toStation="101">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+			</link>
+			<link fromStation="101" toStation="102">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="102" toStation="103">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="103" toStation="104">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="104" toStation="105">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="105" toStation="106">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+			</link>
+			<link fromStation="107" toStation="108">
+				<type>link</type>
+				<weights>
+					<weight type="time">110</weight>
+				</weights>
+			</link>
+			<link fromStation="108" toStation="109">
+				<type>link</type>
+				<weights>
+					<weight type="time">175</weight>
+				</weights>
+			</link>
+			<link fromStation="109" toStation="110">
+				<type>link</type>
+				<weights>
+					<weight type="time">240</weight>
+				</weights>
+			</link>
+			<link fromStation="110" toStation="111">
+				<type>link</type>
+				<weights>
+					<weight type="time">185</weight>
+				</weights>
+			</link>
+			<link fromStation="111" toStation="112">
+				<type>link</type>
+				<weights>
+					<weight type="time">200</weight>
+				</weights>
+			</link>
+			<link fromStation="112" toStation="113">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="113" toStation="114">
+				<type>link</type>
+				<weights>
+					<weight type="time">130</weight>
+				</weights>
+			</link>
+			<link fromStation="114" toStation="115">
+				<type>link</type>
+				<weights>
+					<weight type="time">125</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="295.000000" y="273.000000"/>
+					<customDrawElement type="line" x="328.000000" y="306.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="115" toStation="116">
+				<type>link</type>
+				<weights>
+					<weight type="time">165</weight>
+				</weights>
+			</link>
+			<link fromStation="116" toStation="117">
+				<type>link</type>
+				<weights>
+					<weight type="time">120</weight>
+				</weights>
+			</link>
+			<link fromStation="116" toStation="143">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">240</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="117" toStation="118">
+				<type>link</type>
+				<weights>
+					<weight type="time">90</weight>
+				</weights>
+			</link>
+			<link fromStation="118" toStation="119">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="119" toStation="120">
+				<type>link</type>
+				<weights>
+					<weight type="time">145</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="735.000000" y="576.000000"/>
+					<customDrawElement type="line" x="776.000000" y="576.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="119" toStation="131">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">240</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="120" toStation="121">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="120" toStation="162">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="121" toStation="122">
+				<type>link</type>
+				<weights>
+					<weight type="time">245</weight>
+				</weights>
+			</link>
+			<link fromStation="122" toStation="123">
+				<type>link</type>
+				<weights>
+					<weight type="time">185</weight>
+				</weights>
+			</link>
+			<link fromStation="123" toStation="124">
+				<type>link</type>
+				<weights>
+					<weight type="time">185</weight>
+				</weights>
+			</link>
+			<link fromStation="124" toStation="125">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="126" toStation="127">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="127" toStation="128">
+				<type>link</type>
+				<weights>
+					<weight type="time">195</weight>
+				</weights>
+			</link>
+			<link fromStation="128" toStation="129">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="129" toStation="130">
+				<type>link</type>
+				<weights>
+					<weight type="time">180</weight>
+				</weights>
+			</link>
+			<link fromStation="130" toStation="131">
+				<type>link</type>
+				<weights>
+					<weight type="time">175</weight>
+				</weights>
+			</link>
+			<link fromStation="130" toStation="161">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="131" toStation="132">
+				<type>link</type>
+				<weights>
+					<weight type="time">160</weight>
+				</weights>
+			</link>
+			<link fromStation="133" toStation="134">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="134" toStation="135">
+				<type>link</type>
+				<weights>
+					<weight type="time">195</weight>
+				</weights>
+			</link>
+			<link fromStation="135" toStation="136">
+				<type>link</type>
+				<weights>
+					<weight type="time">165</weight>
+				</weights>
+			</link>
+			<link fromStation="136" toStation="137">
+				<type>link</type>
+				<weights>
+					<weight type="time">145</weight>
+				</weights>
+			</link>
+			<link fromStation="137" toStation="138">
+				<type>link</type>
+				<weights>
+					<weight type="time">195</weight>
+				</weights>
+			</link>
+			<link fromStation="138" toStation="139">
+				<type>link</type>
+				<weights>
+					<weight type="time">100</weight>
+				</weights>
+			</link>
+			<link fromStation="139" toStation="140">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="140" toStation="141">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="141" toStation="142">
+				<type>link</type>
+				<weights>
+					<weight type="time">155</weight>
+				</weights>
+				<customDraw>
+					<customDrawElement type="line" x="462.000000" y="223.000000"/>
+					<customDrawElement type="line" x="511.000000" y="272.000000"/>
+				</customDraw>
+			</link>
+			<link fromStation="142" toStation="158">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">180</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="142" toStation="143">
+				<type>link</type>
+				<weights>
+					<weight type="time">100</weight>
+				</weights>
+			</link>
+			<link fromStation="143" toStation="144">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="144" toStation="145">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+			</link>
+			<link fromStation="145" toStation="146">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="146" toStation="147">
+				<type>link</type>
+				<weights>
+					<weight type="time">205</weight>
+				</weights>
+			</link>
+			<link fromStation="147" toStation="148">
+				<type>link</type>
+				<weights>
+					<weight type="time">225</weight>
+				</weights>
+			</link>
+			<link fromStation="148" toStation="149">
+				<type>link</type>
+				<weights>
+					<weight type="time">120</weight>
+				</weights>
+			</link>
+			<link fromStation="149" toStation="150">
+				<type>link</type>
+				<weights>
+					<weight type="time">100</weight>
+				</weights>
+			</link>
+			<link fromStation="150" toStation="151">
+				<type>link</type>
+				<weights>
+					<weight type="time">110</weight>
+				</weights>
+			</link>
+			<link fromStation="151" toStation="172">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">120</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="151" toStation="152">
+				<type>link</type>
+				<weights>
+					<weight type="time">125</weight>
+				</weights>
+			</link>
+			<link fromStation="152" toStation="153">
+				<type>link</type>
+				<weights>
+					<weight type="time">190</weight>
+				</weights>
+			</link>
+			<link fromStation="153" toStation="154">
+				<type>link</type>
+				<weights>
+					<weight type="time">110</weight>
+				</weights>
+			</link>
+			<link fromStation="154" toStation="155">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="155" toStation="156">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+			<link fromStation="156" toStation="157">
+				<type>link</type>
+				<weights>
+					<weight type="time">160</weight>
+				</weights>
+			</link>
+			<link fromStation="157" toStation="173">
+				<type>transfer</type>
+				<weights>
+					<weight type="time">120</weight>
+					<weight type="transfer">1</weight>
+				</weights>
+			</link>
+			<link fromStation="181" toStation="182">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="182" toStation="158">
+				<type>link</type>
+				<weights>
+					<weight type="time">150</weight>
+				</weights>
+			</link>
+			<link fromStation="158" toStation="159">
+				<type>link</type>
+				<weights>
+					<weight type="time">160</weight>
+				</weights>
+			</link>
+			<link fromStation="159" toStation="160">
+				<type>link</type>
+				<weights>
+					<weight type="time">160</weight>
+				</weights>
+			</link>
+			<link fromStation="160" toStation="161">
+				<type>link</type>
+				<weights>
+					<weight type="time">175</weight>
+				</weights>
+			</link>
+			<link fromStation="161" toStation="162">
+				<type>link</type>
+				<weights>
+					<weight type="time">165</weight>
+				</weights>
+			</link>
+			<link fromStation="162" toStation="163">
+				<type>link</type>
+				<weights>
+					<weight type="time">145</weight>
+				</weights>
+			</link>
+			<link fromStation="163" toStation="164">
+				<type>link</type>
+				<weights>
+					<weight type="time">130</weight>
+				</weights>
+			</link>
+			<link fromStation="164" toStation="165">
+				<type>link</type>
+				<weights>
+					<weight type="time">240</weight>
+				</weights>
+			</link>
+			<link fromStation="165" toStation="166">
+				<type>link</type>
+				<weights>
+					<weight type="time">160</weight>
+				</weights>
+			</link>
+			<link fromStation="166" toStation="167">
+				<type>link</type>
+				<weights>
+					<weight type="time">170</weight>
+				</weights>
+			</link>
+			<link fromStation="167" toStation="168">
+				<type>link</type>
+				<weights>
+					<weight type="time">185</weight>
+				</weights>
+			</link>
+			<link fromStation="168" toStation="169">
+				<type>link</type>
+				<weights>
+					<weight type="time">140</weight>
+				</weights>
+			</link>
+			<link fromStation="170" toStation="171">
+				<type>link</type>
+				<weights>
+					<weight type="time">175</weight>
+				</weights>
+			</link>
+			<link fromStation="171" toStation="172">
+				<type>link</type>
+				<weights>
+					<weight type="time">125</weight>
+				</weights>
+			</link>
+			<link fromStation="173" toStation="174">
+				<type>link</type>
+				<weights>
+					<weight type="time">295</weight>
+				</weights>
+			</link>
+			<link fromStation="174" toStation="175">
+				<type>link</type>
+				<weights>
+					<weight type="time">80</weight>
+				</weights>
+			</link>
+			<link fromStation="175" toStation="176">
+				<type>link</type>
+				<weights>
+					<weight type="time">105</weight>
+				</weights>
+			</link>
+			<link fromStation="176" toStation="177">
+				<type>link</type>
+				<weights>
+					<weight type="time">115</weight>
+				</weights>
+			</link>
+		</links>
+		<transfers>
+			<transfer>
+				<station>72</station>
+				<station>95</station>
+			</transfer>
+			<transfer>
+				<station>142</station>
+				<station>158</station>
+			</transfer>
+			<transfer>
+				<station>141</station>
+				<station>79</station>
+			</transfer>
+			<transfer>
+				<station>92</station>
+				<station>8</station>
+				<station>159</station>
+			</transfer>
+			<transfer>
+				<station>131</station>
+				<station>119</station>
+				<station>75</station>
+			</transfer>
+			<transfer>
+				<station>94</station>
+				<station>132</station>
+				<station>30</station>
+			</transfer>
+			<transfer>
+				<station>65</station>
+				<station>82</station>
+				<station>51</station>
+			</transfer>
+			<transfer>
+				<station>90</station>
+				<station>78</station>
+			</transfer>
+			<transfer>
+				<station>81</station>
+				<station>115</station>
+			</transfer>
+<!--ParkKult			
+			<transfer>
+				<station>71</station>
+				<station>13</station>
+			</transfer>
+-->
+			<transfer>
+				<station>117</station>
+				<station>9</station>
+			</transfer>
+			<transfer>
+				<station>172</station>
+				<station>151</station>
+			</transfer>
+			<transfer>
+				<station>157</station>
+				<station>173</station>
+			</transfer>
+			<transfer>
+				<station>74</station>
+				<station>31</station>
+			</transfer>
+			<transfer>
+				<station>6</station>
+				<station>77</station>
+			</transfer>
+			<transfer>
+				<station>58</station>
+				<station>54</station>
+			</transfer>
+			<transfer>
+				<station>130</station>
+				<station>161</station>
+			</transfer>
+			<transfer>
+<!--BigTheatre
+				<station>28</station>
+-->
+				<station>116</station>
+				<station>143</station>
+			</transfer>
+			<transfer>
+				<station>68</station>
+				<station>144</station>
+				<station>49</station>
+				<station>11</station>
+			</transfer>
+			<transfer>
+				<station>34</station>
+				<station>170</station>
+			</transfer>
+			<transfer>
+				<station>118</station>
+				<station>93</station>
+			</transfer>
+			<transfer>
+				<station>162</station>
+				<station>120</station>
+			</transfer>
+			<transfer>
+				<station>80</station>
+				<station>26</station>
+			</transfer>
+<!--BigTheatre
+			<transfer>
+				<station>29</station>
+				<station>10</station>
+				<station>48</station>
+			</transfer>
+-->
+			<transfer>
+				<station>47</station>
+				<station>76</station>
+				<station>160</station>
+			</transfer>
+			<transfer>
+				<station>73</station>
+				<station>146</station>
+			</transfer>
+		</transfers>
+	</scheme>
+	<scheme locale="en" type="language addition">
+		<options>
+			<name>Moscow</name>
+		</options>
+		<lines>
+			<line id="1">
+				<name>Sokolnicheskaya</name>
+			</line>
+			<line id="2">
+				<name>Zamoskvoretskaya</name>
+			</line>
+			<line id="3">
+				<name>Arbatsko-Pokrovskaya</name>
+			</line>
+			<line id="4">
+				<name>Filyovskaya</name>
+			</line>
+			<line id="5">
+				<name>Koltsevaya</name>
+			</line>
+			<line id="6">
+				<name>Kaluzhsko-Rizhskaya</name>
+			</line>
+			<line id="7">
+				<name>Tagansko-Krasnopresnenskaya</name>
+			</line>
+			<line id="8">
+				<name>Kalininskaya</name>
+			</line>
+			<line id="9">
+				<name>Serpukhovsko-Timiryazevskaya</name>
+			</line>
+			<line id="10">
+				<name>Lyublinskaya</name>
+			</line>
+			<line id="11">
+				<name>Kakhovskaya</name>
+			</line>
+			<line id="12">
+				<name>Butovskaya Light Metro</name>
+			</line>
+		</lines>
+		<stations>
+			<station id="1">
+				<name>
+					<text>Ulitsa Podbelskogo</text>
+				</name>
+			</station>
+			<station id="2">
+				<name>
+					<text>Cherkizovskaya</text>
+				</name>
+			</station>
+			<station id="3">
+				<name>
+					<text>Preobrazhenskaya Ploshchad</text>
+				</name>
+			</station>
+			<station id="4">
+				<name>
+					<text>Sokolniki</text>
+				</name>
+			</station>
+			<station id="5">
+				<name>
+					<text>Krasnoselskaya</text>
+				</name>
+			</station>
+			<station id="6">
+				<name>
+					<text>Komsomolskaya</text>
+					<customSchemePosition x="670.000000" y="260.000000"/>
+				</name>
+			</station>
+			<station id="7">
+				<name>
+					<text>Krasniye Vorota</text>
+				</name>
+			</station>
+			<station id="8">
+				<name>
+					<text>Chistiye Prudy</text>
+				</name>
+			</station>
+			<station id="9">
+				<name>
+					<text>Lubyanka</text>
+				</name>
+			</station>
+			<station id="10">
+				<name>
+					<text>Okhotny Ryad</text>
+				</name>
+			</station>
+			<station id="11">
+				<name>
+					<text>Biblioteka Imeni Lenina</text>
+				</name>
+			</station>
+			<station id="12">
+				<name>
+					<text>Kropotkinskaya</text>
+				</name>
+			</station>
+			<station id="13">
+				<name>
+					<text>Park Kultury</text>
+					<customSchemePosition x="331.000000" y="564.000000"/>
+				</name>
+			</station>
+			<station id="14">
+				<name>
+					<text>Frunzenskaya</text>
+				</name>
+			</station>
+			<station id="15">
+				<name>
+					<text>Sportivnaya</text>
+				</name>
+			</station>
+			<station id="16">
+				<name>
+					<text>Vorobyovy Gory</text>
+				</name>
+			</station>
+			<station id="17">
+				<name>
+					<text>Universitet</text>
+				</name>
+			</station>
+			<station id="18">
+				<name>
+					<text>Prospekt Vernadskogo</text>
+				</name>
+			</station>
+			<station id="19">
+				<name>
+					<text>Yugo-Zapadnaya</text>
+				</name>
+			</station>
+			<station id="20">
+				<name>
+					<text>Rechnoy Vokzal</text>
+				</name>
+			</station>
+			<station id="21">
+				<name>
+					<text>Vodny Stadion</text>
+				</name>
+			</station>
+			<station id="22">
+				<name>
+					<text>Voykovskaya</text>
+				</name>
+			</station>
+			<station id="23">
+				<name>
+					<text>Sokol</text>
+				</name>
+			</station>
+			<station id="24">
+				<name>
+					<text>Aeroport</text>
+				</name>
+			</station>
+			<station id="25">
+				<name>
+					<text>Dinamo</text>
+				</name>
+			</station>
+			<station id="26">
+				<name>
+					<text>Belorusskaya</text>
+				</name>
+			</station>
+<!--BigTheatre
+			<station id="27">
+				<name>
+					<text>Mayakovskaya</text>
+				</name>
+			</station>
+			<station id="28">
+				<name>
+					<text>Tverskaya</text>
+				</name>
+			</station>
+			<station id="29">
+				<name>
+					<text>Teatralnaya</text>
+				</name>
+			</station>
+-->
+			<station id="30">
+				<name>
+					<text>Novokuznetskaya</text>
+				</name>
+			</station>
+			<station id="31">
+				<name>
+					<text>Paveletskaya</text>
+					<customSchemePosition x="647.000000" y="585.000000"/>
+				</name>
+			</station>
+			<station id="32">
+				<name>
+					<text>Avtozavodskaya</text>
+				</name>
+			</station>
+			<station id="33">
+				<name>
+					<text>Kolomenskaya</text>
+				</name>
+			</station>
+			<station id="34">
+				<name>
+					<text>Kashirskaya</text>
+					<customSchemePosition x="655.000000" y="700.000000"/>
+				</name>
+			</station>
+			<station id="35">
+				<name>
+					<text>Kantemirovskaya</text>
+				</name>
+			</station>
+			<station id="36">
+				<name>
+					<text>Tsaritsyno</text>
+				</name>
+			</station>
+			<station id="37">
+				<name>
+					<text>Orekhovo</text>
+				</name>
+			</station>
+			<station id="38">
+				<name>
+					<text>Domodedovskaya</text>
+				</name>
+			</station>
+			<station id="39">
+				<name>
+					<text>Krasnogvardeyskaya</text>
+				</name>
+			</station>
+			<station id="40">
+				<name>
+					<text>Shchyolkovskaya</text>
+				</name>
+			</station>
+			<station id="41">
+				<name>
+					<text>Pervomayskaya</text>
+				</name>
+			</station>
+			<station id="42">
+				<name>
+					<text>Izmaylovskaya</text>
+				</name>
+			</station>
+			<station id="43">
+				<name>
+					<text>Partizanskaya</text>
+				</name>
+			</station>
+			<station id="44">
+				<name>
+					<text>Semyonovskaya</text>
+				</name>
+			</station>
+			<station id="45">
+				<name>
+					<text>Elektrozavodskaya</text>
+				</name>
+			</station>
+			<station id="46">
+				<name>
+					<text>Baumanskaya</text>
+				</name>
+			</station>
+			<station id="47">
+				<name>
+					<text>Kurskaya</text>
+					<customSchemePosition x="724.000000" y="429.000000"/>
+				</name>
+			</station>
+			<station id="48">
+				<name>
+					<text>Ploshchad Revolyutsii</text>
+					<customSchemePosition x="481.000000" y="457.000000"/>
+					<textLines>
+						<textLine>Ploshchad</textLine>
+						<textLine>Revolyutsii</textLine>
+					</textLines>
+				</name>
+			</station>
+			<station id="49">
+				<name>
+					<text>Arbatskaya</text>
+				</name>
+			</station>
+			<station id="50">
+				<name>
+					<text>Smolenskaya</text>
+				</name>
+			</station>
+			<station id="51">
+				<name>
+					<text>Kiyevskaya</text>
+					<customSchemePosition x="277.000000" y="380.000000"/>
+				</name>
+			</station>
+			<station id="52">
+				<name>
+					<text>Park Pobedy</text>
+				</name>
+			</station>
+			<station id="53">
+				<name>
+					<text>Slavyansky Bulvar</text>
+				</name>
+			</station>
+			<station id="54">
+				<name>
+					<text>Kuntsevskaya</text>
+					<customSchemePosition x="122.000000" y="155.000000"/>
+				</name>
+			</station>
+			<station id="55">
+				<name>
+					<text>Molodyozhnaya</text>
+				</name>
+			</station>
+			<station id="56">
+				<name>
+					<text>Krylatskoye</text>
+				</name>
+			</station>
+			<station id="57">
+				<name>
+					<text>Strogino</text>
+				</name>
+			</station>
+			<station id="178">
+				<name>
+					<text>Myakinino</text>
+				</name>
+			</station>
+			<station id="179">
+				<name>
+					<text>Volokolamskaya</text>
+				</name>
+			</station>
+			<station id="180">
+				<name>
+					<text>Mitino</text>
+				</name>
+			</station>
+			<station id="58">
+				<name sameAsForStation="54"/>
+			</station>
+			<station id="59">
+				<name>
+					<text>Pionerskaya</text>
+				</name>
+			</station>
+			<station id="60">
+				<name>
+					<text>Filyovsky Park</text>
+				</name>
+			</station>
+			<station id="61">
+				<name>
+					<text>Bagrationovskaya</text>
+				</name>
+			</station>
+			<station id="62">
+				<name>
+					<text>Fili</text>
+				</name>
+			</station>
+			<station id="63">
+				<name>
+					<text>Kutuzovskaya</text>
+				</name>
+			</station>
+			<station id="64">
+				<name>
+					<text>Studencheskaya</text>
+				</name>
+			</station>
+			<station id="65">
+				<name sameAsForStation="51"/>
+			</station>
+			<station id="66">
+				<name>
+					<text>Smolenskaya</text>
+				</name>
+			</station>
+			<station id="67">
+				<name>
+					<text>Arbatskaya</text>
+				</name>
+			</station>
+			<station id="68">
+				<name>
+					<text>Alexandrovsky Sad</text>
+				</name>
+			</station>
+			<station id="69">
+				<name>
+					<text>Vystavochnaya</text>
+				</name>
+			</station>
+			<station id="70">
+				<name>
+					<text>Mezhdunarodnaya</text>
+				</name>
+			</station>
+<!--ParkKult			
+			<station id="71">
+				<name sameAsForStation="13"/>
+			</station>
+-->
+			<station id="72">
+				<name>
+					<text>Oktyabrskaya</text>
+					<customSchemePosition x="406.000000" y="618.000000"/>
+				</name>
+			</station>
+			<station id="73">
+				<name>
+					<text>Dobryninskaya</text>
+				</name>
+			</station>
+			<station id="74">
+				<name sameAsForStation="31"/>
+			</station>
+			<station id="75">
+				<name>
+					<text>Taganskaya</text>
+					<customSchemePosition x="670.000000" y="521.000000"/>
+				</name>
+			</station>
+			<station id="76">
+				<name sameAsForStation="47"/>
+			</station>
+			<station id="77">
+				<name sameAsForStation="6"/>
+			</station>
+			<station id="78">
+				<name>
+					<text>Prospekt Mira</text>
+					<customSchemePosition x="605.000000" y="212.000000"/>
+				</name>
+			</station>
+			<station id="79">
+				<name>
+					<text>Novoslobodskaya</text>
+				</name>
+			</station>
+			<station id="80">
+				<name>
+					<text>Belorusskaya</text>
+				</name>
+			</station>
+			<station id="81">
+				<name>
+					<text>Krasnopresnenskaya</text>
+				</name>
+			</station>
+			<station id="82">
+				<name sameAsForStation="51"/>
+			</station>
+			<station id="83">
+				<name>
+					<text>Medvedkovo</text>
+				</name>
+			</station>
+			<station id="84">
+				<name>
+					<text>Babushkinskaya</text>
+				</name>
+			</station>
+			<station id="85">
+				<name>
+					<text>Sviblovo</text>
+				</name>
+			</station>
+			<station id="86">
+				<name>
+					<text>Botanichesky Sad</text>
+				</name>
+			</station>
+			<station id="87">
+				<name>
+					<text>VDNKh</text>
+				</name>
+			</station>
+			<station id="88">
+				<name>
+					<text>Alexeyevskaya</text>
+				</name>
+			</station>
+			<station id="89">
+				<name>
+					<text>Rizhskaya</text>
+				</name>
+			</station>
+			<station id="90">
+				<name sameAsForStation="78"/>
+			</station>
+			<station id="91">
+				<name>
+					<text>Sukharevskaya</text>
+				</name>
+			</station>
+			<station id="92">
+				<name>
+					<text>Turgenevskaya</text>
+				</name>
+			</station>
+			<station id="93">
+				<name>
+					<text>Kitay-Gorod</text>
+					<customSchemePosition x="605.000000" y="436.000000"/>
+				</name>
+			</station>
+			<station id="94">
+				<name>
+					<text>Tretyakovskaya</text>
+					<customSchemePosition x="548.000000" y="491.000000"/>
+				</name>
+			</station>
+			<station id="95">
+				<name sameAsForStation="72"/>
+			</station>
+			<station id="96">
+				<name>
+					<text>Shabolovskaya</text>
+				</name>
+			</station>
+			<station id="97">
+				<name>
+					<text>Leninsky Prospekt</text>
+				</name>
+			</station>
+			<station id="98">
+				<name>
+					<text>Akademicheskaya</text>
+				</name>
+			</station>
+			<station id="99">
+				<name>
+					<text>Profsoyuznaya</text>
+				</name>
+			</station>
+			<station id="100">
+				<name>
+					<text>Noviye Cheryomushki</text>
+				</name>
+			</station>
+			<station id="101">
+				<name>
+					<text>Kaluzhskaya</text>
+				</name>
+			</station>
+			<station id="102">
+				<name>
+					<text>Belyayevo</text>
+				</name>
+			</station>
+			<station id="103">
+				<name>
+					<text>Konkovo</text>
+				</name>
+			</station>
+			<station id="104">
+				<name>
+					<text>Tyoplyi Stan</text>
+				</name>
+			</station>
+			<station id="105">
+				<name>
+					<text>Yasenevo</text>
+				</name>
+			</station>
+			<station id="106">
+				<name>
+					<text>Novoyasenevskaya</text>
+				</name>
+			</station>
+			<station id="107">
+				<name>
+					<text>Planernaya</text>
+				</name>
+			</station>
+			<station id="108">
+				<name>
+					<text>Skhodnenskaya</text>
+				</name>
+			</station>
+			<station id="109">
+				<name>
+					<text>Tushinskaya</text>
+				</name>
+			</station>
+			<station id="110">
+				<name>
+					<text>Shchukinskaya</text>
+				</name>
+			</station>
+			<station id="111">
+				<name>
+					<text>Oktyabrskoye Pole</text>
+				</name>
+			</station>
+			<station id="112">
+				<name>
+					<text>Polezhaevskaya</text>
+				</name>
+			</station>
+			<station id="113">
+				<name>
+					<text>Begovaya</text>
+				</name>
+			</station>
+			<station id="114">
+				<name>
+					<text>Ulitsa 1905 Goda</text>
+				</name>
+			</station>
+			<station id="115">
+				<name>
+					<text>Barrikadnaya</text>
+				</name>
+			</station>
+			<station id="116">
+				<name>
+					<text>Pushkinskaya</text>
+				</name>
+			</station>
+			<station id="117">
+				<name>
+					<text>Kuznetsky Most</text>
+				</name>
+			</station>
+			<station id="118">
+				<name sameAsForStation="93"/>
+			</station>
+			<station id="119">
+				<name sameAsForStation="75"/>
+			</station>
+			<station id="120">
+				<name>
+					<text>Proletarskaya</text>
+				</name>
+			</station>
+			<station id="121">
+				<name>
+					<text>Volgogradsky Prospekt</text>
+				</name>
+			</station>
+			<station id="122">
+				<name>
+					<text>Tekstilshchiki</text>
+				</name>
+			</station>
+			<station id="123">
+				<name>
+					<text>Kuzminki</text>
+				</name>
+			</station>
+			<station id="124">
+				<name>
+					<text>Ryazanskiy Prospekt</text>
+				</name>
+			</station>
+			<station id="125">
+				<name>
+					<text>Vykhino</text>
+				</name>
+			</station>
+			<station id="126">
+				<name>
+					<text>Novogireevo</text>
+				</name>
+			</station>
+			<station id="127">
+				<name>
+					<text>Perovo</text>
+				</name>
+			</station>
+			<station id="128">
+				<name>
+					<text>Shosse Entuziastov</text>
+				</name>
+			</station>
+			<station id="129">
+				<name>
+					<text>Aviamotornaya</text>
+				</name>
+			</station>
+			<station id="130">
+				<name>
+					<text>Ploshchad Ilicha</text>
+				</name>
+			</station>
+			<station id="131">
+				<name>
+					<text>Marksistskaya</text>
+				</name>
+			</station>
+			<station id="132">
+				<name sameAsForStation="94"/>
+			</station>
+			<station id="133">
+				<name>
+					<text>Altufyevo</text>
+				</name>
+			</station>
+			<station id="134">
+				<name>
+					<text>Bibirevo</text>
+				</name>
+			</station>
+			<station id="135">
+				<name>
+					<text>Otradnoye</text>
+				</name>
+			</station>
+			<station id="136">
+				<name>
+					<text>Vladykino</text>
+				</name>
+			</station>
+			<station id="137">
+				<name>
+					<text>Petrovsko-Razumovskaya</text>
+					<textLines>
+						<textLine>Petrovsko-</textLine>
+						<textLine>Razumovskaya</textLine>
+					</textLines>
+				</name>
+			</station>
+			<station id="138">
+				<name>
+					<text>Timiryazevskaya</text>
+				</name>
+			</station>
+			<station id="139">
+				<name>
+					<text>Dmitrovskaya</text>
+				</name>
+			</station>
+			<station id="140">
+				<name>
+					<text>Savyolovskaya</text>
+				</name>
+			</station>
+			<station id="141">
+				<name>
+					<text>Mendeleyevskaya</text>
+				</name>
+			</station>
+			<station id="142">
+				<name>
+					<text>Tsvetnoy Bulvar</text>
+				</name>
+			</station>
+			<station id="143">
+				<name>
+					<text>Chekhovskaya</text>
+				</name>
+			</station>
+			<station id="144">
+				<name>
+					<text>Borovitskaya</text>
+				</name>
+			</station>
+			<station id="145">
+				<name>
+					<text>Polyanka</text>
+				</name>
+			</station>
+			<station id="146">
+				<name>
+					<text>Serpukhovskaya</text>
+				</name>
+			</station>
+			<station id="147">
+				<name>
+					<text>Tulskaya</text>
+				</name>
+			</station>
+			<station id="148">
+				<name>
+					<text>Nagatinskaya</text>
+				</name>
+			</station>
+			<station id="149">
+				<name>
+					<text>Nagornaya</text>
+				</name>
+			</station>
+			<station id="150">
+				<name>
+					<text>Nakhimovsky Prospekt</text>
+				</name>
+			</station>
+			<station id="151">
+				<name>
+					<text>Sevastopolskaya</text>
+				</name>
+			</station>
+			<station id="152">
+				<name>
+					<text>Chertanovskaya</text>
+				</name>
+			</station>
+			<station id="153">
+				<name>
+					<text>Yuzhnaya</text>
+				</name>
+			</station>
+			<station id="154">
+				<name>
+					<text>Prazhskaya</text>
+				</name>
+			</station>
+			<station id="155">
+				<name>
+					<text>Ulitsa Akademika Yangelya</text>
+					<textLines>
+						<textLine>Ulitsa</textLine>
+						<textLine>Akademika Yangelya</textLine>
+					</textLines>
+					<customSchemePosition/>
+				</name>
+			</station>
+			<station id="156">
+				<name>
+					<text>Annino</text>
+				</name>
+			</station>
+			<station id="157">
+				<name>
+					<text>Bulvar Dmitriya Donskogo</text>
+				</name>
+			</station>
+			<station id="181">
+				<name>
+					<text>Maryina Roshcha</text>
+				</name>
+			</station>
+			<station id="182">
+				<name>
+					<text>Dostoyevskaya</text>
+				</name>
+			</station>
+			<station id="158">
+				<name>
+					<text>Trubnaya</text>
+				</name>
+			</station>
+			<station id="159">
+				<name>
+					<text>Sretensky Bulvar</text>
+				</name>
+			</station>
+			<station id="160">
+				<name>
+					<text>Chkalovskaya</text>
+				</name>
+			</station>
+			<station id="161">
+				<name>
+					<text>Rimskaya</text>
+				</name>
+			</station>
+			<station id="162">
+				<name>
+					<text>Krestyanskaya Zastava</text>
+				</name>
+			</station>
+			<station id="163">
+				<name>
+					<text>Dubrovka</text>
+				</name>
+			</station>
+			<station id="164">
+				<name>
+					<text>Kozhukhovskaya</text>
+				</name>
+			</station>
+			<station id="165">
+				<name>
+					<text>Pechatniki</text>
+				</name>
+			</station>
+			<station id="166">
+				<name>
+					<text>Volzhskaya</text>
+				</name>
+			</station>
+			<station id="167">
+				<name>
+					<text>Lyublino</text>
+				</name>
+			</station>
+			<station id="168">
+				<name>
+					<text>Bratislavskaya</text>
+				</name>
+			</station>
+			<station id="169">
+				<name>
+					<text>Maryino</text>
+				</name>
+			</station>
+			<station id="170">
+				<name sameAsForStation="34"/>
+			</station>
+			<station id="171">
+				<name>
+					<text>Varshavskaya</text>
+				</name>
+			</station>
+			<station id="172">
+				<name>
+					<text>Kakhovskaya</text>
+				</name>
+			</station>
+			<station id="173">
+				<name>
+					<text>Ulitsa Starokachalovskaya</text>
+				</name>
+			</station>
+			<station id="174">
+				<name>
+					<text>Ulitsa Skobelevskaya</text>
+				</name>
+			</station>
+			<station id="175">
+				<name>
+					<text>Bulvar Admirala Ushakova</text>
+				</name>
+			</station>
+			<station id="176">
+				<name>
+					<text>Ulitsa Gorchakova</text>
+				</name>
+			</station>
+			<station id="177">
+				<name>
+					<text>Buninskaya Alleya</text>
+				</name>
+			</station>
+		</stations>
+	</scheme>
+</scheme-pack>

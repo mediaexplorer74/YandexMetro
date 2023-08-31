@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="d">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Yandex.Maps;component/Themes/PushPin.xaml" />
+        <ResourceDictionary Source="/Yandex.Maps;component/Themes/Map.xaml" />
+        <ResourceDictionary Source="/Yandex.Maps;component/Themes/StaticMap.xaml" />
+        <ResourceDictionary Source="/Yandex.Maps;component/Themes/MapShapes.xaml" />
+        <ResourceDictionary Source="/Yandex.Maps;component/Themes/MapItemsControl.xaml" />
+        <ResourceDictionary Source="/Yandex.Maps;component/Themes/ScaleRuleControl.xaml" />
+        <ResourceDictionary Source="/Yandex.Maps;component/Themes/PositionControl.xaml" />
+        <ResourceDictionary Source="/Yandex.Maps;component/Themes/PositionAccuracyControl.xaml" />
+    </ResourceDictionary.MergedDictionaries>    
+</ResourceDictionary>

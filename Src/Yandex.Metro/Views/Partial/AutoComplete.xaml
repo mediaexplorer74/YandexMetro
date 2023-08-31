@@ -1,0 +1,158 @@
+﻿<UserControl x:Class="Yandex.Metro.Views.Partial.AutoComplete"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             xmlns:Control="clr-namespace:Y.UI.Common.Control;assembly=Y.UI.Common" mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480"
+    DataContext="{Binding Main, Source={StaticResource V}}" >
+
+    <UserControl.Resources>
+        <Style TargetType="TextBox" >
+            <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="CaretBrush" Value="{StaticResource AccentColorBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid Background="Transparent">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Disabled" />
+                                    <VisualState x:Name="ReadOnly" />
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="EnabledBorder" Background="Transparent" Margin="12,12,12,10" >
+                                <ContentControl x:Name="ContentElement" BorderThickness="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource BackWithDefaultOpacityColorBrush}"
+         Visibility="Collapsed">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="106" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="ShownEmpty">
+                    <Storyboard Completed="ShownStoryboardCompleted">
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0.55" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="History" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Shown">
+                    <Storyboard Completed="ShownStoryboardCompleted">
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0.55" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="History" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="ShownFast">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="History" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Hidden">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Search">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Suggest" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="SearchEmpty">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SuggestEmpty" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid Margin="22,34,10,2" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="2,13,0,0" Text="{Binding Main.IsFromDirection, Source={StaticResource V}, Converter={StaticResource DirectionTitleConverter}}" Style="{StaticResource TextBlock23Normal}" />
+            <TextBox Name="txtSearch" Grid.Column="1" BorderBrush="Transparent" BorderThickness="0"
+                     TextChanged="TxtSearchTextChanged" LostFocus="TxtSearchLostFocus" KeyUp="TxtSearch_OnKeyUp">
+            </TextBox>
+            <Control:RoundButton Name="btnOpen" Grid.ColumnSpan="3" toolkit:TiltEffect.IsTiltEnabled="True"
+                                                 HorizontalAlignment="Right"
+                                                 VerticalAlignment="Bottom"
+                                                 ImageSource="/Images/plus.png" ImageMargin="12,16,12,12"
+                                 BorderBrush="White" Foreground="White" 
+                                                 Width="50" Height="54" Margin="0, 1, 0, -1" 
+                                 Click="OpenStationClick" />
+             <Control:RoundButton Name="btnCancel" Grid.ColumnSpan="3" HorizontalAlignment="Right"
+                                                 VerticalAlignment="Bottom"
+                                  BorderBrush="White" Foreground="White" Visibility="Collapsed"
+                                                 ImageSource="/Images/cross.png" ImageMargin="12,16,12,12"
+                                                 Width="50" Height="54" Margin="0, 1, 0, -1" 
+                                                 Click="BtnCancel_OnClick"
+                                                 />
+            <Line Grid.ColumnSpan="3" Margin="2,0,0,0" X2="432" Stroke="White" StrokeThickness="1" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Y1="0.5" Y2="0.5" />
+        </Grid>
+        <ScrollViewer Background="White" Name="Suggest" Grid.Row="1"  Margin="24,0,24,0" Height="350" Visibility="Collapsed">
+            <ItemsControl Margin="0,10,0,10" ItemsSource="{Binding Main.SearchStation, Source={StaticResource V}}" 
+                          ItemTemplate="{StaticResource SearchList_Template}" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
+        <Border Name="History" Background="White" Grid.Row="1"  Margin="24,0,24,0" Visibility="Collapsed">
+            <ItemsControl Margin="0,10,0,10" ItemsSource="{Binding Main.RoutesHistory, Source={StaticResource V}}" 
+                          ItemTemplate="{StaticResource RouteHistory_ItemTemplate}" />
+        </Border>
+        <Border Grid.Row="1" Margin="24,0,24,0" Name="SuggestEmpty" Background="White" Visibility="Collapsed">
+            <TextBlock Margin="0,10,0,10" Text="{Binding Localization.Resources.Search_Empty, Source={StaticResource V}}" Style="{StaticResource TextBlock23Black}" HorizontalAlignment="Center"/>
+        </Border>
+    </Grid>
+
+</UserControl>

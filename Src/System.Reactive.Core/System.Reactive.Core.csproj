@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\System.Reactive.Core.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E276B659-4B02-4B99-A82B-81F32CAC08B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>System.Reactive.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <ApplicationVersion>2.0.20823.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>System</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>lib\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ObservableExtensions.cs" />
+    <Compile Include="Lazy`1.cs" />
+    <Compile Include="Reactive\Observer.cs" />
+    <Compile Include="Reactive\ObservableBase`1.cs" />
+    <Compile Include="Reactive\AnonymousObservable`1.cs" />
+    <Compile Include="Reactive\ObserverBase`1.cs" />
+    <Compile Include="Reactive\AnonymousObserver`1.cs" />
+    <Compile Include="Reactive\AnonymousSafeObserver`1.cs" />
+    <Compile Include="Reactive\IProducer`1.cs" />
+    <Compile Include="Reactive\Producer`1.cs" />
+    <Compile Include="Reactive\Sink`1.cs" />
+    <Compile Include="Reactive\AsyncLockObserver`1.cs" />
+    <Compile Include="Reactive\CheckedObserver`1.cs" />
+    <Compile Include="Reactive\Constants_Core.cs" />
+    <Compile Include="Reactive\AutoDetachObserver`1.cs" />
+    <Compile Include="Reactive\ExceptionHelpers.cs" />
+    <Compile Include="Reactive\ImmutableList`1.cs" />
+    <Compile Include="Reactive\NopObserver`1.cs" />
+    <Compile Include="Reactive\DoneObserver`1.cs" />
+    <Compile Include="Reactive\DisposedObserver`1.cs" />
+    <Compile Include="Reactive\Observer`1.cs" />
+    <Compile Include="Reactive\PriorityQueue`1.cs" />
+    <Compile Include="Reactive\SafeObserver`1.cs" />
+    <Compile Include="Reactive\ScheduledObserver`1.cs" />
+    <Compile Include="Reactive\ObserveOnObserver`1.cs" />
+    <Compile Include="Reactive\Stubs`1.cs" />
+    <Compile Include="Reactive\Stubs.cs" />
+    <Compile Include="Reactive\TimerStubs.cs" />
+    <Compile Include="Reactive\SynchronizedObserver`1.cs" />
+    <Compile Include="Reactive\NotificationKind.cs" />
+    <Compile Include="Reactive\Notification`1.cs" />
+    <Compile Include="Reactive\Notification.cs" />
+    <Compile Include="Reactive\Unit.cs" />
+    <Compile Include="Reactive\Strings_Core.cs" />
+    <Compile Include="Reactive\Concurrency\AsyncLock.cs" />
+    <Compile Include="Reactive\Concurrency\SchedulerWrapper.cs" />
+    <Compile Include="Reactive\Concurrency\CatchScheduler`1.cs" />
+    <Compile Include="Reactive\Concurrency\ConcurrencyAbstractionLayer.cs" />
+    <Compile Include="Reactive\Concurrency\IConcurrencyAbstractionLayer.cs" />
+    <Compile Include="Reactive\Concurrency\DefaultConcurrencyAbstractionLayer.cs" />
+    <Compile Include="Reactive\Concurrency\Scheduler.cs" />
+    <Compile Include="Reactive\Concurrency\DisableOptimizationsScheduler.cs" />
+    <Compile Include="Reactive\Concurrency\LocalScheduler.cs" />
+    <Compile Include="Reactive\Concurrency\CurrentThreadScheduler.cs" />
+    <Compile Include="Reactive\Concurrency\ImmediateScheduler.cs" />
+    <Compile Include="Reactive\Concurrency\ScheduledItem`1.cs" />
+    <Compile Include="Reactive\Concurrency\ScheduledItem`2.cs" />
+    <Compile Include="Reactive\Concurrency\SchedulerDefaults.cs" />
+    <Compile Include="Reactive\Concurrency\SchedulerQueue`1.cs" />
+    <Compile Include="Reactive\Concurrency\DefaultStopwatch.cs" />
+    <Compile Include="Reactive\Concurrency\Synchronization.cs" />
+    <Compile Include="Reactive\Concurrency\ObserveOn`1.cs" />
+    <Compile Include="Reactive\Concurrency\Synchronize`1.cs" />
+    <Compile Include="Reactive\Concurrency\SynchronizationContextScheduler.cs" />
+    <Compile Include="Reactive\Concurrency\DefaultScheduler.cs" />
+    <Compile Include="Reactive\Concurrency\SynchronizationContextExtensions.cs" />
+    <Compile Include="Reactive\Disposables\AnonymousDisposable.cs" />
+    <Compile Include="Reactive\Disposables\BooleanDisposable.cs" />
+    <Compile Include="Reactive\Disposables\CompositeDisposable.cs" />
+    <Compile Include="Reactive\Disposables\ContextDisposable.cs" />
+    <Compile Include="Reactive\Disposables\DefaultDisposable.cs" />
+    <Compile Include="Reactive\Disposables\Disposable.cs" />
+    <Compile Include="Reactive\Disposables\MultipleAssignmentDisposable.cs" />
+    <Compile Include="Reactive\Disposables\RefCountDisposable.cs" />
+    <Compile Include="Reactive\Disposables\ScheduledDisposable.cs" />
+    <Compile Include="Reactive\Disposables\SerialDisposable.cs" />
+    <Compile Include="Reactive\Disposables\SingleAssignmentDisposable.cs" />
+    <Compile Include="Reactive\PlatformServices\NamespaceDoc.cs" />
+    <Compile Include="Reactive\PlatformServices\IExceptionServices.cs" />
+    <Compile Include="Reactive\PlatformServices\DefaultExceptionServices.cs" />
+    <Compile Include="Reactive\PlatformServices\HostLifecycleService.cs" />
+    <Compile Include="Reactive\PlatformServices\IHostLifecycleNotifications.cs" />
+    <Compile Include="Reactive\PlatformServices\HostSuspendingEventArgs.cs" />
+    <Compile Include="Reactive\PlatformServices\HostResumingEventArgs.cs" />
+    <Compile Include="Reactive\PlatformServices\IPlatformEnlightenmentProvider.cs" />
+    <Compile Include="Reactive\PlatformServices\PlatformEnlightenmentProvider.cs" />
+    <Compile Include="Reactive\PlatformServices\DefaultPlatformEnlightenmentProvider.cs" />
+    <Compile Include="Reactive\PlatformServices\SystemClock.cs" />
+    <Compile Include="Reactive\PlatformServices\ISystemClock.cs" />
+    <Compile Include="Reactive\PlatformServices\INotifySystemClockChanged.cs" />
+    <Compile Include="Reactive\PlatformServices\SystemClockChangedEventArgs.cs" />
+    <Compile Include="Reactive\PlatformServices\DefaultSystemClock.cs" />
+    <Compile Include="Reactive\PlatformServices\PeriodicTimerSystemClockMonitor.cs" />
+    <Compile Include="Reactive\PlatformServices\DefaultSystemClockMonitor.cs" />
+    <Compile Include="Reactive\Threading\Semaphore.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reactive\Strings_Core.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

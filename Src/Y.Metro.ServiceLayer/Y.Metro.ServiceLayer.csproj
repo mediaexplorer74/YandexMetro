@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Y.Metro.ServiceLayer.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C44B0616-4D0A-49B3-BA94-98439E73D8AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Y.Metro.ServiceLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="Y.Common">
+      <HintPath>lib\Y.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="boardPositions.cs" />
+    <Compile Include="boardPositionsPos.cs" />
+    <Compile Include="schemepack.cs" />
+    <Compile Include="schemepackScheme.cs" />
+    <Compile Include="schemepackSchemeOptions.cs" />
+    <Compile Include="schemepackSchemeLinesLine.cs" />
+    <Compile Include="schemepackSchemeStationsStation.cs" />
+    <Compile Include="schemepackSchemeLinksLink.cs" />
+    <Compile Include="schemepackSchemeTransfersTransferStation.cs" />
+    <Compile Include="schemepackSchemeOptionsSize.cs" />
+    <Compile Include="schemepackSchemeOptionsWorkTime.cs" />
+    <Compile Include="schemepackSchemeOptionsDefaultRegion.cs" />
+    <Compile Include="schemepackSchemeOptionsInitialPosition.cs" />
+    <Compile Include="BaseObject.cs" />
+    <Compile Include="schemepackSchemeStationsStationSchemePosition.cs" />
+    <Compile Include="schemepackSchemeStationsStationGeoCoordinates.cs" />
+    <Compile Include="schemepackSchemeStationsStationName.cs" />
+    <Compile Include="schemepackSchemeStationsStationBoardInfo.cs" />
+    <Compile Include="schemepackSchemeStationsStationOldNamesOldName.cs" />
+    <Compile Include="schemepackSchemeStationsStationWeightsWeight.cs" />
+    <Compile Include="schemepackSchemeLinksLinkWeightsWeight.cs" />
+    <Compile Include="schemepackSchemeLinksLinkCustomDrawCustomDrawEleme.cs" />
+    <Compile Include="schemepackSchemeStationsStationNameTextLinesTextLi.cs" />
+    <Compile Include="schemepackSchemeStationsStationNameCustomSchemePos.cs" />
+    <Compile Include="schemepackSchemeTransfersTransfer.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\AppResourcesHelper.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\SchemeReader.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\ServiceConstants.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\BaseEventArgs.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\RegistrationEventArgs.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\SchemeEventArgs.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\ServiceProvider.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Common\ServicesHelper.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Entities\Favorites.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Entities\LanguageCode.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Entities\Language.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Entities\ShortRoute.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Entities\Scheme.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Entities\SchemeMatrix.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Entities\SchemeMeta.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Enums\SchemeType.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Enums\TimeType.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Generated\startup.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Generated\startupSchemesScheme.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="generated\moscowmetroschemesample.xml" />
+    <Resource Include="scheme\scheme_1_en.js" />
+    <Resource Include="scheme\scheme_1_ru.js" />
+    <Resource Include="scheme\scheme_13_be.js" />
+    <Resource Include="scheme\scheme_13_en.js" />
+    <Resource Include="scheme\scheme_13_ru.js" />
+    <Resource Include="scheme\scheme_2_en.js" />
+    <Resource Include="scheme\scheme_2_ru.js" />
+    <Resource Include="scheme\scheme_8_en.js" />
+    <Resource Include="scheme\scheme_8_ru.js" />
+    <Resource Include="scheme\scheme_8_uk.js" />
+    <Resource Include="scheme\scheme_9_en.js" />
+    <Resource Include="scheme\scheme_9_ru.js" />
+    <Resource Include="scheme\scheme_9_uk.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

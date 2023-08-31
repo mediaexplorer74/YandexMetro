@@ -1,0 +1,89 @@
+﻿<y:MetroPage
+    x:Class="Yandex.Metro.Views.SelectFavorites"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:y="clr-namespace:Yandex.Metro.Logic"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" 
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.Opacity="0"
+    Margin="{StaticResource PageWithTrayMargin}"
+    DataContext="{Binding Main, Source={StaticResource V}}">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.Resources>
+            <Style TargetType="controls:PivotItem">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Margin" Value="0,28,-280,0"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="controls:PivotItem">
+                            <Grid 
+                        CacheMode="BitmapCache"
+                        Background="{TemplateBinding Background}" 
+                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}" 
+                        VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                                <Grid.RenderTransform>
+                                    <TranslateTransform X="0"/>
+                                </Grid.RenderTransform>
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="Pivot">
+                                        <VisualState x:Name="Right"/>
+                                        <VisualState x:Name="Left"/>
+                                        <VisualState x:Name="Center"/>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter 
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Content="{TemplateBinding Content}"
+                            Margin="{TemplateBinding Padding}"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <controls:Pivot Title="{Binding Localization.Resources.Favorite_Title, Source={StaticResource V}, Converter={StaticResource ToUpperCaseConverter}}">
+            <controls:Pivot.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" Style="{StaticResource TextBlock23SemiBold}"/>
+                </DataTemplate>
+            </controls:Pivot.TitleTemplate>
+            <controls:PivotItem Header="{Binding Localization.Resources.Station_AZ, Source={StaticResource V}}" >
+                <toolkit:LongListSelector Background="Transparent" toolkit:TiltEffect.IsTiltEnabled="True"
+                                      ItemsSource="{Binding StationByName}"
+                                      ItemTemplate="{StaticResource Favorite_ItemTemplateStation}"
+                                      GroupHeaderTemplate="{StaticResource LongListSelector_GroupHeaderTemplate}" 
+                                      GroupItemTemplate="{StaticResource LongListSelector_GroupItemTemplate}"
+                                      SelectionChanged="LongListSelector_OnSelectionChanged">
+                    <toolkit:LongListSelector.GroupItemsPanel>
+                        <ItemsPanelTemplate>
+                            <toolkit:WrapPanel toolkit:TiltEffect.IsTiltEnabled="True"/>
+                        </ItemsPanelTemplate>
+                    </toolkit:LongListSelector.GroupItemsPanel>
+                </toolkit:LongListSelector>
+            </controls:PivotItem>
+            <controls:PivotItem Header="{Binding Localization.Resources.Station_Lines, Source={StaticResource V}}" >
+                <toolkit:LongListSelector Background="Transparent" toolkit:TiltEffect.IsTiltEnabled="True"
+                                      ItemsSource="{Binding StationByLine}"
+                                      ItemTemplate="{StaticResource Favorite_ItemTemplateLines}"
+                                      GroupHeaderTemplate="{StaticResource LongListSelector_GroupHeaderTemplateLine}" 
+                                      GroupItemTemplate="{StaticResource LongListSelector_GroupItemTemplateLine}" 
+                                      SelectionChanged="LongListSelector_OnSelectionChanged">
+                    <toolkit:LongListSelector.GroupItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel toolkit:TiltEffect.IsTiltEnabled="True"/>
+                        </ItemsPanelTemplate>
+                    </toolkit:LongListSelector.GroupItemsPanel>
+                </toolkit:LongListSelector>
+            </controls:PivotItem>
+
+        </controls:Pivot>
+    </Grid>
+</y:MetroPage>

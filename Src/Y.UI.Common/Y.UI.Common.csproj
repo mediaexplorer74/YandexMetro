@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Y.UI.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{379BE86D-B896-4103-8953-014A9A315C71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Y.UI.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <ApplicationVersion>1.0.6124.20830</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Y.UI.Common</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight.WP71">
+      <HintPath>lib\GalaSoft.MvvmLight.WP71.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls">
+      <HintPath>lib\Microsoft.Phone.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>lib\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>lib\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="System\Windows\FrameworkElementExtensions.cs" />
+    <Compile Include="System\Windows\Controls\VisualTreeHelperExtensions.cs" />
+    <Compile Include="ApplicationActivatedMessage.cs" />
+    <Compile Include="CommonConstants.cs" />
+    <Compile Include="GroupById`1.cs" />
+    <Compile Include="GroupByTitle`1.cs" />
+    <Compile Include="Navigate.cs" />
+    <Compile Include="BasePage.cs" />
+    <Compile Include="PageNavigationService.cs" />
+    <Compile Include="StateManager.cs" />
+    <Compile Include="BaseApplicationService`2.cs" />
+    <Compile Include="WeakDelegateCommand.cs" />
+    <Compile Include="WeakDelegateCommand`1.cs" />
+    <Compile Include="WeakEventHandlerManager.cs" />
+    <Compile Include="Behaviors\ExecuteCommandOnEnterAutoComplete.cs" />
+    <Compile Include="Behaviors\ExecuteCommandOnEnter.cs" />
+    <Compile Include="Behaviors\FlyInOutImageBehavior.cs" />
+    <Compile Include="Behaviors\FocusBehavior.cs" />
+    <Compile Include="Behaviors\SmartTrimmingTextBlockBehavior.cs" />
+    <Compile Include="Behaviors\TriggerAnimationBehavior.cs" />
+    <Compile Include="Behaviors\UpdateBindingOnTextChange.cs" />
+    <Compile Include="Control\BindableApplicationBar.cs" />
+    <Compile Include="Control\BindableApplicationBarIconButton.cs" />
+    <Compile Include="Control\BindableApplicationBarMenuItem.cs" />
+    <Compile Include="Control\BindableApplicationBarExtensions.cs" />
+    <Compile Include="Control\BindableApplicationMenuExtensions.cs" />
+    <Compile Include="Control\EmptyContentControl.cs" />
+    <Compile Include="Control\FastLoadPivot.cs" />
+    <Compile Include="Control\ImplicitDataTemplateControl.cs" />
+    <Compile Include="Control\InvertButton.cs" />
+    <Compile Include="Control\ReadonlyRating.cs" />
+    <Compile Include="Control\RoundButton.cs" />
+    <Compile Include="Control\TapButton.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\ToUpperCaseConverter.cs" />
+    <Compile Include="Converters\RelativeTimeConverter.cs" />
+    <Compile Include="Converters\DateTimeFormatHelper.cs" />
+    <Compile Include="Converters\ToLowCaseConverter.cs" />
+    <Compile Include="Converters\DebugConverter.cs" />
+    <Compile Include="Converters\EqualityToBoolConverter.cs" />
+    <Compile Include="Converters\EqualsToVisibilityConverter.cs" />
+    <Compile Include="Converters\InvertBoolConverter.cs" />
+    <Compile Include="Converters\StringNullToVisibilityConverter.cs" />
+    <Compile Include="Converters\TextPrependConverter.cs" />
+    <Compile Include="Extensions\ListBoxExtension.cs" />
+    <Compile Include="Extensions\LongListSelectorExtension.cs" />
+    <Compile Include="Extensions\TaskHelper.cs" />
+    <Compile Include="Extensions\TextExtensions.cs" />
+    <Compile Include="Resources\RelativeTimeConverter\ControlResources.cs" />
+    <Compile Include="Utility\AppSettingsProvider.cs" />
+    <Compile Include="Utility\DispatcherHelper.cs" />
+    <Compile Include="Utility\DoubleUtil.cs" />
+    <Compile Include="Utility\InteractivityUtility.cs" />
+    <Compile Include="Utility\Json.cs" />
+    <Compile Include="Utility\ResourcesHelper.cs" />
+    <Compile Include="Utility\StateKeeper.cs" />
+    <Compile Include="Utility\Theme.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="themes\generic.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RelativeTimeConverter\ControlResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,16 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: Yandex.Maps.PositionManager.Interfaces.ITouchHandlerInitializable
+// Assembly: Yandex.Maps, Version=1.2.4721.1342, Culture=neutral, PublicKeyToken=null
+// MVID: 33D344FB-313B-41ED-9CE8-725920EAA345
+// Assembly location: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Yandex.Maps.dll
+
+using JetBrains.Annotations;
+using Yandex.Input.Interfaces;
+
+namespace Yandex.Maps.PositionManager.Interfaces
+{
+  internal interface ITouchHandlerInitializable
+  {
+    void Initialize([NotNull] ITouchHandler touchHandler);
+  }
+}

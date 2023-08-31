@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newtonsoft.Json", "Newtonsoft.Json.csproj", "{A3F6102A-D054-44D2-8A91-92C4943979AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3F6102A-D054-44D2-8A91-92C4943979AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F6102A-D054-44D2-8A91-92C4943979AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F6102A-D054-44D2-8A91-92C4943979AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F6102A-D054-44D2-8A91-92C4943979AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

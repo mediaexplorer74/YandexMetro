@@ -1,0 +1,66 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:maps="clr-namespace:Yandex.Maps"
+                    xmlns:contentLayers="clr-namespace:Yandex.Maps.ContentLayers"
+                    xmlns:ya="http://schemas.yandex.ru/sl/" 
+                    xmlns:resources="clr-namespace:Yandex.Maps.Resources"
+                    mc:Ignorable="d">
+
+    <resources:ResourceWrapper x:Key="ResourceWrapper"/>
+
+    <Style TargetType="maps:StaticMap">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="maps:StaticMap">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup>
+                                <VisualState x:Name="TwilightModeDisabled"/>
+                                <VisualState x:Name="TwilightModeEnabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundLayer" Storyboard.TargetProperty="TileImageSourceUri">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="/Yandex.Maps;component/Resources/ru-RU/map_background_twilight_tile.png"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <ya:TiledImagePanel x:Name="BackgroundLayer" TileImageSourceUri="/Yandex.Maps;component/Resources/ru-RU/map_background_tile.png"
+                                                                               TileImageWidth="128"
+                                                                               TileImageHeight="128"
+                                                                               HorizontalPeriod="16"
+                                                                               VerticalPeriod="16">
+                        </ya:TiledImagePanel>
+                        <maps:MapLayer x:Name="RootLayer">
+                            <maps:MapLayer.RenderTransform>
+                                <TranslateTransform />
+                            </maps:MapLayer.RenderTransform>
+                            <contentLayers:LayerManager x:Name="LayerManager" Canvas.ZIndex="10">
+                                <contentLayers:LayerManager.RenderTransform>
+                                    <MatrixTransform />
+                                </contentLayers:LayerManager.RenderTransform>
+                                <contentLayers:MapContentLayer x:Name="MapContentLayer" ZoomLevelsToDisplaySimultaneously="0"/>
+                            </contentLayers:LayerManager>
+                            <!-- The layer to hold additional internal data. -->
+                            <maps:MapLayer x:Name="ContentLayer" Canvas.ZIndex="30">
+                                <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </maps:MapLayer>
+                        </maps:MapLayer>
+
+                        <Image 
+                            Source="{Binding AppResources.YandexLogoImageResource, Source={StaticResource ResourceWrapper}, Mode=OneTime}"
+                            Stretch="None"
+                            Margin="12"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Bottom"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Newtonsoft.Json.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3F6102A-D054-44D2-8A91-92C4943979AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Newtonsoft.Json</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
+    <ApplicationVersion>4.0.3.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Newtonsoft.Json</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="System\Runtime\Serialization\Formatters\FormatterAssemblyStyle.cs" />
+    <Compile Include="JsonReader.cs" />
+    <Compile Include="JsonWriter.cs" />
+    <Compile Include="ConstructorHandling.cs" />
+    <Compile Include="JsonConverter.cs" />
+    <Compile Include="DefaultValueHandling.cs" />
+    <Compile Include="IJsonLineInfo.cs" />
+    <Compile Include="JsonContainerAttribute.cs" />
+    <Compile Include="JsonArrayAttribute.cs" />
+    <Compile Include="JsonConstructorAttribute.cs" />
+    <Compile Include="JsonConvert.cs" />
+    <Compile Include="JsonConverterAttribute.cs" />
+    <Compile Include="JsonConverterCollection.cs" />
+    <Compile Include="JsonIgnoreAttribute.cs" />
+    <Compile Include="JsonObjectAttribute.cs" />
+    <Compile Include="JsonPropertyAttribute.cs" />
+    <Compile Include="JsonReaderException.cs" />
+    <Compile Include="JsonSerializationException.cs" />
+    <Compile Include="JsonSerializer.cs" />
+    <Compile Include="JsonSerializerSettings.cs" />
+    <Compile Include="JsonTextReader.cs" />
+    <Compile Include="JsonTextWriter.cs" />
+    <Compile Include="JsonToken.cs" />
+    <Compile Include="JsonValidatingReader.cs" />
+    <Compile Include="WriteState.cs" />
+    <Compile Include="Formatting.cs" />
+    <Compile Include="JsonWriterException.cs" />
+    <Compile Include="MemberSerialization.cs" />
+    <Compile Include="MissingMemberHandling.cs" />
+    <Compile Include="NullValueHandling.cs" />
+    <Compile Include="ObjectCreationHandling.cs" />
+    <Compile Include="PreserveReferencesHandling.cs" />
+    <Compile Include="ReferenceLoopHandling.cs" />
+    <Compile Include="Required.cs" />
+    <Compile Include="SerializationBinder.cs" />
+    <Compile Include="TypeNameHandling.cs" />
+    <Compile Include="Bson\BsonBinaryType.cs" />
+    <Compile Include="Bson\BsonBinaryWriter.cs" />
+    <Compile Include="Bson\BsonObjectId.cs" />
+    <Compile Include="Bson\BsonReader.cs" />
+    <Compile Include="Bson\BsonToken.cs" />
+    <Compile Include="Bson\BsonObject.cs" />
+    <Compile Include="Bson\BsonArray.cs" />
+    <Compile Include="Bson\BsonValue.cs" />
+    <Compile Include="Bson\BsonString.cs" />
+    <Compile Include="Bson\BsonRegex.cs" />
+    <Compile Include="Bson\BsonProperty.cs" />
+    <Compile Include="Bson\BsonType.cs" />
+    <Compile Include="Bson\BsonWriter.cs" />
+    <Compile Include="Converters\BinaryConverter.cs" />
+    <Compile Include="Converters\BsonObjectIdConverter.cs" />
+    <Compile Include="Converters\CustomCreationConverter`1.cs" />
+    <Compile Include="Converters\DateTimeConverterBase.cs" />
+    <Compile Include="Converters\IsoDateTimeConverter.cs" />
+    <Compile Include="Converters\JavaScriptDateTimeConverter.cs" />
+    <Compile Include="Converters\JsonDateTimeSerializationMode.cs" />
+    <Compile Include="Converters\KeyValuePairConverter.cs" />
+    <Compile Include="Converters\RegexConverter.cs" />
+    <Compile Include="Converters\StringEnumConverter.cs" />
+    <Compile Include="Converters\IXmlNode.cs" />
+    <Compile Include="Converters\IXmlDocument.cs" />
+    <Compile Include="Converters\IXmlDeclaration.cs" />
+    <Compile Include="Converters\IXmlElement.cs" />
+    <Compile Include="Converters\XObjectWrapper.cs" />
+    <Compile Include="Converters\XDeclarationWrapper.cs" />
+    <Compile Include="Converters\XContainerWrapper.cs" />
+    <Compile Include="Converters\XDocumentWrapper.cs" />
+    <Compile Include="Converters\XTextWrapper.cs" />
+    <Compile Include="Converters\XCommentWrapper.cs" />
+    <Compile Include="Converters\XProcessingInstructionWrapper.cs" />
+    <Compile Include="Converters\XAttributeWrapper.cs" />
+    <Compile Include="Converters\XElementWrapper.cs" />
+    <Compile Include="Converters\XmlNodeConverter.cs" />
+    <Compile Include="Linq\Extensions.cs" />
+    <Compile Include="Linq\IJEnumerable`1.cs" />
+    <Compile Include="Linq\JToken.cs" />
+    <Compile Include="Linq\JContainer.cs" />
+    <Compile Include="Linq\JArray.cs" />
+    <Compile Include="Linq\JConstructor.cs" />
+    <Compile Include="Linq\JEnumerable`1.cs" />
+    <Compile Include="Linq\JObject.cs" />
+    <Compile Include="Linq\JPath.cs" />
+    <Compile Include="Linq\JProperty.cs" />
+    <Compile Include="Linq\JValue.cs" />
+    <Compile Include="Linq\JRaw.cs" />
+    <Compile Include="Linq\JTokenEqualityComparer.cs" />
+    <Compile Include="Linq\JTokenReader.cs" />
+    <Compile Include="Linq\JTokenType.cs" />
+    <Compile Include="Linq\JTokenWriter.cs" />
+    <Compile Include="Serialization\CachedAttributeGetter`1.cs" />
+    <Compile Include="Serialization\IContractResolver.cs" />
+    <Compile Include="Serialization\DefaultContractResolver.cs" />
+    <Compile Include="Serialization\CamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Serialization\ResolverContractKey.cs" />
+    <Compile Include="Serialization\IReferenceResolver.cs" />
+    <Compile Include="Serialization\DefaultReferenceResolver.cs" />
+    <Compile Include="Serialization\DefaultSerializationBinder.cs" />
+    <Compile Include="Serialization\ErrorContext.cs" />
+    <Compile Include="Serialization\ErrorEventArgs.cs" />
+    <Compile Include="Serialization\IValueProvider.cs" />
+    <Compile Include="Serialization\JsonContract.cs" />
+    <Compile Include="Serialization\JsonArrayContract.cs" />
+    <Compile Include="Serialization\JsonDictionaryContract.cs" />
+    <Compile Include="Serialization\JsonLinqContract.cs" />
+    <Compile Include="Serialization\JsonObjectContract.cs" />
+    <Compile Include="Serialization\JsonPrimitiveContract.cs" />
+    <Compile Include="Serialization\JsonProperty.cs" />
+    <Compile Include="Serialization\JsonPropertyCollection.cs" />
+    <Compile Include="Serialization\JsonSerializerInternalBase.cs" />
+    <Compile Include="Serialization\JsonSerializerProxy.cs" />
+    <Compile Include="Serialization\JsonSerializerInternalReader.cs" />
+    <Compile Include="Serialization\JsonSerializerInternalWriter.cs" />
+    <Compile Include="Serialization\JsonStringContract.cs" />
+    <Compile Include="Serialization\ObjectConstructor`1.cs" />
+    <Compile Include="Serialization\OnErrorAttribute.cs" />
+    <Compile Include="Serialization\ReflectionValueProvider.cs" />
+    <Compile Include="Serialization\JsonTypeReflector.cs" />
+    <Compile Include="Utilities\Base64Encoder.cs" />
+    <Compile Include="Utilities\BidirectionalDictionary`2.cs" />
+    <Compile Include="Utilities\CollectionUtils.cs" />
+    <Compile Include="Utilities\IWrappedCollection.cs" />
+    <Compile Include="Utilities\CollectionWrapper`1.cs" />
+    <Compile Include="Utilities\ConvertUtils.cs" />
+    <Compile Include="Utilities\DateTimeUtils.cs" />
+    <Compile Include="Utilities\IWrappedDictionary.cs" />
+    <Compile Include="Utilities\DictionaryWrapper`2.cs" />
+    <Compile Include="Utilities\EnumUtils.cs" />
+    <Compile Include="Utilities\EnumValue`1.cs" />
+    <Compile Include="Utilities\EnumValues`1.cs" />
+    <Compile Include="Utilities\JavaScriptUtils.cs" />
+    <Compile Include="Utilities\ReflectionDelegateFactory.cs" />
+    <Compile Include="Utilities\LateBoundReflectionDelegateFactory.cs" />
+    <Compile Include="Utilities\IWrappedList.cs" />
+    <Compile Include="Utilities\ListWrapper`1.cs" />
+    <Compile Include="Utilities\MathUtils.cs" />
+    <Compile Include="Utilities\MethodCall`2.cs" />
+    <Compile Include="Utilities\Creator`1.cs" />
+    <Compile Include="Utilities\MiscellaneousUtils.cs" />
+    <Compile Include="Utilities\ReflectionUtils.cs" />
+    <Compile Include="Utilities\StringBuffer.cs" />
+    <Compile Include="Utilities\StringUtils.cs" />
+    <Compile Include="Utilities\ThreadSafeStore`2.cs" />
+    <Compile Include="Utilities\ValidationUtils.cs" />
+    <Compile Include="Schema\Extensions.cs" />
+    <Compile Include="Schema\JsonSchemaException.cs" />
+    <Compile Include="Schema\JsonSchemaModel.cs" />
+    <Compile Include="Schema\JsonSchemaModelBuilder.cs" />
+    <Compile Include="Schema\JsonSchemaNodeCollection.cs" />
+    <Compile Include="Schema\JsonSchemaNode.cs" />
+    <Compile Include="Schema\JsonSchemaWriter.cs" />
+    <Compile Include="Schema\UndefinedSchemaIdHandling.cs" />
+    <Compile Include="Schema\ValidationEventArgs.cs" />
+    <Compile Include="Schema\ValidationEventHandler.cs" />
+    <Compile Include="Schema\JsonSchema.cs" />
+    <Compile Include="Schema\JsonSchemaBuilder.cs" />
+    <Compile Include="Schema\JsonSchemaConstants.cs" />
+    <Compile Include="Schema\JsonSchemaGenerator.cs" />
+    <Compile Include="Schema\JsonSchemaResolver.cs" />
+    <Compile Include="Schema\JsonSchemaType.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

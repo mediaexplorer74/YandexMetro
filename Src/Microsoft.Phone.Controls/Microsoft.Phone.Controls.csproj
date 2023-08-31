@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Microsoft.Phone.Controls.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2FED70E9-F120-488A-A4E1-51149067FDDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Microsoft.Phone.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <ApplicationVersion>7.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Phone</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\OpacityAnimator.cs" />
+    <Compile Include="Controls\SafeRaise.cs" />
+    <Compile Include="Controls\PerfMarkerEvents.cs" />
+    <Compile Include="Controls\PerfLog.cs" />
+    <Compile Include="Controls\TransformAnimator.cs" />
+    <Compile Include="Controls\Panorama.cs" />
+    <Compile Include="Controls\PanoramaItem.cs" />
+    <Compile Include="Controls\Pivot.cs" />
+    <Compile Include="Controls\PivotItem.cs" />
+    <Compile Include="Controls\PivotItemEventArgs.cs" />
+    <Compile Include="Controls\Primitives\PanningLayer.cs" />
+    <Compile Include="Controls\Primitives\PanningTitleLayer.cs" />
+    <Compile Include="Controls\Primitives\PanningBackgroundLayer.cs" />
+    <Compile Include="Controls\Primitives\TemplatedItemsControl`1.cs" />
+    <Compile Include="Controls\Primitives\PanoramaPanel.cs" />
+    <Compile Include="Controls\Primitives\AnimationDirection.cs" />
+    <Compile Include="Controls\Primitives\PivotHeaderItem.cs" />
+    <Compile Include="Controls\Primitives\PivotHeadersControl.cs" />
+    <Compile Include="Controls\Primitives\SelectedIndexChangedEventArgs.cs" />
+    <Compile Include="Controls\Properties\Resources.cs" />
+    <Compile Include="Gestures\GestureEventArgs.cs" />
+    <Compile Include="Gestures\FlickEventArgs.cs" />
+    <Compile Include="Gestures\DragEventArgs.cs" />
+    <Compile Include="Gestures\GestureHelper.cs" />
+    <Compile Include="Gestures\InputBaseArgs.cs" />
+    <Compile Include="Gestures\InputCompletedArgs.cs" />
+    <Compile Include="Gestures\InputDeltaArgs.cs" />
+    <Compile Include="Gestures\ManipulationGestureHelper.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="themes\generic.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

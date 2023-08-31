@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Yandex.Portable.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31B253D8-28E9-445C-91D2-C27F19FE8D34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Yandex.Portable</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile2</TargetFrameworkProfile>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="Zlib">
+      <HintPath>lib\Zlib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABCDStruct.cs" />
+    <Compile Include="MD5Core.cs" />
+    <Compile Include="JetBrains\Annotations\LocalizationRequiredAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\StringFormatMethodAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\InvokerParameterNameAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AssertionMethodAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AssertionConditionAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AssertionConditionType.cs" />
+    <Compile Include="JetBrains\Annotations\TerminatesProgramAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\CanBeNullAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\NotNullAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\CannotApplyEqualityOperatorAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\BaseTypeRequiredAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\UsedImplicitlyAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\MeansImplicitUseAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\ImplicitUseKindFlags.cs" />
+    <Compile Include="JetBrains\Annotations\ImplicitUseTargetFlags.cs" />
+    <Compile Include="JetBrains\Annotations\PublicAPIAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\InstantHandleAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\PureAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\PathReferenceAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcModelTypeAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcControllerAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcMasterAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcViewAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcAreaAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcActionAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcTemplateAttribute.cs" />
+    <Compile Include="Yandex\App\IApplicationSettings.cs" />
+    <Compile Include="Yandex\Collections\ConcurrentCollection`1.cs" />
+    <Compile Include="Yandex\Collections\ConcurrentDictionary`2.cs" />
+    <Compile Include="Yandex\Collections\EnumerableQueue`1.cs" />
+    <Compile Include="Yandex\Collections\MemoryCache`2.cs" />
+    <Compile Include="Yandex\Collections\Queue`1.cs" />
+    <Compile Include="Yandex\Collections\WeakDictionary`2.cs" />
+    <Compile Include="Yandex\Collections\Interfaces\IConcurrentCollection`1.cs" />
+    <Compile Include="Yandex\Collections\Interfaces\IQueue`1.cs" />
+    <Compile Include="Yandex\Collections\Interfaces\IEnumerableQueue`1.cs" />
+    <Compile Include="Yandex\Collections\Interfaces\IMemoryCache`2.cs" />
+    <Compile Include="Yandex\Common\ICloneable.cs" />
+    <Compile Include="Yandex\Common\Logger.cs" />
+    <Compile Include="Yandex\Common\Timer.cs" />
+    <Compile Include="Yandex\Common\TimerCallback.cs" />
+    <Compile Include="Yandex\PAL\Interfaces\IStopwatch.cs" />
+    <Compile Include="Yandex\PAL\IO\FileAccess.cs" />
+    <Compile Include="Yandex\PAL\IO\FileShare.cs" />
+    <Compile Include="Yandex\DevUtils\DebuggerExt.cs" />
+    <Compile Include="Yandex\Extensions\TimerExtension.cs" />
+    <Compile Include="Yandex\Extensions\LinqExtension.cs" />
+    <Compile Include="Yandex\Hardware\IDeviceInfo.cs" />
+    <Compile Include="Yandex\Ioc\InjectedMemberBase.cs" />
+    <Compile Include="Yandex\Ioc\IIocConfiguration.cs" />
+    <Compile Include="Yandex\Ioc\IIocContainer.cs" />
+    <Compile Include="Yandex\Ioc\IIocInjectionMember.cs" />
+    <Compile Include="Yandex\Ioc\IocInjectionConstructor.cs" />
+    <Compile Include="Yandex\Ioc\IocInjectionProperty.cs" />
+    <Compile Include="Yandex\IO\FileMode.cs" />
+    <Compile Include="Yandex\IO\IFileStorage.cs" />
+    <Compile Include="Yandex\IO\ILimitedFileStorage.cs" />
+    <Compile Include="Yandex\IO\IPath.cs" />
+    <Compile Include="Yandex\IO\MemoryStreamExtention.cs" />
+    <Compile Include="Yandex\ItemsCounter\IItemCounter.cs" />
+    <Compile Include="Yandex\Log\CapptainLoggerHelper.cs" />
+    <Compile Include="Yandex\Log\EmptyLogger.cs" />
+    <Compile Include="Yandex\Log\Interfaces\ILogger.cs" />
+    <Compile Include="Yandex\Memory\IMemoryPlanner.cs" />
+    <Compile Include="Yandex\Memory\DummyMemoryPlanner.cs" />
+    <Compile Include="Yandex\Memory\IMemoryUsageMonitor.cs" />
+    <Compile Include="Yandex\Memory\MemoryPlanner.cs" />
+    <Compile Include="Yandex\Memory\MemoryPressure.cs" />
+    <Compile Include="Yandex\Patterns\IFlusheable.cs" />
+    <Compile Include="Yandex\Patterns\IInitializable.cs" />
+    <Compile Include="Yandex\Patterns\IStateService.cs" />
+    <Compile Include="Yandex\Patterns\ServiceState.cs" />
+    <Compile Include="Yandex\Patterns\StateChangedEventArgs.cs" />
+    <Compile Include="Yandex\Patterns\StateServiceExtensions.cs" />
+    <Compile Include="Yandex\Properties\Resources.cs" />
+    <Compile Include="Yandex\Serialization\DataRepositoryBase`1.cs" />
+    <Compile Include="Yandex\Serialization\ModelRepositoryBase`1.cs" />
+    <Compile Include="Yandex\Serialization\UnixTimestampConverter.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IDataRepository`1.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IGenericXmlSerializer`1.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IModelRepositoryBase`1.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IPreprocessor`1.cs" />
+    <Compile Include="Yandex\StringUtils\AnnotatedObject.cs" />
+    <Compile Include="Yandex\StringUtils\AnnotatedValue`1.cs" />
+    <Compile Include="Yandex\StringUtils\Common.cs" />
+    <Compile Include="Yandex\StringUtils\Crc32Util.cs" />
+    <Compile Include="Yandex\StringUtils\CropUtil.cs" />
+    <Compile Include="Yandex\StringUtils\DistanceFormatterUtil.cs" />
+    <Compile Include="Yandex\StringUtils\MetricDistanceFormatterUtil.cs" />
+    <Compile Include="Yandex\StringUtils\HexString.cs" />
+    <Compile Include="Yandex\StringUtils\TimeFormatterUtil.cs" />
+    <Compile Include="Yandex\StringUtils\XorUtil.cs" />
+    <Compile Include="Yandex\StringUtils\Plurals\EnglishPlurals.cs" />
+    <Compile Include="Yandex\StringUtils\Plurals\TurkishPlurals.cs" />
+    <Compile Include="Yandex\StringUtils\Plurals\RussianPlurals.cs" />
+    <Compile Include="Yandex\StringUtils\Plurals\Interfaces\IPlurals.cs" />
+    <Compile Include="Yandex\StringUtils\Interfaces\IDistanceFormatterUtil.cs" />
+    <Compile Include="Yandex\StringUtils\Interfaces\ITimeFormatterUtil.cs" />
+    <Compile Include="Yandex\Threading\WaitCallback.cs" />
+    <Compile Include="Yandex\Threading\Interfaces\IMonitor.cs" />
+    <Compile Include="Yandex\Threading\Interfaces\IThread.cs" />
+    <Compile Include="Yandex\Threading\Interfaces\IThreadPool.cs" />
+    <Compile Include="Yandex\Threading\Interfaces\IUiDispatcher.cs" />
+    <Compile Include="Yandex\WebUtils\CacheValidators.cs" />
+    <Compile Include="Yandex\WebUtils\CommunicatorBase`3.cs" />
+    <Compile Include="Yandex\WebUtils\ContentCompressor.cs" />
+    <Compile Include="Yandex\WebUtils\DefaultCommunicatorBase`3.cs" />
+    <Compile Include="Yandex\WebUtils\DiversityCommunicator`4.cs" />
+    <Compile Include="Yandex\WebUtils\NetworkInterfaceType.cs" />
+    <Compile Include="Yandex\WebUtils\NetworkInterfaceWrapper.cs" />
+    <Compile Include="Yandex\WebUtils\PostData.cs" />
+    <Compile Include="Yandex\WebUtils\QueryStringUtil.cs" />
+    <Compile Include="Yandex\WebUtils\StreamCommunicatorBase`3.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\ICommunicator`2.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IContentCompressor.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IDiversityCommunicator`3.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IDataManager`2.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IHttpWebRequest.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IWebClientFactory.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IMapWebClientFactory.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\INetworkInterfaceWrapper.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IQueryBuilder.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IQueryBuilder`1.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IWebResponse.cs" />
+    <Compile Include="Yandex\WebUtils\Events\RequestCompletedEventArgs`2.cs" />
+    <Compile Include="Yandex\WebUtils\Events\RequestCompletedEventHandler`2.cs" />
+    <Compile Include="Yandex\WebUtils\Events\RequestFailedEventArgs`1.cs" />
+    <Compile Include="Yandex\Net\HttpStatusCode.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Yandex\Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

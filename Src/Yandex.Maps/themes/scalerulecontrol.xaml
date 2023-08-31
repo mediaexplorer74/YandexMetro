@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:Maps="clr-namespace:Yandex.Maps"
+                    mc:Ignorable="d">
+    <Style TargetType="Maps:ScaleRuleControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Maps:ScaleRuleControl">
+                    <Grid>
+                        <Image Source="/Yandex.Maps;component/Resources/ru-RU/ruler_texture.png" Stretch="None"/>
+                        <TextBlock MaxWidth="64" Foreground="Black" FontSize="16" Text="{TemplateBinding Text}" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                			<TextBlock.RenderTransform>
+                				<CompositeTransform TranslateY="-3"/>
+                			</TextBlock.RenderTransform>
+                        </TextBlock>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

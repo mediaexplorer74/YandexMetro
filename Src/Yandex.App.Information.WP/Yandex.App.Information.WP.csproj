@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Yandex.App.Information.WP.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD8FDA8A-83F7-4D1B-BE7B-C1ED5D27E17F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Yandex.App.Information.WP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Yandex</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Yandex.Portable">
+      <HintPath>lib\Yandex.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Yandex.Serialization.WP">
+      <HintPath>lib\Yandex.Serialization.WP.dll</HintPath>
+    </Reference>
+    <Reference Include="Yandex.WP">
+      <HintPath>lib\Yandex.WP.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="App\Information\ApplicationInformationBase.cs" />
+    <Compile Include="App\Information\IManifestInformationProvider.cs" />
+    <Compile Include="App\Information\ManifestInformation.cs" />
+    <Compile Include="App\Information\ManifestInformationProvider.cs" />
+    <Compile Include="App\Information\Resources.cs" />
+    <Compile Include="App\Information\ResourceWrapper.cs" />
+    <Compile Include="App\Information\Interfaces\IApplicationInformation.cs" />
+    <Compile Include="App\Information\Interfaces\ILiceseAgreementQueryBuilder.cs" />
+    <Compile Include="App\Information\AppList\IAppListCommunicator.cs" />
+    <Compile Include="App\Information\AppList\AppListCommunicator.cs" />
+    <Compile Include="App\Information\AppList\AppListManager.cs" />
+    <Compile Include="App\Information\AppList\AppListQueryBuilder.cs" />
+    <Compile Include="App\Information\AppList\AppListRequestParameters.cs" />
+    <Compile Include="App\Information\AppList\AppListParameters.cs" />
+    <Compile Include="App\Information\AppList\IAppListUrlProvider.cs" />
+    <Compile Include="App\Information\AppList\ProductionAppListUrlProvider.cs" />
+    <Compile Include="App\Information\AppList\HeroismAppListUrlProvider.cs" />
+    <Compile Include="App\Information\AppList\IAppListParameters.cs" />
+    <Compile Include="App\Information\AppList\Dto\Apps.cs" />
+    <Compile Include="App\Information\AppList\Dto\appsApp.cs" />
+    <Compile Include="App\Information\AppList\DataAdapters\IAppListDataAdapter.cs" />
+    <Compile Include="App\Information\AppList\DataAdapters\AppListDataAdapter.cs" />
+    <Compile Include="App\Information\Converters\IsNullConverter.cs" />
+    <Compile Include="App\Information\Dto\AppDto.cs" />
+    <Compile Include="App\Information\Dto\ImageIriDto.cs" />
+    <Compile Include="App\Information\Dto\ManifestDto.cs" />
+    <Compile Include="App\Information\Dto\PrimaryTokenDto.cs" />
+    <Compile Include="App\Information\Dto\TemplateType5Dto.cs" />
+    <Compile Include="App\Information\Public\DefaultApplicationInformation.cs" />
+    <Compile Include="App\Information\Public\DefaultApplicationInformationViewModel.cs" />
+    <Compile Include="App\Information\Views\AboutView.cs" />
+    <Compile Include="App\Information\Views\ApplicationInformationControl.cs" />
+    <Compile Include="App\Information\Views\ApplicationsView.cs" />
+    <Compile Include="App\Information\Views\AppListControl.cs" />
+    <Compile Include="App\Information\Views\ViewModels\ApplicationInformationViewModel.cs" />
+    <Compile Include="App\Information\Views\ViewModels\AboutViewModelBase.cs" />
+    <Compile Include="App\Information\Views\ViewModels\IAppListViewModel.cs" />
+    <Compile Include="App\Information\Views\ViewModels\AppListViewModel.cs" />
+    <Compile Include="App\Information\Views\ViewModels\YandexApplicationsViewModel.cs" />
+    <Compile Include="App\Information\Views\ViewModels\Interfaces\IApplicationInformationViewModel.cs" />
+    <Compile Include="App\Information\Views\ViewModels\Interfaces\IAboutViewModel.cs" />
+    <Compile Include="App\Information\Views\ViewModels\Interfaces\IApplicationsViewModel.cs" />
+    <Compile Include="App\Information\Models\AppItem.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\aboutview.xaml" />
+    <Resource Include="views\applicationinformationcontrol.xaml" />
+    <Resource Include="views\applicationsview.xaml" />
+    <Resource Include="views\applistcontrol.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App\Information\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

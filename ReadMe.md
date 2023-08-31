@@ -1,14 +1,15 @@
 # YandexMetro
 
-"Imitation" of YandexMetro app for W10M
+R.E./RnD of YandexMetro app for WP7
 
-This is the fork of YandexMetro WPF app.
+This is the my uncompleted port of YandexMetro app. 
 
-Realized city map: S.-Peterburg only
+The goal was to assemble some UWP app...
 
 Status:
-Work-in-progress
+- WP7 src code generated
+- Little research 
 
 AS IS. No support. RnD (learning) only.
 
--- me 2022
+-- me 2022-2023

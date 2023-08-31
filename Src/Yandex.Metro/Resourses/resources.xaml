@@ -1,0 +1,36 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:common="clr-namespace:Y.UI.Common.Converters;assembly=Y.UI.Common"
+    xmlns:vm="clr-namespace:Yandex.Metro.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Converters="clr-namespace:Yandex.Metro.Logic.Converters" xmlns:core="clr-namespace:System;assembly=mscorlib"
+    mc:Ignorable="d">
+    <vm:Locator x:Key="V" d:IsDataSource="True" />
+    <common:DebugConverter x:Key="DebugConverter"/>
+    <common:EqualityToBoolConverter x:Key="EqualityToBoolConverter"/>
+    <common:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <common:EqualsToVisibilityConverter x:Key="EqualsToVisibilityConverter"/>
+    <common:StringNullToVisibilityConverter x:Key="StringNullToVisibilityConverter"/>
+    <common:ToLowCaseConverter x:Key="ToLowCaseConverter"/>
+    <common:TextPrependConverter x:Key="BoldTextPrependConverter" 
+                             PrependFontFamilyResourceName="PhoneFontFamilySemiBold"
+                             MainFontFamilyResourceName="PhoneFontFamilySemiLight" />
+    <common:InvertBoolConverter x:Key="InvertBoolConverter"/>
+    <Converters:SchemeToForegroundConverter x:Key="SchemeToForegroundConverter"/>
+    <Converters:DurationToStringConverter x:Key="DurationToStringConverter"/>
+    <Converters:CityConverter x:Key="CityConverter"/>
+    <Converters:StationTitleConverter x:Key="StationTitleConverter"/>
+    <Converters:DirectionTitleConverter x:Key="DirectionTitleConverter"/>
+    <Converters:LineToShortNameConverter x:Key="LineToShortNameConverter"/>
+    <Converters:MetroColorToBrushConverter x:Key="MetroColorToBrushConverter"/>
+    <Converters:SameAsToVisibilityConverter x:Key="SameAsToVisibilityConverter"/>
+    <common:ToUpperCaseConverter x:Key="ToUpperCaseConverter"/>
+
+    <core:Boolean x:Key="FalseValue">False</core:Boolean>
+    <core:Boolean x:Key="TrueValue">True</core:Boolean>
+    <Visibility x:Key="CollapsedValue">Collapsed</Visibility>
+
+
+</ResourceDictionary>

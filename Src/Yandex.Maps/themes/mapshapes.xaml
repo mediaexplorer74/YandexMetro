@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:Maps="clr-namespace:Yandex.Maps"
+                    mc:Ignorable="d">
+    <Style TargetType="Maps:MapPolylineBase">
+        <Setter Property="Stroke" Value="Red"/>
+        <Setter Property="StrokeThickness" Value="10"/>
+        <Setter Property="StrokeLineJoin" Value="Round"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Maps:MapPolylineBase">
+                    <Polyline x:Name="Shape" 
+                              Stroke="{TemplateBinding Stroke}" 
+                              StrokeThickness="{TemplateBinding StrokeThickness}"
+                              StrokeLineJoin="{TemplateBinding StrokeLineJoin}"
+                              />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="Maps:MapPolyline">
+        <Setter Property="Stroke" Value="Red"/>
+        <Setter Property="StrokeThickness" Value="10"/>
+        <Setter Property="StrokeLineJoin" Value="Round"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Maps:MapPolyline">
+                    <Polyline x:Name="Shape" 
+                              Stroke="{TemplateBinding Stroke}" 
+                              StrokeThickness="{TemplateBinding StrokeThickness}"
+                              StrokeLineJoin="{TemplateBinding StrokeLineJoin}"
+                              />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+        <Style TargetType="Maps:MapPolygon">
+        <Setter Property="Stroke" Value="Red"/>
+        <Setter Property="StrokeThickness" Value="10"/>
+        <Setter Property="StrokeLineJoin" Value="Round"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Maps:MapPolygon">
+                    <Polygon x:Name="Shape" 
+                              Stroke="{TemplateBinding Stroke}" 
+                              StrokeThickness="{TemplateBinding StrokeThickness}"
+                              StrokeLineJoin="{TemplateBinding StrokeLineJoin}"
+                              />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

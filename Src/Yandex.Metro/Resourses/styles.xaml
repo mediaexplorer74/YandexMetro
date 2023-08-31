@@ -1,0 +1,236 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:System="clr-namespace:System;assembly=mscorlib"
+    xmlns:c="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:Control="clr-namespace:Y.UI.Common.Control;assembly=Y.UI.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:Model="clr-namespace:Y.Metro.ServiceLayer.FastScheme"
+    xmlns:ModelView="clr-namespace:Yandex.Metro.Views">
+
+    <SolidColorBrush x:Key="AccentColorBrush" Color="{StaticResource PhoneAccentColor}"/>
+
+    <Color x:Key="BackColor">#FF000000</Color>
+    <SolidColorBrush x:Key="BackColorBrush" Color="{StaticResource BackColor}"/>
+
+    <Color x:Key="BackWithDefaultOpacityColor">#CC000000</Color>
+    <SolidColorBrush x:Key="BackWithDefaultOpacityColorBrush" Color="{StaticResource BackWithDefaultOpacityColor}"/>
+
+    <Color x:Key="ForeColor">#FFFFFFFF</Color>
+    <SolidColorBrush x:Key="ForeColorBrush" Color="{StaticResource ForeColor}"/>
+
+    <Color x:Key="GrayColor">#666666</Color>
+    <SolidColorBrush x:Key="GrayColorBrush" Color="{StaticResource GrayColor}"/>
+
+    <Color x:Key="LightGrayColor">#999999</Color>
+    <SolidColorBrush x:Key="LightGrayColorBrush" Color="{StaticResource LightGrayColor}"/>
+
+
+    <System:Double x:Key="ElementDefaultOpacity">0.8</System:Double>
+    <Thickness x:Key="PageWithTrayMargin">0,32,0,0</Thickness>
+
+    <System:Double x:Key="DefaultZoom">15</System:Double>
+
+    <!--textBlock style-->
+
+    <Style TargetType="TextBlock" x:Key="TextBlock20LightGray">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="Segoe WP"/>
+        <Setter Property="Foreground" Value="{StaticResource LightGrayColor}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlock20Gray">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="Segoe WP"/>
+        <Setter Property="Foreground" Value="{StaticResource GrayColor}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlock23LightGray">
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+        <Setter Property="Foreground" Value="{StaticResource LightGrayColor}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlock23Black">
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+        <Setter Property="Foreground" Value="{StaticResource BackColor}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlock23Normal">
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForeColor}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlock23SemiBold">
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiBold}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForeColor}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlock25Black">
+        <Setter Property="FontSize" Value="25.33"/>
+        <Setter Property="FontFamily" Value="Segoe WP Semibold"/>
+        <Setter Property="Foreground" Value="{StaticResource BackColor}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlock32Light">
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeLarge}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiLight}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForeColor}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlock42Light">
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeExtraLarge}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiLight}"/>
+        <Setter Property="Foreground" Value="{StaticResource PhoneForegroundColor}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlock42LightBlack">
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeExtraLarge}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiLight}"/>
+        <Setter Property="Foreground" Value="{StaticResource BackColor}"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="RevertBorder">
+        <Setter Property="Width" Value="432"/>
+        <Setter Property="Height" Value="80"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BackColorBrush}"/>
+        <Setter Property="BorderThickness" Value="3"/>
+    </Style>
+
+    <DataTemplate x:Key="Favorite_ItemTemplateLines">
+        <StackPanel Orientation="Horizontal" Margin="24,20,0,20" d:DataContext="{d:DesignInstance Model:MetroStation}">
+            <Ellipse Width="43" Height="43" Fill="{Binding LineReference.Color, Converter={StaticResource MetroColorToBrushConverter}}" Margin="0,0,10,0"></Ellipse>
+            <TextBlock Text="{Binding Name.Text}" Style="{StaticResource TextBlock42Light}"  />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Favorite_ItemTemplateStation">
+        <StackPanel Orientation="Vertical" Margin="24,20,0,0" Height="80" d:DataContext="{d:DesignInstance Model:MetroStation}">
+            <StackPanel Orientation="Horizontal">
+                <Ellipse Width="43" Height="43" Fill="{Binding LineReference.Color, Converter={StaticResource MetroColorToBrushConverter}}" Margin="0,0,10,0"></Ellipse>
+                <TextBlock Text="{Binding Name.Text}" Style="{StaticResource TextBlock42Light}"  />
+            </StackPanel>
+            <TextBlock Margin="54,0,0,0" Text="{Binding LineReference.Title}" Style="{StaticResource TextBlock20LightGray}" 
+                       Visibility="{Binding SameAsId, Converter={StaticResource SameAsToVisibilityConverter}, FallbackValue={StaticResource CollapsedValue}}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="LongListSelector_GroupHeaderTemplate">
+        <Border Margin="24,12,24,12" Width="432" HorizontalAlignment="Left">
+            <Border.Background>
+                <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+            </Border.Background>
+            <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="LongListSelector_GroupHeaderTemplateLine">
+        <Border Margin="24,12,24,12" MinWidth="432" HorizontalAlignment="Left">
+            <Border.Background>
+                <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+            </Border.Background>
+            <TextBlock Text="{Binding Line.Name}" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="LongListSelector_GroupItemTemplate" >
+        <Border Width="80" Height="80" Margin="12">
+            <Border.Background>
+                <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+            </Border.Background>
+            <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="LongListSelector_GroupItemTemplateLine" >
+        <Border Background="{Binding Line.Color, Converter={StaticResource MetroColorToBrushConverter}}" Margin="24,12,12,12">
+            <TextBlock Text="{Binding Line.Name}" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FavoritesList_Template" >
+        <Control:TapButton Command="{Binding Main.SelectionChanged, Source={StaticResource V}}" CommandParameter="{Binding}"
+                           c:TiltEffect.IsTiltEnabled="True">
+            <Control:TapButton.Template>
+                <ControlTemplate>
+                    <StackPanel Orientation="Vertical" Margin="24,20,0,0" Height="80" d:DataContext="{d:DesignInstance Model:MetroStation}">
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="43" Height="43" Fill="{Binding LineReference.Color, Converter={StaticResource MetroColorToBrushConverter}}" Margin="0,0,10,0"></Ellipse>
+                            <TextBlock Text="{Binding Name.Text}" Style="{StaticResource TextBlock42Light}"  />
+                        </StackPanel>
+                        <TextBlock Margin="54,0,0,0" Text="{Binding LineReference.Title}" Style="{StaticResource TextBlock20LightGray}" 
+                       Visibility="{Binding SameAsId, Converter={StaticResource SameAsToVisibilityConverter}, FallbackValue={StaticResource CollapsedValue}}"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Control:TapButton.Template>
+        </Control:TapButton>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Multi_ItemTemplate">
+        <Control:TapButton Command="{Binding Main.FocusStationCommand, Source={StaticResource V}}" CommandParameter="{Binding}"
+                           c:TiltEffect.IsTiltEnabled="True">
+            <Control:TapButton.Template>
+                <ControlTemplate>
+                    <StackPanel Orientation="Vertical" Margin="0,20,0,0" Height="80" d:DataContext="{d:DesignInstance Model:MetroStation}">
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="43" Height="43" Fill="{Binding LineReference.Color, Converter={StaticResource MetroColorToBrushConverter}}" Margin="0,0,10,0"></Ellipse>
+                            <TextBlock Text="{Binding Name.Text}" Style="{StaticResource TextBlock42Light}"  />
+                        </StackPanel>
+                        <TextBlock Margin="54,0,0,0" Text="{Binding LineReference.Title}" Style="{StaticResource TextBlock20LightGray}" 
+                       Visibility="{Binding SameAsId, Converter={StaticResource SameAsToVisibilityConverter}, FallbackValue={StaticResource CollapsedValue}}"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Control:TapButton.Template>
+        </Control:TapButton>
+    </DataTemplate>
+
+    <DataTemplate x:Key="RouteHistory_ItemTemplate">
+        <Control:TapButton c:TiltEffect.IsTiltEnabled="True" Command="{Binding Main.SetRouteCommand, Source={StaticResource V}}" CommandParameter="{Binding}">
+            <Control:TapButton.Template>
+                <ControlTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="12,10,0,10" Background="Transparent" HorizontalAlignment="Stretch"
+                                d:DataContext="{d:DesignInstance Model:Route}">
+                        <Ellipse Width="12" Height="12" Fill="{Binding StartStation.LineReference.Color, Converter={StaticResource MetroColorToBrushConverter}}" Margin="0,0,5,0"></Ellipse>
+                        <TextBlock Text="{Binding StartStation.Name.Text}" Style="{StaticResource TextBlock23Black}"  />
+                        <Image Source="/Images/route_arrow.png" Width="16" Height="10" Margin="12,0,12,0" ></Image>
+                        <Ellipse Width="12" Height="12" Fill="{Binding EndStation.LineReference.Color, Converter={StaticResource MetroColorToBrushConverter}}" Margin="0,0,5,0"></Ellipse>
+                        <TextBlock Text="{Binding EndStation.Name.Text}" Style="{StaticResource TextBlock23Black}"  />
+                    </StackPanel>
+                </ControlTemplate>
+            </Control:TapButton.Template>
+        </Control:TapButton>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SearchList_Template" >
+        <Control:TapButton Command="{Binding Main.SelectionChanged, Source={StaticResource V}}" CommandParameter="{Binding Station}"
+                           c:TiltEffect.IsTiltEnabled="True" >
+            <Control:TapButton.Template>
+                <ControlTemplate>
+                    <Border Background="Transparent" Padding="12,10,0,10">
+                        <Grid HorizontalAlignment="Stretch" d:DataContext="{d:DesignInstance ModelView:StationName}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="22"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Ellipse Grid.RowSpan="2" Grid.Column="0" Width="12" Height="12" Fill="{Binding Station.LineReference.Color, Converter={StaticResource MetroColorToBrushConverter}}" Margin="0,0,10,0"></Ellipse>
+                            <TextBlock Grid.Row="0" Grid.Column="1"  Text="{Binding Station.Name.Text}" Style="{StaticResource TextBlock23Black}"  />
+                            <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding Station.LineShortName}" Style="{StaticResource TextBlock23Black}" 
+                                        Visibility="{Binding Station.SameAsIdVisible, FallbackValue={StaticResource CollapsedValue}}"/>
+                            <TextBlock  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding OldName}" Style="{StaticResource TextBlock20Gray}"  />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Control:TapButton.Template>
+        </Control:TapButton>
+    </DataTemplate>
+
+</ResourceDictionary>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Yandex.WP.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80F116E0-E296-4E86-BB1C-2D5AC32732F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Yandex.WP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Reactive.Core">
+      <HintPath>lib\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>lib\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>lib\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>lib\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="Yandex.Portable">
+      <HintPath>lib\Yandex.Portable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Yandex\LowMemoryHelper.cs" />
+    <Compile Include="Yandex\ShellHelper.cs" />
+    <Compile Include="Yandex\App\IsolatedStorageApplicationSettings.cs" />
+    <Compile Include="Yandex\Collections\ConvertingObservableCollection`2.cs" />
+    <Compile Include="Yandex\Collections\IObservableEnumerable`1.cs" />
+    <Compile Include="Yandex\Collections\ObservableDictionary`2.cs" />
+    <Compile Include="Yandex\Collections\ObservableList`1.cs" />
+    <Compile Include="Yandex\Collections\SmartCollection`1.cs" />
+    <Compile Include="Yandex\PAL\Stopwatch.cs" />
+    <Compile Include="Yandex\PAL\IO\IsolatedStorageFileWrapper.cs" />
+    <Compile Include="Yandex\DevUtils\DesignerProperties.cs" />
+    <Compile Include="Yandex\DevUtils\WP\DebugWatch.cs" />
+    <Compile Include="Yandex\Extensions\GridHelper.cs" />
+    <Compile Include="Yandex\Ioc\TinyIoCContainer.cs" />
+    <Compile Include="Yandex\Ioc\IocInitializer.cs" />
+    <Compile Include="Yandex\Ioc\IocSingleton`1.cs" />
+    <Compile Include="Yandex\IO\Path.cs" />
+    <Compile Include="Yandex\ItemsCounter\ItemCounter.cs" />
+    <Compile Include="Yandex\ItemsCounter\ItemCounterSimple.cs" />
+    <Compile Include="Yandex\Log\CapptainLogger.cs" />
+    <Compile Include="Yandex\Memory\MemoryUsageMonitor.cs" />
+    <Compile Include="Yandex\Properties\Resources.cs" />
+    <Compile Include="Yandex\Threading\Monitor.cs" />
+    <Compile Include="Yandex\Threading\Thread.cs" />
+    <Compile Include="Yandex\Threading\ThreadPool.cs" />
+    <Compile Include="Yandex\Threading\UiDispatcher.cs" />
+    <Compile Include="Yandex\WebUtils\HttpWebRequestWrapper.cs" />
+    <Compile Include="Yandex\WebUtils\ObservableCommunicatorBase`2.cs" />
+    <Compile Include="Yandex\WebUtils\UrlValidator.cs" />
+    <Compile Include="Yandex\WebUtils\WebClientFactory.cs" />
+    <Compile Include="Yandex\WebUtils\WebResponseWrapper.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IObservableCommunicator`2.cs" />
+    <Compile Include="Yandex\Media\ColorHelper.cs" />
+    <Compile Include="Yandex\Heroism\IHeroismSettings.cs" />
+    <Compile Include="Yandex\Heroism\HeroismSettings.cs" />
+    <Compile Include="Yandex\Observable\ObservableRequestsWrapper.cs" />
+    <Compile Include="Yandex\Observable\WrappedObservableException.cs" />
+    <Compile Include="TinyIoC\SafeDictionary`2.cs" />
+    <Compile Include="TinyIoC\AssemblyExtensions.cs" />
+    <Compile Include="TinyIoC\TypeExtensions.cs" />
+    <Compile Include="TinyIoC\PropertyInfoExtensions.cs" />
+    <Compile Include="TinyIoC\TinyIoCResolutionException.cs" />
+    <Compile Include="TinyIoC\TinyIoCRegistrationTypeException.cs" />
+    <Compile Include="TinyIoC\TinyIoCRegistrationException.cs" />
+    <Compile Include="TinyIoC\TinyIoCWeakReferenceException.cs" />
+    <Compile Include="TinyIoC\TinyIoCConstructorResolutionException.cs" />
+    <Compile Include="TinyIoC\TinyIoCAutoRegistrationException.cs" />
+    <Compile Include="TinyIoC\NamedParameterOverloads.cs" />
+    <Compile Include="TinyIoC\UnregisteredResolutionActions.cs" />
+    <Compile Include="TinyIoC\NamedResolutionFailureActions.cs" />
+    <Compile Include="TinyIoC\ResolveOptions.cs" />
+    <Compile Include="TinyIoC\TinyIoCContainer.cs" />
+    <Compile Include="DanielVaughan\WindowsPhone7Unleashed\DependencyPropertyListener.cs" />
+    <Compile Include="DanielVaughan\WindowsPhone7Unleashed\BindingChangedEventArgs.cs" />
+    <Compile Include="DanielVaughan\WindowsPhone7Unleashed\ScrollViewerMonitor.cs" />
+    <Compile Include="Clarity\Phone\Extensions\VisualTreeExtensions.cs" />
+    <Compile Include="Clarity\Phone\Extensions\TransformCreationMode.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Yandex\Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

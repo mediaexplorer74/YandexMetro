@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:Maps="clr-namespace:Yandex.Maps" 
+                    mc:Ignorable="d">
+
+    <Style TargetType="Maps:PushPin">
+        <Setter Property="Maps:MapLayer.Alignment">
+            <Setter.Value>
+                <Maps:Alignment>BottomCenter</Maps:Alignment>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Maps:PushPin">
+                    <Grid x:Name="pushpinPanel">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualStateGroup.Transitions>
+                                	<VisualTransition GeneratedDuration="0"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Collapsed">
+                                	<Storyboard>
+                                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="org_circle">
+                                			<DiscreteObjectKeyFrame KeyTime="0">
+                                				<DiscreteObjectKeyFrame.Value>
+                                					<Visibility>Visible</Visibility>
+                                				</DiscreteObjectKeyFrame.Value>
+                                			</DiscreteObjectKeyFrame>
+                                		</ObjectAnimationUsingKeyFrames>
+                                	</Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Expanded">
+                                	<Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ExpandedControl">
+                                			<DiscreteObjectKeyFrame KeyTime="0">
+                                				<DiscreteObjectKeyFrame.Value>
+                                					<Visibility>Visible</Visibility>
+                                				</DiscreteObjectKeyFrame.Value>
+                                			</DiscreteObjectKeyFrame>
+                                		</ObjectAnimationUsingKeyFrames>
+                                	</Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="BaloonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="BaloonVisible">
+                                	<Storyboard>
+                                		<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ExpandedControl" d:IsOptimized="True"/>
+                                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                                			<DiscreteObjectKeyFrame KeyTime="0">
+                                				<DiscreteObjectKeyFrame.Value>
+                                					<Visibility>Visible</Visibility>
+                                				</DiscreteObjectKeyFrame.Value>
+                                			</DiscreteObjectKeyFrame>
+                                		</ObjectAnimationUsingKeyFrames>
+                                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="pushpin_tail_background">
+                                			<DiscreteObjectKeyFrame KeyTime="0">
+                                				<DiscreteObjectKeyFrame.Value>
+                                					<Visibility>Visible</Visibility>
+                                				</DiscreteObjectKeyFrame.Value>
+                                			</DiscreteObjectKeyFrame>
+                                		</ObjectAnimationUsingKeyFrames>
+                                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="pushpin_tail_background2">
+                                			<DiscreteObjectKeyFrame KeyTime="0">
+                                				<DiscreteObjectKeyFrame.Value>
+                                					<Visibility>Visible</Visibility>
+                                				</DiscreteObjectKeyFrame.Value>
+                                			</DiscreteObjectKeyFrame>
+                                		</ObjectAnimationUsingKeyFrames>
+                                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="border">
+                                			<DiscreteObjectKeyFrame KeyTime="0">
+                                				<DiscreteObjectKeyFrame.Value>
+                                					<Thickness>0,0,0,18</Thickness>
+                                				</DiscreteObjectKeyFrame.Value>
+                                			</DiscreteObjectKeyFrame>
+                                		</ObjectAnimationUsingKeyFrames>
+                                	</Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="BaloonCollapsed"/>
+                            </VisualStateGroup>                            
+                        </VisualStateManager.VisualStateGroups>
+                    	<Border x:Name="org_circle" Padding="6" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,-15" Background="Transparent" Visibility="Collapsed" Width="30" Height="30">
+                    		<Ellipse Fill="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="2" Width="18" Height="18"/>
+                    	</Border>
+                        <Image x:Name="ExpandedControl" Source="{TemplateBinding ExpandedImageSource}" Stretch="None" Margin="10,0,0,-2" Visibility="Collapsed"/>
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="2" Background="{TemplateBinding Background}" VerticalAlignment="Bottom" Margin="0,0,-70,18" Visibility="Collapsed">
+                            <ContentPresenter
+                                x:Name="contentControl" 
+                                Content="{TemplateBinding Content}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                    			HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    			Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                />
+                        </Border>
+                        <Path x:Name="pushpin_tail_background2" 
+                        	Data="M0,0 H40"
+                        	Width="17" VerticalAlignment="Bottom" HorizontalAlignment="Center" Stroke="{TemplateBinding Background}" StrokeThickness="2" Margin="22,0,0,18" Stretch="Fill" Visibility="Collapsed"/>
+						
+                        <Path x:Name="pushpin_tail_background" 
+                              Data="M0,0 L11.428572,-2.7755576E-16 C13.077613,3.0263326 4.4047623,17.212187 1.8353283,25.157108 C0.751477,28.508474 1.4912322,29.459648 3.1075499,29.74613 C4.8809528,30.003416 6.3111286,29.816595 8.0952387,28.310661 C24.646568,14.339999 33.480637,0.33458066 38.075653,0.17465077 L40,0"
+                              Width="23" Height="21.831" Fill="{TemplateBinding Background}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Visibility="Collapsed" Stroke="{TemplateBinding Foreground}" StrokeThickness="2" Margin="17,0,0,-1.831" Stretch="Fill" StrokeLineJoin="Round" UseLayoutRounding="False"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="Background" Value="#FF0A70CE"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Padding" Value="6"/>
+        <Setter Property="ExpandedImageSource" Value="/Yandex.Maps;component/Resources/ru-RU/org.png"/>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Zlib.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{726CFAEB-70B8-4F69-9E39-8AA56D5CEFCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Zlib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile2</TargetFrameworkProfile>
+    <ApplicationVersion>0.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Ionic</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Encoding\Iso8859Dash1Encoding.cs" />
+    <Compile Include="Zlib\CRC32.cs" />
+    <Compile Include="Zlib\CrcCalculatorStream.cs" />
+    <Compile Include="Zlib\FlushType.cs" />
+    <Compile Include="Zlib\BlockState.cs" />
+    <Compile Include="Zlib\DeflateFlavor.cs" />
+    <Compile Include="Zlib\DeflateManager.cs" />
+    <Compile Include="Zlib\DeflateStream.cs" />
+    <Compile Include="Zlib\GZipStream.cs" />
+    <Compile Include="Zlib\InflateBlocks.cs" />
+    <Compile Include="Zlib\InternalInflateConstants.cs" />
+    <Compile Include="Zlib\InflateCodes.cs" />
+    <Compile Include="Zlib\InflateManager.cs" />
+    <Compile Include="Zlib\InfTree.cs" />
+    <Compile Include="Zlib\Tree.cs" />
+    <Compile Include="Zlib\CompressionLevel.cs" />
+    <Compile Include="Zlib\CompressionStrategy.cs" />
+    <Compile Include="Zlib\CompressionMode.cs" />
+    <Compile Include="Zlib\ZlibException.cs" />
+    <Compile Include="Zlib\SharedUtils.cs" />
+    <Compile Include="Zlib\InternalConstants.cs" />
+    <Compile Include="Zlib\StaticTree.cs" />
+    <Compile Include="Zlib\Adler.cs" />
+    <Compile Include="Zlib\ZlibStreamFlavor.cs" />
+    <Compile Include="Zlib\ZlibBaseStream.cs" />
+    <Compile Include="Zlib\ZlibCodec.cs" />
+    <Compile Include="Zlib\ZlibConstants.cs" />
+    <Compile Include="Zlib\ZlibStream.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

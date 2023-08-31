@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Settings_UpdateTitle" xml:space="preserve">
+    <value>Find new stations</value>
+  </data>
+  <data name="Country_Belarus" xml:space="preserve">
+    <value>Belarus</value>
+  </data>
+  <data name="Shake_Text" xml:space="preserve">
+    <value>Clear current path?</value>
+  </data>
+  <data name="Menu_Favorites" xml:space="preserve">
+    <value>favorites</value>
+  </data>
+  <data name="Menu_ClearRoute" xml:space="preserve">
+    <value>clear route</value>
+  </data>
+  <data name="PolicyButton_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="City_Moscow" xml:space="preserve">
+    <value>Moscow</value>
+  </data>
+  <data name="Settings_GpsContent" xml:space="preserve">
+    <value>Autoselect Start-End</value>
+  </data>
+  <data name="Map_To" xml:space="preserve">
+    <value>Here</value>
+  </data>
+  <data name="ErrorReport_AppVersion" xml:space="preserve">
+    <value>App version</value>
+  </data>
+  <data name="Progress_LoadingMap" xml:space="preserve">
+    <value>Loading map</value>
+  </data>
+  <data name="ErrorReport_Model" xml:space="preserve">
+    <value>Telephone model</value>
+  </data>
+  <data name="ErrorReport_Line3" xml:space="preserve">
+    <value>Information that will help us resolve the issue as soon as possible</value>
+  </data>
+  <data name="ErrorReport_Line1" xml:space="preserve">
+    <value>Please provide a detailed description of the problem:</value>
+  </data>
+  <data name="UpdateScheme_Complete" xml:space="preserve">
+    <value>Scheme update finished!</value>
+  </data>
+  <data name="City_Kiev" xml:space="preserve">
+    <value>Kiev</value>
+  </data>
+  <data name="Settings_UpdateText" xml:space="preserve">
+    <value>Updated  {0}</value>
+  </data>
+  <data name="ErrorReport_CurrentPage" xml:space="preserve">
+    <value>Current page</value>
+  </data>
+  <data name="ErrorReport_NoPage" xml:space="preserve">
+    <value>Not specified</value>
+  </data>
+  <data name="Settings_AllowRotation" xml:space="preserve">
+    <value>allow rotation</value>
+  </data>
+  <data name="FavoriteButton_Add" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="FavoriteButton_Edit" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="ApplicationFailed_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="CopyrightFormat" xml:space="preserve">
+    <value>© {0} YANDEX</value>
+  </data>
+  <data name="Station_AZ" xml:space="preserve">
+    <value>a..z</value>
+  </data>
+  <data name="Settings_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="YandexApps_Title" xml:space="preserve">
+    <value>applications</value>
+  </data>
+  <data name="City_Kharkiv" xml:space="preserve">
+    <value>Kharkiv</value>
+  </data>
+  <data name="Metro_WorkTimeMessage" xml:space="preserve">
+    <value>Subway is closed from {0} till {1}</value>
+  </data>
+  <data name="Menu_PlainMap" xml:space="preserve">
+    <value>plain map</value>
+  </data>
+  <data name="Map_Minute" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="FavoriteButton_Remove" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="UpdateScheme_Header" xml:space="preserve">
+    <value>Updating schemes</value>
+  </data>
+  <data name="VersionFormat" xml:space="preserve">
+    <value>Version {0}.{1:D2}, {2:D}</value>
+  </data>
+  <data name="City_SaintPetersburg" xml:space="preserve">
+    <value>Saint Petersburg</value>
+  </data>
+  <data name="DetectCity_Title" xml:space="preserve">
+    <value>City detecting</value>
+  </data>
+  <data name="Settings_AboutTitle" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="ApplicationFailed_Subject" xml:space="preserve">
+    <value>Windows Phone Metro mobile app</value>
+  </data>
+  <data name="Station_Destination" xml:space="preserve">
+    <value>destination</value>
+  </data>
+  <data name="Policy_ContentLine1" xml:space="preserve">
+    <value>For information about the location, use the "Locate", which is used to find the nearest metro station.</value>
+  </data>
+  <data name="Policy_ContentLine2" xml:space="preserve">
+    <value>By clicking "Allow", you agree to the transfer of data to the conditions specified in the license agreement.</value>
+  </data>
+  <data name="Station_Lines" xml:space="preserve">
+    <value>lines</value>
+  </data>
+  <data name="Station_Title" xml:space="preserve">
+    <value>Station {0}</value>
+  </data>
+  <data name="Map_RevertRoute" xml:space="preserve">
+    <value>Invert path</value>
+  </data>
+  <data name="ApplicationFailed_MessageLine2" xml:space="preserve">
+    <value>Please tap "OK" to send Yandex a bug report.</value>
+  </data>
+  <data name="ApplicationFailed_MessageLine1" xml:space="preserve">
+    <value>The application needs to relaunched.</value>
+  </data>
+  <data name="DetectCity_Text" xml:space="preserve">
+    <value>Find city automatically?</value>
+  </data>
+  <data name="Station_Dispatch" xml:space="preserve">
+    <value>dispatch</value>
+  </data>
+  <data name="Progress_UpdateScheme" xml:space="preserve">
+    <value>Updating schemes...</value>
+  </data>
+  <data name="Search_Empty" xml:space="preserve">
+    <value>There are no search results</value>
+  </data>
+  <data name="Map_From" xml:space="preserve">
+    <value>From here</value>
+  </data>
+  <data name="Map_Hour" xml:space="preserve">
+    <value>hour</value>
+  </data>
+  <data name="ShakeButton_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="PolicyButton_Allow" xml:space="preserve">
+    <value>Allow</value>
+  </data>
+  <data name="Application_Title" xml:space="preserve">
+    <value>METRO</value>
+  </data>
+  <data name="Settings_SettingsTitle" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="UpdateScheme_UpToDate" xml:space="preserve">
+    <value>Nothing to update</value>
+  </data>
+  <data name="Favorite_Title" xml:space="preserve">
+    <value>add to favorites</value>
+  </data>
+  <data name="Map_End" xml:space="preserve">
+    <value>End:</value>
+  </data>
+  <data name="Podorosnik" xml:space="preserve">
+    <value>подорожник</value>
+  </data>
+  <data name="Settings_GpsTitle" xml:space="preserve">
+    <value>Consider my location</value>
+  </data>
+  <data name="Progress_Suggest" xml:space="preserve">
+    <value>Quick search</value>
+  </data>
+  <data name="PolicyButton_LicenseAgreement" xml:space="preserve">
+    <value>License agreement</value>
+  </data>
+  <data name="Country_Ukraine" xml:space="preserve">
+    <value>Ukraine</value>
+  </data>
+  <data name="City_Minsk" xml:space="preserve">
+    <value>Minsk</value>
+  </data>
+  <data name="Map_Start" xml:space="preserve">
+    <value>Start:</value>
+  </data>
+  <data name="ShakeButton_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ErrorReport_OSVersion" xml:space="preserve">
+    <value>Operating system version</value>
+  </data>
+  <data name="Progress_Route" xml:space="preserve">
+    <value>Loading route...</value>
+  </data>
+  <data name="Progress_Map" xml:space="preserve">
+    <value>Loading map...</value>
+  </data>
+  <data name="BuildFormat" xml:space="preserve">
+    <value>Build {0}.{1}</value>
+  </data>
+  <data name="LicenseAgreement" xml:space="preserve">
+    <value>license agreement</value>
+  </data>
+  <data name="Language_En" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Policy_Title" xml:space="preserve">
+    <value>Allow the program "Yandex.Metro" to use the information about the location?</value>
+  </data>
+  <data name="Language_Bel" xml:space="preserve">
+    <value>Belorussian</value>
+  </data>
+  <data name="Language_Rus" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="Language_Ukr" xml:space="preserve">
+    <value>Ukrainian</value>
+  </data>
+  <data name="Country_Russia" xml:space="preserve">
+    <value>Russia</value>
+  </data>
+  <data name="UUID" xml:space="preserve">
+    <value>Your uuid {0}</value>
+  </data>
+</root>

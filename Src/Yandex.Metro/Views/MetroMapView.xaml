@@ -1,0 +1,548 @@
+﻿<y:MetroPage 
+    x:Class="Yandex.Metro.Views.MetroMapView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:y="clr-namespace:Yandex.Metro.Logic" 
+    xmlns:Control="clr-namespace:Y.UI.Common.Control;assembly=Y.UI.Common"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:CommonBehaviors="clr-namespace:Y.UI.Common.Behaviors;assembly=Y.UI.Common"
+    xmlns:FastScheme="clr-namespace:Y.Metro.ServiceLayer.FastScheme" xmlns:ym="we://love.windowsphone/metro.yandex.ru/"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.Opacity="0"
+    shell:SystemTray.ForegroundColor="{StaticResource ForeColor}"
+    DataContext="{Binding Main, Source={StaticResource V}}"
+    >
+    <y:MetroPage.Resources>
+        <Storyboard x:Name="SearchStationActivateAnimationFrom">
+            <DoubleAnimation Storyboard.TargetName="StartStationGrid" Storyboard.TargetProperty="Width" To="450" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="StartLine" Storyboard.TargetProperty="X2" To="432" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EndStationGrid" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GridRoute" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="SearchStationActivateAnimationTo">
+            <DoubleAnimation Storyboard.TargetName="RouteTransform" Storyboard.TargetProperty="X" To="-230" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="EndStationGrid" Storyboard.TargetProperty="Width" To="448" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="EndLine" Storyboard.TargetProperty="X2" To="432" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GridRoute" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="SearchStationDeactivateAnimationFrom">
+            <DoubleAnimation Storyboard.TargetName="StartStationGrid" Storyboard.TargetProperty="Width" To="221" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="StartLine" Storyboard.TargetProperty="X2" To="204" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EndStationGrid" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GridRoute" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="SearchStationDeactivateAnimationFromFast">
+            <DoubleAnimation Storyboard.TargetName="StartStationGrid" Storyboard.TargetProperty="Width" To="221" Duration="0:0:0">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="StartLine" Storyboard.TargetProperty="X2" To="204" Duration="0:0:0">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="EndStationGrid" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GridRoute" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="SearchStationDeactivateAnimationToFast">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GridRoute" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimation Storyboard.TargetName="EndStationGrid" Storyboard.TargetProperty="Width" To="221" Duration="0:0:0">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="EndLine" Storyboard.TargetProperty="X2" To="204" Duration="0:0:0">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="RouteTransform" Storyboard.TargetProperty="X" To="0" Duration="0:0:0">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+        </Storyboard>
+
+        <Storyboard x:Name="SearchStationDeactivateAnimationTo">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GridRoute" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimation Storyboard.TargetName="EndStationGrid" Storyboard.TargetProperty="Width" To="221" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="EndLine" Storyboard.TargetProperty="X2" To="204" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="RouteTransform" Storyboard.TargetProperty="X" To="0" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+        </Storyboard>
+
+        <Storyboard x:Name="MapTypeSwitchAnimation" Duration="0:0:0.5">
+            <DoubleAnimation Storyboard.TargetName="PlainMapTransform" Storyboard.TargetProperty="RotationY" To="0" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="SchemeMapTransform" Storyboard.TargetProperty="X" To="-1000" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="LogoTransform" Storyboard.TargetProperty="X" To="-1000" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="SchemeMap" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.5"/>
+            <DoubleAnimation Storyboard.TargetName="logoImage" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.5"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PlainMap" Storyboard.TargetProperty="Visibility" Duration="0:0:0.5">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="MapTypeSwitchBackAnimation"  Duration="0:0:0.5">
+            <DoubleAnimation Storyboard.TargetName="PlainMapTransform" Storyboard.TargetProperty="RotationY" To="-90" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="SchemeMapTransform" Storyboard.TargetProperty="X" To="0" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="LogoTransform" Storyboard.TargetProperty="X" To="0" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="SchemeMap" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.5"/>
+            <DoubleAnimation Storyboard.TargetName="logoImage" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.5"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PlainMap" Storyboard.TargetProperty="Visibility" Duration="0:0:0.5">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="SelectStationAnimation" Storyboard.TargetName="animateStationCircle" >
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.5" />
+            <DoubleAnimation Storyboard.TargetName="EllipseTransform" Storyboard.TargetProperty="X" To="435" Duration="0:0:0.5"/>
+            <DoubleAnimation Storyboard.TargetName="EllipseTransform" Storyboard.TargetProperty="Y" To="51" Duration="0:0:0.5"/>
+        </Storyboard>
+
+        <Storyboard x:Name="LogoAnimation" Storyboard.TargetName="logoImage" >
+            <DoubleAnimation Storyboard.TargetName="LogoTransform" Storyboard.TargetProperty="Y" To="-8" Duration="0:0:0.5">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </y:MetroPage.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource ForeColorBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="106" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <i:Interaction.Behaviors>
+            <CommonBehaviors:TriggerAnimationBehavior PropertyToMonitor="{Binding IsPlainMode}"
+                                                      ValueToMonitor="{StaticResource TrueValue}" 
+                                                      AnimationToBegin="{StaticResource MapTypeSwitchAnimation}"
+                                                      AnimationBackToBegin="{StaticResource MapTypeSwitchBackAnimation}"/>
+        </i:Interaction.Behaviors>
+        <Grid Name="SchemeMap" Grid.Row="1" Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+              MouseLeftButtonDown="OnHideSelectStationControl">
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="SchemeMapTransform" X="0"/>
+            </Grid.RenderTransform>
+            <toolkit:GestureService.GestureListener>
+                <toolkit:GestureListener DragStarted="GestureListenerDragStarted"
+                                         DragDelta="GestureListenerDragDelta"
+                                         DragCompleted="GestureListenerDragCompleted"
+                                         PinchStarted="GestureListenerPinchStarted"
+                                         PinchDelta="GestureListenerPinchDelta"
+                                         PinchCompleted="GestureListenerPinchCompleted"
+                                         DoubleTap="GestureListenerDoubleTap"
+                                         Hold="GestureListener_OnHold"
+                                         GestureCompleted="GestureListener_OnGestureCompleted"/>
+            </toolkit:GestureService.GestureListener>
+            <Canvas x:Name="MapRoot" Width="1000" Height="1000" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Canvas.CacheMode>
+                    <BitmapCache x:Name="cacheMode" RenderAtScale="2"/>
+                </Canvas.CacheMode>
+                <i:Interaction.Behaviors>
+                    <ym:GpsBehavior NearestStation="{Binding NearestStation}" />
+                </i:Interaction.Behaviors>
+                <Canvas.Resources>
+                    <Storyboard x:Key="gpsAnimation" Storyboard.TargetName="gpsEllipse" >
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.4">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetProperty="Width" Duration="0:0:0.5" To="79">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetProperty="Height" Duration="0:0:0.5" To="79">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" Duration="0:0:0.5" To="79">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)" Duration="0:0:0.5" To="79">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetName="gpsEllipseSmall" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.5"/>
+                    </Storyboard>
+                </Canvas.Resources>
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <MatrixTransform x:Name="previousTransform" />
+
+                        <TransformGroup x:Name="currentTransform">
+                            <ScaleTransform x:Name="scaleTransform" />
+                            <RotateTransform x:Name="rotateTransform" />
+                            <TranslateTransform x:Name="translateTransform" />
+                        </TransformGroup>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Canvas x:Name="RouteRoot" Width="1000" Height="1000" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Canvas.ZIndex="8000" IsHitTestVisible="False">
+                    <Canvas.CacheMode>
+                        <BitmapCache RenderAtScale="2"/>
+                    </Canvas.CacheMode>
+                </Canvas>
+            </Canvas>
+
+        </Grid>
+
+        <ScrollViewer Name="PlainMap" Grid.Row="1"  Background="Transparent" VerticalAlignment="Top" Visibility="Collapsed">
+            <toolkit:GestureService.GestureListener>
+                <toolkit:GestureListener  DragDelta="GestureListenerDragDelta"
+                                          Hold="GestureListener_OnHold"
+                                          GestureCompleted="GestureListener_OnGestureCompleted"/>
+            </toolkit:GestureService.GestureListener>
+            <ScrollViewer.RenderTransform>
+                <TranslateTransform x:Name="PlainMapScrollTransform"></TranslateTransform>
+            </ScrollViewer.RenderTransform>
+            <ScrollViewer.Projection>
+                <PlaneProjection x:Name="PlainMapTransform" CenterOfRotationX="1" RotationY="-90"/>
+            </ScrollViewer.Projection>
+            <Canvas Name="PlainMapCanvas">
+                <Canvas.Resources>
+                    <Storyboard x:Key="gpsPlainAnimation" Storyboard.TargetName="gpsPlainEllipse">
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetProperty="Width" Duration="0:0:0.3" To="80">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetProperty="Height" Duration="0:0:0.3" To="80">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" Duration="0:0:0.3" To="80">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)" Duration="0:0:0.3" To="80">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetName="gpsPlainEllipseSmall" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.3"/>
+                    </Storyboard>
+                    <Storyboard x:Key="gpsSmallEllipseAnimation" Storyboard.TargetName="gpsPlainEllipseSmall" Completed="DrugAnimationCompleted">
+                        <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" Duration="0:0:0.7" To="80">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                        <DoubleAnimation Storyboard.TargetProperty="(Canvas.Top)" Duration="0:0:0.7" To="80">
+                            <DoubleAnimation.EasingFunction>
+                                <CircleEase EasingMode="EaseInOut"/>
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                    </Storyboard>
+
+                </Canvas.Resources>
+                <i:Interaction.Behaviors>
+                    <ym:PlainModeBehavior Route="{Binding SelectRoute}" />
+                </i:Interaction.Behaviors>
+                <Control:TapButton  Name="revertButton" toolkit:TiltEffect.IsTiltEnabled="True"
+                    Command="{Binding Main.RevertRoute, Source={StaticResource V}}" Margin="24,0,24,0">
+                    <Control:TapButton.Template>
+                        <ControlTemplate>
+                            <Border Style="{StaticResource RevertBorder}">
+                                <StackPanel Margin="12, 4, 12, 0">
+                                    <TextBlock Style="{StaticResource TextBlock25Black}" Text="{Binding Localization.Resources.Map_RevertRoute, Source={StaticResource V}}"/>
+                                    <TextBlock Style="{StaticResource TextBlock20Gray}" Text="{Binding Main.RevertButtonText, Source={StaticResource V}}"/>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+                    </Control:TapButton.Template>
+                </Control:TapButton>
+            </Canvas>
+        </ScrollViewer>
+
+        <Grid Name="GridRoute" Background="{StaticResource BackWithDefaultOpacityColorBrush}" Width="800">
+            <Grid VerticalAlignment="Bottom" Visibility="{Binding IsRouteAvailable, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=invert}" >
+                <Grid.RenderTransform>
+                    <TranslateTransform x:Name="RouteTransform" X="0"/>
+                </Grid.RenderTransform>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Name="StartStationGrid" Margin="22,0,11,18"  Width="221" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <!--this column for text width limit only-->
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Margin="2,12,5,0" Text="{Binding Localization.Resources.Map_Start, Source={StaticResource V}}" Style="{StaticResource TextBlock23Normal}" 
+                               Visibility="{Binding IsStartStationAvailable, Converter={StaticResource BooleanToVisibilityConverter},ConverterParameter=invert}"/>
+                    <!--grid or border is required as parent container for smart trimming behavior-->
+                    <Border Grid.Column="1" Margin="0,12,0,0" Tap="StartStationTap"
+                            Visibility="{Binding SearchIsActive, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=invert}" >
+                        <TextBlock Text="{Binding StartStation.Name.Text}" FontSize="23">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                            </TextBlock.Foreground>
+                                    <i:Interaction.Behaviors>
+                                        <CommonBehaviors:SmartTrimmingTextBlockBehavior TextTrimmingMargin="0" EllipcesSize="10" />
+                                    </i:Interaction.Behaviors>
+                        </TextBlock>
+                    </Border>
+                    <Control:RoundButton Grid.ColumnSpan="3" 
+                                                 HorizontalAlignment="Right"
+                                                 toolkit:TiltEffect.IsTiltEnabled="True"
+                                                 VerticalAlignment="Bottom"
+                                                 ImageSource="/Images/plus.png" ImageMargin="12,16,12,12"
+                                                 Width="50" Height="54" Margin="0,0,2,-1" 
+                                          BorderBrush="White" Foreground="White" 
+                                                 Command="{Binding OpenStationView}" CommandParameter="{StaticResource TrueValue}"
+                                                 Visibility="{Binding IsStartStationAvailable, Converter={StaticResource BooleanToVisibilityConverter},FallbackValue={StaticResource CollapsedValue},
+                                                               ConverterParameter=invert}"/>
+                    <Control:RoundButton Grid.ColumnSpan="3" toolkit:TiltEffect.IsTiltEnabled="True"
+                                                 VerticalAlignment="Bottom"
+                                                 HorizontalAlignment="Right"
+                                                 ImageSource="/Images/cross.png" ImageMargin="12,16,12,12"
+                                                 Width="50" Height="54" Margin="0,0,2,-1" 
+                                          BorderBrush="White" Foreground="White" 
+                                                 Command="{Binding ClearStationCommand}" CommandParameter="{StaticResource TrueValue}"
+                                                 Visibility="{Binding IsStartStationAvailable, Converter={StaticResource BooleanToVisibilityConverter},FallbackValue={StaticResource CollapsedValue}}"/>
+                    <Line Name="StartLine" Grid.ColumnSpan="3" Margin="2,0,0,0"
+                          X2="204" Stroke="White" StrokeThickness="1" 
+                          VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
+                          Y1="0.5" Y2="0.5"
+                          />
+                </Grid>
+                <Grid Name="EndStationGrid" Grid.Column="1" Margin="0,0,18,18" Width="221">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Margin="0,12,5,0" Text="{Binding Localization.Resources.Map_End, Source={StaticResource V}}"  Style="{StaticResource TextBlock23Normal}"
+                               Visibility="{Binding IsEndStationAvailable, Converter={StaticResource BooleanToVisibilityConverter},ConverterParameter=invert}"></TextBlock>
+                    <!--grid or border is required as parent container for smart trimming behavior-->
+                    <Grid Grid.Column="1" Margin="0,12,5,0" Tap="EndStationTap">
+                        <TextBlock Grid.Column="1" Text="{Binding EndStation.Name.Text}" FontSize="23">
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                            </TextBlock.Foreground>
+                                    <i:Interaction.Behaviors>
+                                        <CommonBehaviors:SmartTrimmingTextBlockBehavior TextTrimmingMargin="0" EllipcesSize="10" />
+                                    </i:Interaction.Behaviors>
+                        </TextBlock>
+                    </Grid>
+                    <Control:RoundButton Grid.ColumnSpan="3" toolkit:TiltEffect.IsTiltEnabled="True"
+                                                 HorizontalAlignment="Right"
+                                                 VerticalAlignment="Bottom"
+                                                 ImageSource="/Images/plus.png" ImageMargin="12,16,12,12"
+                                                 Width="50" Height="54" Margin="0,0,2,-1" 
+                                         BorderBrush="White" Foreground="White" 
+                                                 Command="{Binding OpenStationView}" CommandParameter="{StaticResource FalseValue}"
+                                                 Visibility="{Binding IsEndStationAvailable, Converter={StaticResource BooleanToVisibilityConverter},FallbackValue={StaticResource CollapsedValue},
+                                                               ConverterParameter=invert}"/>
+                    <Control:RoundButton Grid.ColumnSpan="3" toolkit:TiltEffect.IsTiltEnabled="True"
+                                                 HorizontalAlignment="Right"
+                                                 VerticalAlignment="Bottom"
+                                                 ImageSource="/Images/cross.png" ImageMargin="12,16,12,12"
+                                                 Width="50" Height="54" Margin="0,0,2,-1" 
+                                          BorderBrush="White" Foreground="White" 
+                                                  Command="{Binding ClearStationCommand}" CommandParameter="{StaticResource FalseValue}"
+                                                 Visibility="{Binding IsEndStationAvailable, Converter={StaticResource BooleanToVisibilityConverter},FallbackValue={StaticResource CollapsedValue}}"/>
+                    <Line Name="EndLine" Grid.ColumnSpan="3"
+                          Y1="0.5" Y2="0.5"
+                          Margin="2,0,0,0"
+                          X2="204" Stroke="White" StrokeThickness="1" 
+                          VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
+                          />
+                </Grid>
+            </Grid>
+            <Grid Margin="{StaticResource PageWithTrayMargin}" Visibility="{Binding IsRouteAvailable, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener DragDelta="GestureListenerPreventDragDeltaGesture"
+                                                 DragCompleted="GestureListenerPreventDragCompletedGesture"/>
+                </toolkit:GestureService.GestureListener>
+                <controls:Pivot ItemsSource="{Binding Routes}" x:Name="pivot" LoadedPivotItem="PivotLoadedPivotItem"  
+                                SelectedIndex="{Binding SelectedIndexPivot, Mode=TwoWay}">
+                    <controls:Pivot.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" Background="Transparent">
+                                <StackPanel Orientation="Horizontal" d:DataContext="{d:DesignInstance FastScheme:Route}">
+                                    <Grid Width="30" Height="30" Margin="0,2,10,0">
+                                        <Ellipse Fill="{StaticResource ForeColorBrush}"/>
+                                        <TextBlock Text="{Binding RouteNumber}" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                       FontSize="20" FontWeight="Bold" Margin="0,-3,0,0"
+                                                       Foreground="{StaticResource BackColorBrush}"/>
+                                    </Grid>
+                                    <TextBlock Text="{Binding EstimatedDuration, Converter={StaticResource DurationToStringConverter}}" Style="{StaticResource TextBlock23Normal}"></TextBlock>
+                                    <Image Source="/Images/flag.png" Height="32" Width="32" HorizontalAlignment="Left" Margin="10,2,10,0"/>
+                                    <TextBlock Text="{Binding EstimatedDuration, Converter={StaticResource DurationToStringConverter}, ConverterParameter=time}" Style="{StaticResource TextBlock23Normal}"></TextBlock>
+                                </StackPanel>
+                                <Canvas Height="10" CacheMode="BitmapCache" HorizontalAlignment="Stretch" Margin="40,5,0,0"
+                                            >
+                                    <i:Interaction.Behaviors>
+                                        <ym:RenderLineInBehavior Route="{Binding}" />
+                                    </i:Interaction.Behaviors>
+                                </Canvas>
+                            </StackPanel>
+                        </DataTemplate>
+                    </controls:Pivot.HeaderTemplate>
+                    <controls:Pivot.ItemTemplate>
+                        <DataTemplate>
+                        </DataTemplate>
+                    </controls:Pivot.ItemTemplate>
+                </controls:Pivot>
+            </Grid>
+            <Rectangle Fill="Transparent" MouseLeftButtonDown="OnHideSelectStationControl"
+                        Visibility="{Binding IsStationPopupVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+            </Rectangle>
+        </Grid>
+
+        <ym:AutoComplete Canvas.ZIndex="1" Grid.RowSpan="2" AutoCompleteState="{Binding Main.AutoCompleteState, Source={StaticResource V}}"/>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.RowSpan="2"
+                    Margin="0,0,0,80" Background="{StaticResource BackWithDefaultOpacityColorBrush}" 
+                    Visibility="{Binding IsDebugVersion, Converter={StaticResource BooleanToVisibilityConverter},FallbackValue={StaticResource CollapsedValue}}">
+            <Button Content="+" Tap="ButtonScaleUp" Width="80" Height="80"/>
+            <Button Content="-" Tap="ButtonScaleDown" Width="80" Height="80"/>
+        </StackPanel>
+
+        <ym:SelectStation Margin="{Binding PopupMargin}" Grid.RowSpan="2" VerticalAlignment="Top" 
+                               Visibility="{Binding IsStationPopupVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+        <toolkit:PerformanceProgressBar IsIndeterminate="{Binding Progress.IsMapLoading, Source={StaticResource V}}"
+                                        Grid.Row="1" VerticalAlignment="Center"/>
+
+        <Ellipse Height="26" Width="26" Fill="Yellow" Opacity="0" Name="animateStationCircle" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Stroke="Black" StrokeThickness="1" IsHitTestVisible="False" CacheMode="BitmapCache">
+            <Ellipse.RenderTransform>
+                <TranslateTransform x:Name="EllipseTransform" X="0"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+
+        <Image Name="logoImage" Source="{Binding LogoUrl}" Width="90" Height="35" IsHitTestVisible="False"
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.RowSpan="2" Margin="12,0,0,0">
+            <Image.RenderTransform>
+                <TranslateTransform x:Name="LogoTransform" Y="-80"/>
+            </Image.RenderTransform>
+        </Image>
+
+        <Control:BindableApplicationBar x:Name="bar" BackgroundColor="{StaticResource BackColor}" BarOpacity="0.8" ForegroundColor="{StaticResource ForeColor}"
+                                        IsVisible="{Binding Main.BarIsVisible,Source={StaticResource V}}" StateChanged="Bar_OnStateChanged">
+            <Control:BindableApplicationBarIconButton IconUri="/Images/favs.png" Command="{Binding ShowFavorites}" 
+                                                      Text="{Binding Localization.Resources.Menu_Favorites, Source={StaticResource V}}"/>
+            <Control:BindableApplicationBarMenuItem Text="{Binding Localization.Resources.Settings_SettingsTitle, Source={StaticResource V}}" 
+                                                    Command="{Binding SettingsCommand}"/>
+            <Control:BindableApplicationBarMenuItem Text="{Binding Localization.Resources.Settings_AboutTitle, Source={StaticResource V}}"
+                                                    Command="{Binding About}"/>
+        </Control:BindableApplicationBar>
+    </Grid>
+
+
+</y:MetroPage>
