@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Y.Metro.ServiceLayer.dll-->
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C44B0616-4D0A-49B3-BA94-98439E73D8AA}</ProjectGuid>
+    <ProjectGuid>{31800CAF-FA07-47AB-88B0-C13D95B1273E}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Y.Metro.ServiceLayer</RootNamespace>
     <AssemblyName>Y.Metro.ServiceLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
-    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -18,7 +23,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -27,83 +32,177 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Device" />
-    <Reference Include="System.Net" />
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Serialization" />
-    <Reference Include="Y.Common">
-      <HintPath>lib\Y.Common.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="BaseObject.cs" />
     <Compile Include="boardPositions.cs" />
     <Compile Include="boardPositionsPos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="schemepack.cs" />
     <Compile Include="schemepackScheme.cs" />
-    <Compile Include="schemepackSchemeOptions.cs" />
     <Compile Include="schemepackSchemeLinesLine.cs" />
-    <Compile Include="schemepackSchemeStationsStation.cs" />
     <Compile Include="schemepackSchemeLinksLink.cs" />
-    <Compile Include="schemepackSchemeTransfersTransferStation.cs" />
-    <Compile Include="schemepackSchemeOptionsSize.cs" />
-    <Compile Include="schemepackSchemeOptionsWorkTime.cs" />
+    <Compile Include="schemepackSchemeLinksLinkCustomDrawCustomDrawEleme.cs" />
+    <Compile Include="schemepackSchemeLinksLinkWeightsWeight.cs" />
+    <Compile Include="schemepackSchemeOptions.cs" />
     <Compile Include="schemepackSchemeOptionsDefaultRegion.cs" />
     <Compile Include="schemepackSchemeOptionsInitialPosition.cs" />
-    <Compile Include="BaseObject.cs" />
-    <Compile Include="schemepackSchemeStationsStationSchemePosition.cs" />
+    <Compile Include="schemepackSchemeOptionsSize.cs" />
+    <Compile Include="schemepackSchemeOptionsWorkTime.cs" />
+    <Compile Include="schemepackSchemeStationsStation.cs" />
+    <Compile Include="schemepackSchemeStationsStationBoardInfo.cs" />
     <Compile Include="schemepackSchemeStationsStationGeoCoordinates.cs" />
     <Compile Include="schemepackSchemeStationsStationName.cs" />
-    <Compile Include="schemepackSchemeStationsStationBoardInfo.cs" />
-    <Compile Include="schemepackSchemeStationsStationOldNamesOldName.cs" />
-    <Compile Include="schemepackSchemeStationsStationWeightsWeight.cs" />
-    <Compile Include="schemepackSchemeLinksLinkWeightsWeight.cs" />
-    <Compile Include="schemepackSchemeLinksLinkCustomDrawCustomDrawEleme.cs" />
-    <Compile Include="schemepackSchemeStationsStationNameTextLinesTextLi.cs" />
     <Compile Include="schemepackSchemeStationsStationNameCustomSchemePos.cs" />
+    <Compile Include="schemepackSchemeStationsStationNameTextLinesTextLi.cs" />
+    <Compile Include="schemepackSchemeStationsStationOldNamesOldName.cs" />
+    <Compile Include="schemepackSchemeStationsStationSchemePosition.cs" />
+    <Compile Include="schemepackSchemeStationsStationWeightsWeight.cs" />
     <Compile Include="schemepackSchemeTransfersTransfer.cs" />
+    <Compile Include="schemepackSchemeTransfersTransferStation.cs" />
     <Compile Include="Y\Metro\ServiceLayer\AppResourcesHelper.cs" />
-    <Compile Include="Y\Metro\ServiceLayer\SchemeReader.cs" />
-    <Compile Include="Y\Metro\ServiceLayer\ServiceConstants.cs" />
     <Compile Include="Y\Metro\ServiceLayer\BaseEventArgs.cs" />
-    <Compile Include="Y\Metro\ServiceLayer\RegistrationEventArgs.cs" />
-    <Compile Include="Y\Metro\ServiceLayer\SchemeEventArgs.cs" />
-    <Compile Include="Y\Metro\ServiceLayer\ServiceProvider.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Common\ServicesHelper.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Entities\Favorites.cs" />
-    <Compile Include="Y\Metro\ServiceLayer\Entities\LanguageCode.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Entities\Language.cs" />
-    <Compile Include="Y\Metro\ServiceLayer\Entities\ShortRoute.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Entities\LanguageCode.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Entities\Scheme.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Entities\SchemeMatrix.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Entities\SchemeMeta.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\Entities\ShortRoute.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Enums\SchemeType.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Enums\TimeType.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Generated\startup.cs" />
     <Compile Include="Y\Metro\ServiceLayer\Generated\startupSchemesScheme.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\RegistrationEventArgs.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\SchemeEventArgs.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\SchemeReader.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\ServiceConstants.cs" />
+    <Compile Include="Y\Metro\ServiceLayer\ServiceProvider.cs" />
+    <EmbeddedResource Include="Properties\Y.Metro.ServiceLayer.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="generated\moscowmetroschemesample.xml" />
-    <Resource Include="scheme\scheme_1_en.js" />
-    <Resource Include="scheme\scheme_1_ru.js" />
-    <Resource Include="scheme\scheme_13_be.js" />
-    <Resource Include="scheme\scheme_13_en.js" />
-    <Resource Include="scheme\scheme_13_ru.js" />
-    <Resource Include="scheme\scheme_2_en.js" />
-    <Resource Include="scheme\scheme_2_ru.js" />
-    <Resource Include="scheme\scheme_8_en.js" />
-    <Resource Include="scheme\scheme_8_ru.js" />
-    <Resource Include="scheme\scheme_8_uk.js" />
-    <Resource Include="scheme\scheme_9_en.js" />
-    <Resource Include="scheme\scheme_9_ru.js" />
-    <Resource Include="scheme\scheme_9_uk.js" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="generated\moscowmetroschemesample.xml" />
+    <Content Include="scheme\scheme_13_be.js" />
+    <Content Include="scheme\scheme_13_en.js" />
+    <Content Include="scheme\scheme_13_ru.js" />
+    <Content Include="scheme\scheme_1_en.js" />
+    <Content Include="scheme\scheme_1_ru.js" />
+    <Content Include="scheme\scheme_2_en.js" />
+    <Content Include="scheme\scheme_2_ru.js" />
+    <Content Include="scheme\scheme_8_en.js" />
+    <Content Include="scheme\scheme_8_ru.js" />
+    <Content Include="scheme\scheme_8_uk.js" />
+    <Content Include="scheme\scheme_9_en.js" />
+    <Content Include="scheme\scheme_9_ru.js" />
+    <Content Include="scheme\scheme_9_uk.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Y.Common\Y.Common.csproj">
+      <Project>{27673b3d-7385-4114-acf7-afe8a033993a}</Project>
+      <Name>Y.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

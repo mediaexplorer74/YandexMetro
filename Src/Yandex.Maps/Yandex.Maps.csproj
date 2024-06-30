@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Yandex.Maps.dll-->
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F2145B2-87BA-4AA0-8769-B755E18A35F5}</ProjectGuid>
+    <ProjectGuid>{BF04D819-14A8-4ABA-9FD6-9C27FB71C7B4}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yandex.Maps</RootNamespace>
     <AssemblyName>Yandex.Maps</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
-    <ApplicationVersion>1.2.4721.1342</ApplicationVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -18,7 +23,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -27,115 +32,194 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.Phone.Controls">
-      <HintPath>lib\Microsoft.Phone.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Device" />
-    <Reference Include="System.Net" />
-    <Reference Include="System.Reactive.Core">
-      <HintPath>lib\System.Reactive.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.Interfaces">
-      <HintPath>lib\System.Reactive.Interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.Linq">
-      <HintPath>lib\System.Reactive.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.PlatformServices">
-      <HintPath>lib\System.Reactive.PlatformServices.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.Windows.Threading">
-      <HintPath>lib\System.Reactive.Windows.Threading.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Windows.Interactivity">
-      <HintPath>lib\System.Windows.Interactivity.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Xml.Serialization" />
-    <Reference Include="Zlib">
-      <HintPath>lib\Zlib.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="ABCDStruct.cs" />
-    <Compile Include="MD5Core.cs" />
-    <Compile Include="JetBrains\Annotations\LocalizationRequiredAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\StringFormatMethodAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\InvokerParameterNameAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\AssertionMethodAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\AssertionConditionAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\AssertionConditionType.cs" />
-    <Compile Include="JetBrains\Annotations\TerminatesProgramAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\CanBeNullAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\NotNullAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\CannotApplyEqualityOperatorAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\BaseTypeRequiredAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\UsedImplicitlyAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\MeansImplicitUseAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\ImplicitUseKindFlags.cs" />
-    <Compile Include="JetBrains\Annotations\ImplicitUseTargetFlags.cs" />
-    <Compile Include="JetBrains\Annotations\PublicAPIAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\InstantHandleAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\PureAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\PathReferenceAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\AspMvcModelTypeAttribute.cs" />
+    <Compile Include="Clarity\Phone\Extensions\TransformCreationMode.cs" />
+    <Compile Include="Clarity\Phone\Extensions\VisualTreeExtensions.cs" />
+    <Compile Include="DanielVaughan\WindowsPhone7Unleashed\BindingChangedEventArgs.cs" />
+    <Compile Include="DanielVaughan\WindowsPhone7Unleashed\DependencyPropertyListener.cs" />
+    <Compile Include="DanielVaughan\WindowsPhone7Unleashed\ScrollViewerMonitor.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcActionAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcAreaAttribute.cs" />
     <Compile Include="JetBrains\Annotations\AspMvcControllerAttribute.cs" />
     <Compile Include="JetBrains\Annotations\AspMvcMasterAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\AspMvcViewAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\AspMvcAreaAttribute.cs" />
-    <Compile Include="JetBrains\Annotations\AspMvcActionAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcModelTypeAttribute.cs" />
     <Compile Include="JetBrains\Annotations\AspMvcTemplateAttribute.cs" />
-    <Compile Include="Yandex\LowMemoryHelper.cs" />
-    <Compile Include="Yandex\ShellHelper.cs" />
-    <Compile Include="Yandex\Controls\FocusBehavior.cs" />
-    <Compile Include="Yandex\Controls\InvokeCommandWithParameterAction.cs" />
-    <Compile Include="Yandex\Controls\EnterPressedTrigger.cs" />
-    <Compile Include="Yandex\Controls\ExtendedPhoneApplicationPage.cs" />
-    <Compile Include="Yandex\Controls\PaddingVirualizedListBox.cs" />
-    <Compile Include="Yandex\Controls\QuickItemsBehavior`1.cs" />
-    <Compile Include="Yandex\Controls\ResSource.cs" />
-    <Compile Include="Yandex\Controls\DataTemplateSelector.cs" />
-    <Compile Include="Yandex\Controls\Ioc.cs" />
-    <Compile Include="Yandex\Controls\ControlsIocInitializer.cs" />
-    <Compile Include="Yandex\Controls\PhoneTheme.cs" />
-    <Compile Include="Yandex\Controls\PhoneThemes.cs" />
-    <Compile Include="Yandex\Controls\OrientationHandlerWrapper.cs" />
-    <Compile Include="Yandex\Controls\ResImage.cs" />
-    <Compile Include="Yandex\Controls\TextBlockEx.cs" />
-    <Compile Include="Yandex\Controls\TiledImagePanel.cs" />
-    <Compile Include="Yandex\Controls\UnloadingPivot.cs" />
-    <Compile Include="Yandex\Controls\TextBoxUpdatesTextBindingOnPropertyChanged.cs" />
-    <Compile Include="Yandex\Controls\ThicknessAnimationSide.cs" />
-    <Compile Include="Yandex\Controls\ThicknessWrapper.cs" />
-    <Compile Include="Yandex\Controls\WatermarkedTextBox.cs" />
-    <Compile Include="Yandex\Controls\Converters\UpperCaseConverter.cs" />
-    <Compile Include="Yandex\Controls\Converters\BoolToVisibilityConverter.cs" />
-    <Compile Include="Yandex\Controls\Converters\DateFormatter.cs" />
-    <Compile Include="Yandex\Controls\ApplicationBar\ApplicationBarWrapper.cs" />
-    <Compile Include="Yandex\Controls\ApplicationBar\ApplicationBarMenuItemGenericWrapper`1.cs" />
+    <Compile Include="JetBrains\Annotations\AspMvcViewAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AssertionConditionAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\AssertionConditionType.cs" />
+    <Compile Include="JetBrains\Annotations\AssertionMethodAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\BaseTypeRequiredAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\CanBeNullAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\CannotApplyEqualityOperatorAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\ImplicitUseKindFlags.cs" />
+    <Compile Include="JetBrains\Annotations\ImplicitUseTargetFlags.cs" />
+    <Compile Include="JetBrains\Annotations\InstantHandleAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\InvokerParameterNameAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\LocalizationRequiredAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\MeansImplicitUseAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\NotNullAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\PathReferenceAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\PublicAPIAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\PureAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\StringFormatMethodAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\TerminatesProgramAttribute.cs" />
+    <Compile Include="JetBrains\Annotations\UsedImplicitlyAttribute.cs" />
+    <Compile Include="MD5Core.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TinyIoC\AssemblyExtensions.cs" />
+    <Compile Include="TinyIoC\NamedParameterOverloads.cs" />
+    <Compile Include="TinyIoC\NamedResolutionFailureActions.cs" />
+    <Compile Include="TinyIoC\PropertyInfoExtensions.cs" />
+    <Compile Include="TinyIoC\ResolveOptions.cs" />
+    <Compile Include="TinyIoC\SafeDictionary`2.cs" />
+    <Compile Include="TinyIoC\TinyIoCAutoRegistrationException.cs" />
+    <Compile Include="TinyIoC\TinyIoCConstructorResolutionException.cs" />
+    <Compile Include="TinyIoC\TinyIoCContainer.cs" />
+    <Compile Include="TinyIoC\TinyIoCRegistrationException.cs" />
+    <Compile Include="TinyIoC\TinyIoCRegistrationTypeException.cs" />
+    <Compile Include="TinyIoC\TinyIoCResolutionException.cs" />
+    <Compile Include="TinyIoC\TinyIoCWeakReferenceException.cs" />
+    <Compile Include="TinyIoC\TypeExtensions.cs" />
+    <Compile Include="TinyIoC\UnregisteredResolutionActions.cs" />
+    <Compile Include="WP7Contrib\Collections\BaseTrickleToCollection`1.cs" />
+    <Compile Include="WP7Contrib\Collections\ITrickleToCollection`1.cs" />
+    <Compile Include="WP7Contrib\Collections\TrickleAllToCollection`1.cs" />
+    <Compile Include="Yandex\App\ApplicationIdentity.cs" />
+    <Compile Include="Yandex\App\DummyApplicationIdentity.cs" />
+    <Compile Include="Yandex\App\EntryPointAssemblyIdentity.cs" />
+    <Compile Include="Yandex\App\Events\ApplicationActivatedEventArgs.cs" />
+    <Compile Include="Yandex\App\Events\ApplicationDeactivatedEventArgs.cs" />
+    <Compile Include="Yandex\App\IApplicationSettings.cs" />
+    <Compile Include="Yandex\App\Information\IManifestInformationProvider.cs" />
+    <Compile Include="Yandex\App\Information\ManifestInformation.cs" />
+    <Compile Include="Yandex\App\Information\ManifestInformationProvider.cs" />
+    <Compile Include="Yandex\App\Interfaces\IApplicationIdentity.cs" />
+    <Compile Include="Yandex\App\Interfaces\IResourcesHelper.cs" />
+    <Compile Include="Yandex\App\IsolatedStorageApplicationSettings.cs" />
+    <Compile Include="Yandex\App\ResourcesHelper.cs" />
+    <Compile Include="Yandex\Collections\ConcurrentCollection`1.cs" />
+    <Compile Include="Yandex\Collections\ConcurrentDictionary`2.cs" />
+    <Compile Include="Yandex\Collections\ConvertingObservableCollection`2.cs" />
+    <Compile Include="Yandex\Collections\EnumerableQueue`1.cs" />
+    <Compile Include="Yandex\Collections\Interfaces\IConcurrentCollection`1.cs" />
+    <Compile Include="Yandex\Collections\Interfaces\IEnumerableQueue`1.cs" />
+    <Compile Include="Yandex\Collections\Interfaces\IMemoryCache`2.cs" />
+    <Compile Include="Yandex\Collections\Interfaces\IQueue`1.cs" />
+    <Compile Include="Yandex\Collections\IObservableEnumerable`1.cs" />
+    <Compile Include="Yandex\Collections\MemoryCache`2.cs" />
+    <Compile Include="Yandex\Collections\ObservableDictionary`2.cs" />
+    <Compile Include="Yandex\Collections\ObservableList`1.cs" />
+    <Compile Include="Yandex\Collections\Queue`1.cs" />
+    <Compile Include="Yandex\Collections\SmartCollection`1.cs" />
+    <Compile Include="Yandex\Collections\WeakDictionary`2.cs" />
+    <Compile Include="Yandex\Common\ICloneable.cs" />
+    <Compile Include="Yandex\Common\Logger.cs" />
+    <Compile Include="Yandex\Common\Timer.cs" />
+    <Compile Include="Yandex\Common\TimerCallback.cs" />
     <Compile Include="Yandex\Controls\ApplicationBar\ApplicationBarIconButtonWrapper.cs" />
+    <Compile Include="Yandex\Controls\ApplicationBar\ApplicationBarMenuItemGenericWrapper`1.cs" />
     <Compile Include="Yandex\Controls\ApplicationBar\ApplicationBarMenuItemWrapper.cs" />
-    <Compile Include="Yandex\Controls\Behaviors\PageOrientationBehavior.cs" />
+    <Compile Include="Yandex\Controls\ApplicationBar\ApplicationBarWrapper.cs" />
     <Compile Include="Yandex\Controls\Behaviors\LandscapeHideSystemTrayBehavior.cs" />
     <Compile Include="Yandex\Controls\Behaviors\LandscapeHideSystemTrayIndicatorBehavior.cs" />
+    <Compile Include="Yandex\Controls\Behaviors\PageOrientationBehavior.cs" />
     <Compile Include="Yandex\Controls\Behaviors\VisualStateBehavior.cs" />
-    <Compile Include="Yandex\Controls\Navigation\NavigationType.cs" />
-    <Compile Include="Yandex\Controls\Navigation\INavigationService.cs" />
-    <Compile Include="Yandex\Controls\Navigation\NavigationService.cs" />
-    <Compile Include="Yandex\Controls\Navigation\LoggedNavigationService.cs" />
-    <Compile Include="Yandex\Controls\Navigation\NavigationState.cs" />
-    <Compile Include="Yandex\Controls\Notification\Notification.cs" />
-    <Compile Include="Yandex\Controls\Notification\NotificationControl.cs" />
+    <Compile Include="Yandex\Controls\ControlsIocInitializer.cs" />
+    <Compile Include="Yandex\Controls\Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Yandex\Controls\Converters\DateFormatter.cs" />
+    <Compile Include="Yandex\Controls\Converters\UpperCaseConverter.cs" />
+    <Compile Include="Yandex\Controls\DataTemplateSelector.cs" />
+    <Compile Include="Yandex\Controls\EnterPressedTrigger.cs" />
+    <Compile Include="Yandex\Controls\ExtendedPhoneApplicationPage.cs" />
+    <Compile Include="Yandex\Controls\FocusBehavior.cs" />
     <Compile Include="Yandex\Controls\Helpers\VisualTreeHelperEx.cs" />
     <Compile Include="Yandex\Controls\Images\BitmapRepository`1.cs" />
     <Compile Include="Yandex\Controls\Images\FileNameMapper`1.cs" />
@@ -144,335 +228,328 @@
     <Compile Include="Yandex\Controls\Images\ImageManager.cs" />
     <Compile Include="Yandex\Controls\Images\ImageQueueItem.cs" />
     <Compile Include="Yandex\Controls\Images\ImageResponseItem.cs" />
-    <Compile Include="Yandex\Controls\Images\RepositoryItem.cs" />
-    <Compile Include="Yandex\Controls\Images\RepositoryState.cs" />
     <Compile Include="Yandex\Controls\Images\Interfaces\IBitmapRepository`1.cs" />
     <Compile Include="Yandex\Controls\Images\Interfaces\IFileNameMapper`1.cs" />
     <Compile Include="Yandex\Controls\Images\Interfaces\IFileStorage.cs" />
     <Compile Include="Yandex\Controls\Images\Interfaces\IImageDispatcher.cs" />
+    <Compile Include="Yandex\Controls\Images\RepositoryItem.cs" />
+    <Compile Include="Yandex\Controls\Images\RepositoryState.cs" />
+    <Compile Include="Yandex\Controls\InvokeCommandWithParameterAction.cs" />
+    <Compile Include="Yandex\Controls\Ioc.cs" />
+    <Compile Include="Yandex\Controls\Navigation\INavigationService.cs" />
+    <Compile Include="Yandex\Controls\Navigation\LoggedNavigationService.cs" />
+    <Compile Include="Yandex\Controls\Navigation\NavigationService.cs" />
+    <Compile Include="Yandex\Controls\Navigation\NavigationState.cs" />
+    <Compile Include="Yandex\Controls\Navigation\NavigationType.cs" />
+    <Compile Include="Yandex\Controls\Notification\Notification.cs" />
+    <Compile Include="Yandex\Controls\Notification\NotificationControl.cs" />
+    <Compile Include="Yandex\Controls\OrientationHandlerWrapper.cs" />
+    <Compile Include="Yandex\Controls\PaddingVirualizedListBox.cs" />
+    <Compile Include="Yandex\Controls\PhoneTheme.cs" />
+    <Compile Include="Yandex\Controls\PhoneThemes.cs" />
+    <Compile Include="Yandex\Controls\QuickItemsBehavior`1.cs" />
+    <Compile Include="Yandex\Controls\ResImage.cs" />
+    <Compile Include="Yandex\Controls\ResSource.cs" />
+    <Compile Include="Yandex\Controls\TextBlockEx.cs" />
+    <Compile Include="Yandex\Controls\TextBoxUpdatesTextBindingOnPropertyChanged.cs" />
     <Compile Include="Yandex\Controls\Themes\IThemeDispatcher.cs" />
     <Compile Include="Yandex\Controls\Themes\LightThemeDispatcher.cs" />
-    <Compile Include="Yandex\Controls\ViewStateManager\ViewStateManagerBase`1.cs" />
+    <Compile Include="Yandex\Controls\ThicknessAnimationSide.cs" />
+    <Compile Include="Yandex\Controls\ThicknessWrapper.cs" />
+    <Compile Include="Yandex\Controls\TiledImagePanel.cs" />
+    <Compile Include="Yandex\Controls\UnloadingPivot.cs" />
     <Compile Include="Yandex\Controls\ViewStateManager\Interfaces\IViewState.cs" />
     <Compile Include="Yandex\Controls\ViewStateManager\Interfaces\IViewStateManagerBase`1.cs" />
-    <Compile Include="Yandex\App\ApplicationIdentity.cs" />
-    <Compile Include="Yandex\App\DummyApplicationIdentity.cs" />
-    <Compile Include="Yandex\App\EntryPointAssemblyIdentity.cs" />
-    <Compile Include="Yandex\App\ResourcesHelper.cs" />
-    <Compile Include="Yandex\App\IApplicationSettings.cs" />
-    <Compile Include="Yandex\App\IsolatedStorageApplicationSettings.cs" />
-    <Compile Include="Yandex\App\Information\IManifestInformationProvider.cs" />
-    <Compile Include="Yandex\App\Information\ManifestInformation.cs" />
-    <Compile Include="Yandex\App\Information\ManifestInformationProvider.cs" />
-    <Compile Include="Yandex\App\Interfaces\IApplicationIdentity.cs" />
-    <Compile Include="Yandex\App\Interfaces\IResourcesHelper.cs" />
-    <Compile Include="Yandex\App\Events\ApplicationActivatedEventArgs.cs" />
-    <Compile Include="Yandex\App\Events\ApplicationDeactivatedEventArgs.cs" />
-    <Compile Include="Yandex\Collections\ConcurrentCollection`1.cs" />
-    <Compile Include="Yandex\Collections\ConcurrentDictionary`2.cs" />
-    <Compile Include="Yandex\Collections\EnumerableQueue`1.cs" />
-    <Compile Include="Yandex\Collections\MemoryCache`2.cs" />
-    <Compile Include="Yandex\Collections\Queue`1.cs" />
-    <Compile Include="Yandex\Collections\WeakDictionary`2.cs" />
-    <Compile Include="Yandex\Collections\ConvertingObservableCollection`2.cs" />
-    <Compile Include="Yandex\Collections\IObservableEnumerable`1.cs" />
-    <Compile Include="Yandex\Collections\ObservableDictionary`2.cs" />
-    <Compile Include="Yandex\Collections\ObservableList`1.cs" />
-    <Compile Include="Yandex\Collections\SmartCollection`1.cs" />
-    <Compile Include="Yandex\Collections\Interfaces\IConcurrentCollection`1.cs" />
-    <Compile Include="Yandex\Collections\Interfaces\IQueue`1.cs" />
-    <Compile Include="Yandex\Collections\Interfaces\IEnumerableQueue`1.cs" />
-    <Compile Include="Yandex\Collections\Interfaces\IMemoryCache`2.cs" />
-    <Compile Include="Yandex\Common\ICloneable.cs" />
-    <Compile Include="Yandex\Common\Logger.cs" />
-    <Compile Include="Yandex\Common\Timer.cs" />
-    <Compile Include="Yandex\Common\TimerCallback.cs" />
-    <Compile Include="Yandex\PAL\Stopwatch.cs" />
-    <Compile Include="Yandex\PAL\Interfaces\IStopwatch.cs" />
-    <Compile Include="Yandex\PAL\IO\FileAccess.cs" />
-    <Compile Include="Yandex\PAL\IO\FileShare.cs" />
-    <Compile Include="Yandex\PAL\IO\IsolatedStorageFileWrapper.cs" />
+    <Compile Include="Yandex\Controls\ViewStateManager\ViewStateManagerBase`1.cs" />
+    <Compile Include="Yandex\Controls\WatermarkedTextBox.cs" />
     <Compile Include="Yandex\DevUtils\DebuggerExt.cs" />
     <Compile Include="Yandex\DevUtils\DesignerProperties.cs" />
     <Compile Include="Yandex\DevUtils\WP\DebugWatch.cs" />
+    <Compile Include="Yandex\Extensions\EnumerableExtensions.cs" />
     <Compile Include="Yandex\Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Yandex\Extensions\GridHelper.cs" />
+    <Compile Include="Yandex\Extensions\LinqExtension.cs" />
     <Compile Include="Yandex\Extensions\ListExtensions.cs" />
     <Compile Include="Yandex\Extensions\PublicGrouping`2.cs" />
-    <Compile Include="Yandex\Extensions\LinqExtension.cs" />
-    <Compile Include="Yandex\Extensions\EnumerableExtensions.cs" />
-    <Compile Include="Yandex\Extensions\GridHelper.cs" />
-    <Compile Include="Yandex\Hardware\Wp7BacklightManager.cs" />
+    <Compile Include="Yandex\Globalization\CultureInfoExt.cs" />
     <Compile Include="Yandex\Hardware\BackLightMode.cs" />
     <Compile Include="Yandex\Hardware\BackLightState.cs" />
-    <Compile Include="Yandex\Hardware\Wp7DeviceInfo.cs" />
     <Compile Include="Yandex\Hardware\IDeviceInfo.cs" />
     <Compile Include="Yandex\Hardware\Interfaces\IBacklightManager.cs" />
-    <Compile Include="Yandex\Ioc\InjectedMemberBase.cs" />
-    <Compile Include="Yandex\Ioc\IIocConfiguration.cs" />
-    <Compile Include="Yandex\Ioc\IIocContainer.cs" />
-    <Compile Include="Yandex\Ioc\IIocInjectionMember.cs" />
-    <Compile Include="Yandex\Ioc\IocInjectionConstructor.cs" />
-    <Compile Include="Yandex\Ioc\IocInjectionProperty.cs" />
-    <Compile Include="Yandex\Ioc\TinyIoCContainer.cs" />
-    <Compile Include="Yandex\Ioc\IocInitializer.cs" />
-    <Compile Include="Yandex\Ioc\IocSingleton`1.cs" />
-    <Compile Include="Yandex\IO\IDirectoryStorage.cs" />
-    <Compile Include="Yandex\IO\CachedDirectoryStorage.cs" />
-    <Compile Include="Yandex\IO\FileMode.cs" />
-    <Compile Include="Yandex\IO\IFileStorage.cs" />
-    <Compile Include="Yandex\IO\ILimitedFileStorage.cs" />
-    <Compile Include="Yandex\IO\IPath.cs" />
-    <Compile Include="Yandex\IO\MemoryStreamExtention.cs" />
-    <Compile Include="Yandex\IO\Path.cs" />
-    <Compile Include="Yandex\IO\CachedDirectoryIsolatedStorage.cs" />
-    <Compile Include="Yandex\ItemsCounter\IItemCounter.cs" />
-    <Compile Include="Yandex\ItemsCounter\ItemCounter.cs" />
-    <Compile Include="Yandex\ItemsCounter\ItemCounterSimple.cs" />
-    <Compile Include="Yandex\Log\CapptainLoggerHelper.cs" />
-    <Compile Include="Yandex\Log\EmptyLogger.cs" />
-    <Compile Include="Yandex\Log\CapptainLogger.cs" />
-    <Compile Include="Yandex\Log\Interfaces\ILogger.cs" />
-    <Compile Include="Yandex\Memory\IMemoryPlanner.cs" />
-    <Compile Include="Yandex\Memory\DummyMemoryPlanner.cs" />
-    <Compile Include="Yandex\Memory\IMemoryUsageMonitor.cs" />
-    <Compile Include="Yandex\Memory\MemoryPlanner.cs" />
-    <Compile Include="Yandex\Memory\MemoryPressure.cs" />
-    <Compile Include="Yandex\Memory\MemoryUsageMonitor.cs" />
-    <Compile Include="Yandex\Patterns\IFlusheable.cs" />
-    <Compile Include="Yandex\Patterns\IInitializable.cs" />
-    <Compile Include="Yandex\Patterns\IStateService.cs" />
-    <Compile Include="Yandex\Patterns\ServiceState.cs" />
-    <Compile Include="Yandex\Patterns\StateChangedEventArgs.cs" />
-    <Compile Include="Yandex\Patterns\StateServiceExtensions.cs" />
-    <Compile Include="Yandex\Properties\Resources.cs" />
-    <Compile Include="Yandex\Serialization\RepositoryBase`1.cs" />
-    <Compile Include="Yandex\Serialization\DataRepositoryBase`1.cs" />
-    <Compile Include="Yandex\Serialization\ModelRepositoryBase`1.cs" />
-    <Compile Include="Yandex\Serialization\UnixTimestampConverter.cs" />
-    <Compile Include="Yandex\Serialization\GenericXmlSerializer`1.cs" />
-    <Compile Include="Yandex\Serialization\GenericCompressedXmlSerializer`1.cs" />
-    <Compile Include="Yandex\Serialization\GenericCompressingSerializer`1.cs" />
-    <Compile Include="Yandex\Serialization\SharpXmlSerializer`1.cs" />
-    <Compile Include="Yandex\Serialization\Interfaces\IReadOnlyRepositoryBase`1.cs" />
-    <Compile Include="Yandex\Serialization\Interfaces\IRepositoryBase`1.cs" />
-    <Compile Include="Yandex\Serialization\Interfaces\IDataRepository`1.cs" />
-    <Compile Include="Yandex\Serialization\Interfaces\IGenericXmlSerializer`1.cs" />
-    <Compile Include="Yandex\Serialization\Interfaces\IModelRepositoryBase`1.cs" />
-    <Compile Include="Yandex\Serialization\Interfaces\IPreprocessor`1.cs" />
-    <Compile Include="Yandex\StringUtils\AnnotatedObject.cs" />
-    <Compile Include="Yandex\StringUtils\AnnotatedValue`1.cs" />
-    <Compile Include="Yandex\StringUtils\Common.cs" />
-    <Compile Include="Yandex\StringUtils\Crc32Util.cs" />
-    <Compile Include="Yandex\StringUtils\CropUtil.cs" />
-    <Compile Include="Yandex\StringUtils\DistanceFormatterUtil.cs" />
-    <Compile Include="Yandex\StringUtils\MetricDistanceFormatterUtil.cs" />
-    <Compile Include="Yandex\StringUtils\HexString.cs" />
-    <Compile Include="Yandex\StringUtils\TimeFormatterUtil.cs" />
-    <Compile Include="Yandex\StringUtils\XorUtil.cs" />
-    <Compile Include="Yandex\StringUtils\Plurals\EnglishPlurals.cs" />
-    <Compile Include="Yandex\StringUtils\Plurals\TurkishPlurals.cs" />
-    <Compile Include="Yandex\StringUtils\Plurals\RussianPlurals.cs" />
-    <Compile Include="Yandex\StringUtils\Plurals\Interfaces\IPlurals.cs" />
-    <Compile Include="Yandex\StringUtils\Interfaces\IDistanceFormatterUtil.cs" />
-    <Compile Include="Yandex\StringUtils\Interfaces\ITimeFormatterUtil.cs" />
-    <Compile Include="Yandex\Threading\WaitCallback.cs" />
-    <Compile Include="Yandex\Threading\Monitor.cs" />
-    <Compile Include="Yandex\Threading\Thread.cs" />
-    <Compile Include="Yandex\Threading\ThreadPool.cs" />
-    <Compile Include="Yandex\Threading\UiDispatcher.cs" />
-    <Compile Include="Yandex\Threading\Interfaces\IMonitor.cs" />
-    <Compile Include="Yandex\Threading\Interfaces\IThread.cs" />
-    <Compile Include="Yandex\Threading\Interfaces\IThreadPool.cs" />
-    <Compile Include="Yandex\Threading\Interfaces\IUiDispatcher.cs" />
-    <Compile Include="Yandex\WebUtils\CacheValidators.cs" />
-    <Compile Include="Yandex\WebUtils\CommunicatorBase`3.cs" />
-    <Compile Include="Yandex\WebUtils\ContentCompressor.cs" />
-    <Compile Include="Yandex\WebUtils\DefaultCommunicatorBase`3.cs" />
-    <Compile Include="Yandex\WebUtils\DiversityCommunicator`4.cs" />
-    <Compile Include="Yandex\WebUtils\NetworkInterfaceType.cs" />
-    <Compile Include="Yandex\WebUtils\NetworkInterfaceWrapper.cs" />
-    <Compile Include="Yandex\WebUtils\PostData.cs" />
-    <Compile Include="Yandex\WebUtils\QueryStringUtil.cs" />
-    <Compile Include="Yandex\WebUtils\StreamCommunicatorBase`3.cs" />
-    <Compile Include="Yandex\WebUtils\HttpWebRequestWrapper.cs" />
-    <Compile Include="Yandex\WebUtils\ObservableCommunicatorBase`2.cs" />
-    <Compile Include="Yandex\WebUtils\UrlValidator.cs" />
-    <Compile Include="Yandex\WebUtils\WebClientFactory.cs" />
-    <Compile Include="Yandex\WebUtils\WebResponseWrapper.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\ICommunicator`2.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IContentCompressor.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IDiversityCommunicator`3.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IDataManager`2.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IHttpWebRequest.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IWebClientFactory.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IMapWebClientFactory.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\INetworkInterfaceWrapper.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IQueryBuilder.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IQueryBuilder`1.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IWebResponse.cs" />
-    <Compile Include="Yandex\WebUtils\Interfaces\IObservableCommunicator`2.cs" />
-    <Compile Include="Yandex\WebUtils\Events\RequestCompletedEventArgs`2.cs" />
-    <Compile Include="Yandex\WebUtils\Events\RequestCompletedEventHandler`2.cs" />
-    <Compile Include="Yandex\WebUtils\Events\RequestFailedEventArgs`1.cs" />
-    <Compile Include="Yandex\Net\HttpStatusCode.cs" />
-    <Compile Include="Yandex\MapKit\Properties\Resources.cs" />
-    <Compile Include="Yandex\Input\TouchManipulationSource.cs" />
-    <Compile Include="Yandex\Input\InertialTouchManipulationSource.cs" />
-    <Compile Include="Yandex\Input\PageTouchWrapper`1.cs" />
-    <Compile Include="Yandex\Input\GestureStatus.cs" />
-    <Compile Include="Yandex\Input\Touch.cs" />
-    <Compile Include="Yandex\Input\TouchPoint.cs" />
-    <Compile Include="Yandex\Input\TouchWrapper.cs" />
-    <Compile Include="Yandex\Input\ManipulationModes.cs" />
-    <Compile Include="Yandex\Input\TouchAction.cs" />
-    <Compile Include="Yandex\Input\PageOrientation.cs" />
-    <Compile Include="Yandex\Input\TouchManipulationDelta.cs" />
-    <Compile Include="Yandex\Input\TouchManipulationVelocities.cs" />
-    <Compile Include="Yandex\Input\WeightedSumVelocityCalculator.cs" />
+    <Compile Include="Yandex\Hardware\Wp7BacklightManager.cs" />
+    <Compile Include="Yandex\Hardware\Wp7DeviceInfo.cs" />
+    <Compile Include="Yandex\Heroism\HeroismSettings.cs" />
+    <Compile Include="Yandex\Heroism\IHeroismSettings.cs" />
     <Compile Include="Yandex\Input\Events\DoubleTapEventArgs.cs" />
     <Compile Include="Yandex\Input\Events\FlickEventArgs.cs" />
     <Compile Include="Yandex\Input\Events\MultiTapEventArgs.cs" />
+    <Compile Include="Yandex\Input\Events\PointerMovedEventArgs.cs" />
     <Compile Include="Yandex\Input\Events\TapEventArgs.cs" />
     <Compile Include="Yandex\Input\Events\TouchEventArgs.cs" />
     <Compile Include="Yandex\Input\Events\TouchManipulationCompletedEventArgs.cs" />
     <Compile Include="Yandex\Input\Events\TouchManipulationDeltaEventArgs.cs" />
     <Compile Include="Yandex\Input\Events\TouchManipulationStartedEventArgs.cs" />
-    <Compile Include="Yandex\Input\Events\PointerMovedEventArgs.cs" />
+    <Compile Include="Yandex\Input\GestureStatus.cs" />
+    <Compile Include="Yandex\Input\InertialTouchManipulationSource.cs" />
     <Compile Include="Yandex\Input\Interfaces\IManipulationSource.cs" />
     <Compile Include="Yandex\Input\Interfaces\ITouchHandler.cs" />
     <Compile Include="Yandex\Input\Interfaces\ITouchPoint.cs" />
     <Compile Include="Yandex\Input\Interfaces\ITouchWrapper.cs" />
     <Compile Include="Yandex\Input\Interfaces\IVelocityCalculator.cs" />
-    <Compile Include="Yandex\Touch\Events\TapHoldEventArgs.cs" />
+    <Compile Include="Yandex\Input\ManipulationModes.cs" />
+    <Compile Include="Yandex\Input\PageOrientation.cs" />
+    <Compile Include="Yandex\Input\PageTouchWrapper`1.cs" />
+    <Compile Include="Yandex\Input\Touch.cs" />
+    <Compile Include="Yandex\Input\TouchAction.cs" />
+    <Compile Include="Yandex\Input\TouchManipulationDelta.cs" />
+    <Compile Include="Yandex\Input\TouchManipulationSource.cs" />
+    <Compile Include="Yandex\Input\TouchManipulationVelocities.cs" />
+    <Compile Include="Yandex\Input\TouchPoint.cs" />
+    <Compile Include="Yandex\Input\TouchWrapper.cs" />
+    <Compile Include="Yandex\Input\WeightedSumVelocityCalculator.cs" />
+    <Compile Include="Yandex\Ioc\IIocConfiguration.cs" />
+    <Compile Include="Yandex\Ioc\IIocContainer.cs" />
+    <Compile Include="Yandex\Ioc\IIocInjectionMember.cs" />
+    <Compile Include="Yandex\Ioc\InjectedMemberBase.cs" />
+    <Compile Include="Yandex\Ioc\IocInitializer.cs" />
+    <Compile Include="Yandex\Ioc\IocInjectionConstructor.cs" />
+    <Compile Include="Yandex\Ioc\IocInjectionProperty.cs" />
+    <Compile Include="Yandex\Ioc\IocSingleton`1.cs" />
+    <Compile Include="Yandex\Ioc\TinyIoCContainer.cs" />
+    <Compile Include="Yandex\IO\CachedDirectoryIsolatedStorage.cs" />
+    <Compile Include="Yandex\IO\CachedDirectoryStorage.cs" />
+    <Compile Include="Yandex\IO\FileMode.cs" />
+    <Compile Include="Yandex\IO\IDirectoryStorage.cs" />
+    <Compile Include="Yandex\IO\IFileStorage.cs" />
+    <Compile Include="Yandex\IO\ILimitedFileStorage.cs" />
+    <Compile Include="Yandex\IO\IPath.cs" />
+    <Compile Include="Yandex\IO\MemoryStreamExtention.cs" />
+    <Compile Include="Yandex\IO\Path.cs" />
+    <Compile Include="Yandex\ItemsCounter\IItemCounter.cs" />
+    <Compile Include="Yandex\ItemsCounter\ItemCounter.cs" />
+    <Compile Include="Yandex\ItemsCounter\ItemCounterSimple.cs" />
+    <Compile Include="Yandex\Log\CapptainLogger.cs" />
+    <Compile Include="Yandex\Log\CapptainLoggerHelper.cs" />
+    <Compile Include="Yandex\Log\EmptyLogger.cs" />
+    <Compile Include="Yandex\Log\Interfaces\ILogger.cs" />
+    <Compile Include="Yandex\LowMemoryHelper.cs" />
+    <Compile Include="Yandex\MapKit\Properties\Resources.cs" />
+    <Compile Include="Yandex\MapKit\Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Yandex\Maps\Alignment.cs" />
-    <Compile Include="Yandex\Maps\LayerBase.cs" />
-    <Compile Include="Yandex\Maps\MapBase.cs" />
-    <Compile Include="Yandex\Maps\LayerCommand.cs" />
+    <Compile Include="Yandex\Maps\API\Adapters\LayerAdapter.cs" />
+    <Compile Include="Yandex\Maps\API\BaseLayers.cs" />
+    <Compile Include="Yandex\Maps\API\Converters\GeoPixelConverter.cs" />
+    <Compile Include="Yandex\Maps\API\Converters\GeoTileConverter.cs" />
+    <Compile Include="Yandex\Maps\API\Converters\TileInfoNormalizer.cs" />
+    <Compile Include="Yandex\Maps\API\Converters\ViewportPointConverter.cs" />
+    <Compile Include="Yandex\Maps\API\Converters\ViewportTileConverter.cs" />
+    <Compile Include="Yandex\Maps\API\Converters\ZoomLevelConverter.cs" />
+    <Compile Include="Yandex\Maps\API\DisplayTileSize.cs" />
+    <Compile Include="Yandex\Maps\API\Extensions\ViewportRectExtensions.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\IDisplayTileSize.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\IGeoPixelConverter.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\IGeoTileConverter.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\ITile.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\ITileBlock.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\ITileFactory`1.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\ITileInfo.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\ITileInfoNormalizer.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\ITileSize.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\IViewportPointConveter.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\IViewportTileConverter.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\IZoomInfo.cs" />
+    <Compile Include="Yandex\Maps\API\Interfaces\IZoomLevelConverter.cs" />
+    <Compile Include="Yandex\Maps\API\MobileYandexMapsZoomInfo.cs" />
+    <Compile Include="Yandex\Maps\API\PublicTransport.cs" />
+    <Compile Include="Yandex\Maps\API\PublicTransportStop.cs" />
+    <Compile Include="Yandex\Maps\API\Tile.cs" />
+    <Compile Include="Yandex\Maps\API\TileBlock.cs" />
+    <Compile Include="Yandex\Maps\API\TileFactory.cs" />
+    <Compile Include="Yandex\Maps\API\TileInfo.cs" />
+    <Compile Include="Yandex\Maps\API\TileMetadata.cs" />
+    <Compile Include="Yandex\Maps\API\TileMetaFeatures.cs" />
+    <Compile Include="Yandex\Maps\API\TileRecord.cs" />
+    <Compile Include="Yandex\Maps\API\TileSize.cs" />
+    <Compile Include="Yandex\Maps\API\TileStatus.cs" />
+    <Compile Include="Yandex\Maps\API\TileType.cs" />
+    <Compile Include="Yandex\Maps\API\ViewportPoint.cs" />
+    <Compile Include="Yandex\Maps\API\ViewportRect.cs" />
+    <Compile Include="Yandex\Maps\ApplicationIdentity\MapkitAssemblyIdentity.cs" />
+    <Compile Include="Yandex\Maps\Behavior\AttachedPropertyBindingProvider.cs" />
+    <Compile Include="Yandex\Maps\Behavior\Interfaces\IPushPinContentVisibilityAction.cs" />
+    <Compile Include="Yandex\Maps\Behavior\PushPinBehaviorBase.cs" />
+    <Compile Include="Yandex\Maps\Behavior\PushPinCollapseAction.cs" />
+    <Compile Include="Yandex\Maps\Behavior\PushPinContentVisibilityBehavior.cs" />
+    <Compile Include="Yandex\Maps\Behavior\PushPinStateBehavior.cs" />
+    <Compile Include="Yandex\Maps\Behavior\PushPinTopAction.cs" />
+    <Compile Include="Yandex\Maps\Behavior\PushPinZIndexBehavior.cs" />
+    <Compile Include="Yandex\Maps\CollapseAllPushPinsAction.cs" />
+    <Compile Include="Yandex\Maps\CompositeTransformation.cs" />
+    <Compile Include="Yandex\Maps\Config\ConfigMediator.cs" />
+    <Compile Include="Yandex\Maps\Config\HeroismPrinterUrlProvider.cs" />
+    <Compile Include="Yandex\Maps\Config\HostTypes.cs" />
+    <Compile Include="Yandex\Maps\Config\Interfaces\IConfigMediator.cs" />
+    <Compile Include="Yandex\Maps\Config\Interfaces\IPrinterUrlProvider.cs" />
+    <Compile Include="Yandex\Maps\Config\JamCollectConfig.cs" />
+    <Compile Include="Yandex\Maps\Config\MapKitPrinterUrlProvider.cs" />
+    <Compile Include="Yandex\Maps\Config\MapLayer.cs" />
+    <Compile Include="Yandex\Maps\Config\ObjectShowInterval.cs" />
+    <Compile Include="Yandex\Maps\Config\OperatorConfig.cs" />
+    <Compile Include="Yandex\Maps\Config\OperatorName.cs" />
+    <Compile Include="Yandex\Maps\Config\PrinterUrlProvider.cs" />
+    <Compile Include="Yandex\Maps\Config\QueryHosts.cs" />
+    <Compile Include="Yandex\Maps\Config\UnstablePrinterUrlProvider.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Behaviors\PublicTransportBehavior.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\BitmapTileZoomLayer`1.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\ContentLayerBase.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Events\TileLoadedEventArgs.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IContentLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IDrawManagerCommand.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IMapContentLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IMetaContentLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileContentLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileDrawManager.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileLoadedNotifier.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileZoomLayerBuilder`1.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileZoomLayer`1.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITrafficContentLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITrafficTileZoomLayerBuilder.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IVisibleTileInfoLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IVisibleTileLayer`1.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\LayerContainer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\LayerManager.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\MapContentLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\MetaContentLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\RefreshTilesLayerCommand.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TileContentLayerBase`1.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TileDrawManager.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TileLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TileLoadedNotifier.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TilesReadyLayerCommand`1.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TileZoomLayerBuilder`1.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TileZoomLayer`1.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TrafficContentLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TrafficTileZoomLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\TrafficTileZoomLayerBuilder.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\UnavailableTile.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\VisibleTileInfoLayer.cs" />
+    <Compile Include="Yandex\Maps\ContentLayers\VisibleTileLayer`1.cs" />
+    <Compile Include="Yandex\Maps\Controls\AnimationLevel.cs" />
+    <Compile Include="Yandex\Maps\Controls\ContentLayers\IContentContainer.cs" />
+    <Compile Include="Yandex\Maps\Controls\ContentLayers\ITileZoomLayerManager.cs" />
+    <Compile Include="Yandex\Maps\Controls\Events\TrafficAvailableChangedArgs.cs" />
+    <Compile Include="Yandex\Maps\Controls\Events\TrafficValueChangedArgs.cs" />
+    <Compile Include="Yandex\Maps\Controls\InterimPointsHelper.cs" />
+    <Compile Include="Yandex\Maps\Controls\LayerCommandTypes.cs" />
+    <Compile Include="Yandex\Maps\Controls\PositionManagerRestictions.cs" />
+    <Compile Include="Yandex\Maps\Controls\PositionManager\Event\PositionMoveEventArgs.cs" />
+    <Compile Include="Yandex\Maps\Controls\ProjectionUpdateLevel.cs" />
     <Compile Include="Yandex\Maps\DrawManagerCommand.cs" />
     <Compile Include="Yandex\Maps\DrawManagerCommandTypes.cs" />
-    <Compile Include="Yandex\Maps\CompositeTransformation.cs" />
+    <Compile Include="Yandex\Maps\Events\GroupKeyArgs.cs" />
+    <Compile Include="Yandex\Maps\Events\OperationStatusChangedEventArgs.cs" />
+    <Compile Include="Yandex\Maps\Events\PositionChangedEventArgs.cs" />
+    <Compile Include="Yandex\Maps\Events\PositionChangeType.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\Dto\GeocodeObject.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\Dto\GeocodeResult.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\GeocodeCommunicator.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\GeocodeManager.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\GeocodeQueryBuilder.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\GeocodeRequestParameters.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\GeocodeUrlProvider.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\Interfaces\IGeocodeManager.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\Interfaces\IGeocodeQueryBuilder.cs" />
+    <Compile Include="Yandex\Maps\Geocoding\Interfaces\IGeocodeUrlProvider.cs" />
+    <Compile Include="Yandex\Maps\GroupKeysConverter.cs" />
+    <Compile Include="Yandex\Maps\Helpers\DraggableControlBehavior.cs" />
+    <Compile Include="Yandex\Maps\Helpers\DraggableControlBehaviorHelper.cs" />
+    <Compile Include="Yandex\Maps\Helpers\Events\DragCompletedEventArgs.cs" />
+    <Compile Include="Yandex\Maps\Helpers\GeocodeManagerProvider.cs" />
+    <Compile Include="Yandex\Maps\Helpers\MapLayerHelper.cs" />
+    <Compile Include="Yandex\Maps\Imaging\BulkTileWriteableBitmapBuilder.cs" />
+    <Compile Include="Yandex\Maps\Imaging\TileImagePool.cs" />
+    <Compile Include="Yandex\Maps\Imaging\TileWriteableBitmapPool.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IBoundable.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\ICompositeTransformation.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IFrameworkElement.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IInterimPointsHelper.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\ILayerCommand.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\ILocationRect.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IMap.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IMapLayer.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IMapMode.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IMapPresenter.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IMapPresenterBase.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IMapPresenterFactory.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IMapState.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IMapView.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IMapViewBase.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IPositionManagerRestictions.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IPositionWatcherManager.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IProjectable.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IProjectablePanel.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\IPushPinManager.cs" />
+    <Compile Include="Yandex\Maps\Interfaces\ITranslateTransform.cs" />
+    <Compile Include="Yandex\Maps\IoC\ControlsIocInitializer.cs" />
+    <Compile Include="Yandex\Maps\IoC\Ioc.cs" />
+    <Compile Include="Yandex\Maps\LayerBase.cs" />
+    <Compile Include="Yandex\Maps\LayerCommand.cs" />
+    <Compile Include="Yandex\Maps\Map.cs" />
+    <Compile Include="Yandex\Maps\MapBase.cs" />
+    <Compile Include="Yandex\Maps\MapControlModel.cs" />
     <Compile Include="Yandex\Maps\MapGlobalSettings.cs" />
     <Compile Include="Yandex\Maps\MapItemsControl.cs" />
     <Compile Include="Yandex\Maps\MapItemsControlEx.cs" />
     <Compile Include="Yandex\Maps\MapLayer.cs" />
-    <Compile Include="Yandex\Maps\MapShape.cs" />
-    <Compile Include="Yandex\Maps\MapShapeObservable.cs" />
     <Compile Include="Yandex\Maps\MapPolygon.cs" />
     <Compile Include="Yandex\Maps\MapPolyline.cs" />
     <Compile Include="Yandex\Maps\MapPolylineBase.cs" />
+    <Compile Include="Yandex\Maps\MapPresenter.cs" />
     <Compile Include="Yandex\Maps\MapPresenterBase.cs" />
     <Compile Include="Yandex\Maps\MapPresenterFactory.cs" />
     <Compile Include="Yandex\Maps\MapPresenterType.cs" />
-    <Compile Include="Yandex\Maps\PositionAccuracyControl.cs" />
-    <Compile Include="Yandex\Maps\PositionControl.cs" />
-    <Compile Include="Yandex\Maps\CollapseAllPushPinsAction.cs" />
-    <Compile Include="Yandex\Maps\GroupKeysConverter.cs" />
-    <Compile Include="Yandex\Maps\PushPinManager.cs" />
-    <Compile Include="Yandex\Maps\PushPinManagerHelper.cs" />
-    <Compile Include="Yandex\Maps\PushPin.cs" />
-    <Compile Include="Yandex\Maps\ScaleRuleControl.cs" />
-    <Compile Include="Yandex\Maps\StaticMap.cs" />
-    <Compile Include="Yandex\Maps\TileManager.cs" />
-    <Compile Include="Yandex\Maps\VirtualizingMapItemsControl.cs" />
-    <Compile Include="Yandex\Maps\Map.cs" />
-    <Compile Include="Yandex\Maps\MapPresenter.cs" />
+    <Compile Include="Yandex\Maps\MapShape.cs" />
+    <Compile Include="Yandex\Maps\MapShapeObservable.cs" />
     <Compile Include="Yandex\Maps\OperationMode.cs" />
     <Compile Include="Yandex\Maps\OperationStatus.cs" />
-    <Compile Include="Yandex\Maps\MapControlModel.cs" />
+    <Compile Include="Yandex\Maps\PositionAccuracyControl.cs" />
+    <Compile Include="Yandex\Maps\PositionControl.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\DummyPositionWatcherWraper.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Event\ManipulationCompletedEventArgs.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Event\ManipulationMoveEventArgs.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Event\ManipulationZoomEventArgs.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IManipulationWrapper.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IManipulationWrapperInitializable.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IPositionDispatcher.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IPositionDispatcherBase.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IPositionManager.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IPositionWatcherWrapper.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Interfaces\ITouchHandlerInitializable.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\Interfaces\IInterimPointsEnumerator.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\LinearVelocityInterimPointsEnumerator.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\PhisicalVelocityInterimPointsEnumerator.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\PowerVelocityInterimPointsEnumerator.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\SimpleInterimPointsEnumerator.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\KineticPositionManager.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\ManipulationWrapper.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Operations\JumpToCurrentPositionOperation.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Operations\MovePositionOperation.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Operations\PositionOperation.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Operations\PositionOperationSource.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Operations\PositionOperationType.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Operations\ResendEventOperation.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\Operations\ZoomPositionOperation.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\PositionDispatcher.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\PositionDispatcherBase.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\PositionWatcherWrapper.cs" />
+    <Compile Include="Yandex\Maps\PositionManager\StaticPositionDispatcher.cs" />
     <Compile Include="Yandex\Maps\PositionWatcherManager.cs" />
-    <Compile Include="Yandex\Maps\PushPinState.cs" />
-    <Compile Include="Yandex\Maps\TileManagerBase`1.cs" />
-    <Compile Include="Yandex\Maps\ApplicationIdentity\MapkitAssemblyIdentity.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\VisibleTileLayer`1.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TileZoomLayer`1.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\BitmapTileZoomLayer`1.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\LayerContainer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\ContentLayerBase.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TileContentLayerBase`1.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\MetaContentLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TileLoadedNotifier.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TrafficTileZoomLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\UnavailableTile.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TrafficTileZoomLayerBuilder.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TileZoomLayerBuilder`1.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\LayerManager.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\MapContentLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TileLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TrafficContentLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\VisibleTileInfoLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\RefreshTilesLayerCommand.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TileDrawManager.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\TilesReadyLayerCommand`1.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Behaviors\PublicTransportBehavior.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IVisibleTileLayer`1.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileZoomLayer`1.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IContentLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileContentLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IMapContentLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITrafficContentLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IVisibleTileInfoLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileLoadedNotifier.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IMetaContentLayer.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileZoomLayerBuilder`1.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITrafficTileZoomLayerBuilder.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\IDrawManagerCommand.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Interfaces\ITileDrawManager.cs" />
-    <Compile Include="Yandex\Maps\ContentLayers\Events\TileLoadedEventArgs.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IProjectable.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IMapPresenterFactory.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IMapLayer.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IMapViewBase.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IMapView.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IPushPinManager.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IBoundable.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IMapState.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IMapPresenterBase.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IPositionWatcherManager.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IInterimPointsHelper.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\ICompositeTransformation.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IFrameworkElement.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\ILayerCommand.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\ILocationRect.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IMap.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IMapMode.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IMapPresenter.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IProjectablePanel.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\ITranslateTransform.cs" />
-    <Compile Include="Yandex\Maps\Interfaces\IPositionManagerRestictions.cs" />
-    <Compile Include="Yandex\Maps\Imaging\BulkTileWriteableBitmapBuilder.cs" />
-    <Compile Include="Yandex\Maps\Imaging\TileImagePool.cs" />
-    <Compile Include="Yandex\Maps\Imaging\TileWriteableBitmapPool.cs" />
-    <Compile Include="Yandex\Maps\Helpers\DraggableControlBehaviorHelper.cs" />
-    <Compile Include="Yandex\Maps\Helpers\GeocodeManagerProvider.cs" />
-    <Compile Include="Yandex\Maps\Helpers\DraggableControlBehavior.cs" />
-    <Compile Include="Yandex\Maps\Helpers\MapLayerHelper.cs" />
-    <Compile Include="Yandex\Maps\Helpers\Events\DragCompletedEventArgs.cs" />
-    <Compile Include="Yandex\Maps\IoC\Ioc.cs" />
-    <Compile Include="Yandex\Maps\IoC\ControlsIocInitializer.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\MapKitStartupQueryBuilder.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\PrinterManager.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\PrinterTileFetcher.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\CacheTileScaleAdapter.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Printer1TileScaleAdapter.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Printer1And2TileScaleAdapter.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\PrinterQueryBuilder.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\PrinterStartupManager.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\PrinterTileHeaderReader.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\PrinterTileReader.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\PrinterTileRequestSizeConverter.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\RequestState.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\StartupQueryBuilder.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\DTO\FeaturesParam.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterTileRequestSizeConverter.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\ICacheTileScaleAdapter.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\ITileScaleAdapter.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterManager.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterQueryBuilder.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterStartupManager.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterTileHeaderReader.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterTileReader.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IStartupQueryBuilder.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\ApplicationIdentityConfig.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\BannerConfig.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\LayerStream.cs" />
@@ -484,9 +561,9 @@
     <Compile Include="Yandex\Maps\PrinterClient\Config\News.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\ObjectInterval.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\ObjectTypes.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Config\Operator.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\OperatorBranding.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\OperatorPortal.cs" />
-    <Compile Include="Yandex\Maps\PrinterClient\Config\Operator.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\ProviderFeatures.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\QueryHost.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Config\StartupParameters.cs" />
@@ -497,32 +574,153 @@
     <Compile Include="Yandex\Maps\PrinterClient\DataAdapters\OperatorInfoDataAdapter.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\DataAdapters\OperatorInfoIgnoreBrandingTimeoutDataAdapter.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\DataAdapters\VersionStringAdapter.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\DTO\FeaturesParam.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\EventArgs\PrinterStartupEventArgs.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\ICacheTileScaleAdapter.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterManager.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterQueryBuilder.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterStartupManager.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterTileHeaderReader.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterTileReader.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IPrinterTileRequestSizeConverter.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\IStartupQueryBuilder.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Interfaces\ITileScaleAdapter.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\MapKitStartupQueryBuilder.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Printer1And2TileScaleAdapter.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\Printer1TileScaleAdapter.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\PrinterManager.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\PrinterQueryBuilder.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\PrinterStartupManager.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\PrinterTileFetcher.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\PrinterTileHeaderReader.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\PrinterTileReader.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\PrinterTileRequestSizeConverter.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\RequestState.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Response\PrinterTileInfo.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Response\PrinterTileResponseHeader.cs" />
+    <Compile Include="Yandex\Maps\PrinterClient\StartupQueryBuilder.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Tiles\LayerRequest.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Tiles\TileRequest.cs" />
     <Compile Include="Yandex\Maps\PrinterClient\Tiles\TilesRequest.cs" />
     <Compile Include="Yandex\Maps\Properties\Resources.cs" />
-    <Compile Include="Yandex\Maps\Behavior\AttachedPropertyBindingProvider.cs" />
-    <Compile Include="Yandex\Maps\Behavior\PushPinBehaviorBase.cs" />
-    <Compile Include="Yandex\Maps\Behavior\PushPinZIndexBehavior.cs" />
-    <Compile Include="Yandex\Maps\Behavior\PushPinCollapseAction.cs" />
-    <Compile Include="Yandex\Maps\Behavior\PushPinContentVisibilityBehavior.cs" />
-    <Compile Include="Yandex\Maps\Behavior\PushPinStateBehavior.cs" />
-    <Compile Include="Yandex\Maps\Behavior\PushPinTopAction.cs" />
-    <Compile Include="Yandex\Maps\Behavior\Interfaces\IPushPinContentVisibilityAction.cs" />
-    <Compile Include="Yandex\Maps\ViewModel\EmptyPushPinBaloonViewModel.cs" />
-    <Compile Include="Yandex\Maps\ViewModel\PushPinViewModelBase.cs" />
-    <Compile Include="Yandex\Maps\ViewModel\PushPinViewModel`1.cs" />
-    <Compile Include="Yandex\Maps\ViewModels\ViewModelBase.cs" />
-    <Compile Include="Yandex\Maps\ViewModels\MapItemViewModel.cs" />
+    <Compile Include="Yandex\Maps\Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Yandex\Maps\PushPin.cs" />
+    <Compile Include="Yandex\Maps\PushPinManager.cs" />
+    <Compile Include="Yandex\Maps\PushPinManagerHelper.cs" />
+    <Compile Include="Yandex\Maps\PushPinState.cs" />
+    <Compile Include="Yandex\Maps\Repository\Adapters\MapLayersAdapter.cs" />
+    <Compile Include="Yandex\Maps\Repository\Config\CacheConfigDataRepository.cs" />
+    <Compile Include="Yandex\Maps\Repository\Config\CacheConfigManager.cs" />
+    <Compile Include="Yandex\Maps\Repository\Config\ICacheConfigManager.cs" />
+    <Compile Include="Yandex\Maps\Repository\Config\MapLayer.cs" />
+    <Compile Include="Yandex\Maps\Repository\Config\MapLayers.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\AnyMetadataDto.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\AnyMetdataFeaturesDto.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\FeatureMembersDto.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\FeaturesDto.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\GeoObject.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\GeoObjectDto.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\MetadataPropertyDto.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\PointDto.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\StopMetaData.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\TileMetadataDto.cs" />
+    <Compile Include="Yandex\Maps\Repository\Dto\TransportDto.cs" />
+    <Compile Include="Yandex\Maps\Repository\DummyFileCache`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\EventArgs\AddTilesCompleteEventArgs`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\EventArgs\TileBlocksReadyEventArgs.cs" />
+    <Compile Include="Yandex\Maps\Repository\Events\TileRequestFailedEventArgs.cs" />
+    <Compile Include="Yandex\Maps\Repository\Events\TilesReadyEventArgs`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\IAsyncTileStorage`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ICacheFolderNameConstructor.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ICacheRootDirectoryBuilder.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ICacheStorageUpdater.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\IClearableTileCache.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\IHeaderBlockSerializer.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\IMappingTileQueue.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\IQueryQueueManager`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\IStateQueue`2.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileCache`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileFetcher`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileFileCache`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileFileNameConstructor.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileManager`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileMemoryCache`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileMetadataReader.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileRectangleBreaker.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileRepository`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileSerializer.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileStorage`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\Interfaces\IZoomTreeHeightCalculator.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\BlockType.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheFileHeader.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheFileNameConstructor.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheFolderNameConstructor.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheMetaData.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheMetaDataGenerator.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheMetaDataRepository.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheStorage.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheStorageAsync.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheStorageUpdater.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\DummyCacheStorageUpdater.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\HeaderBlock.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\HeaderBlockSerializer.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\IdSortComparer.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\ObjectSize.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\Utils.cs" />
+    <Compile Include="Yandex\Maps\Repository\MapLoader\ZoomTreeHeightCalculator.cs" />
+    <Compile Include="Yandex\Maps\Repository\MappingTileQueue.cs" />
+    <Compile Include="Yandex\Maps\Repository\QueryQueueManager.cs" />
+    <Compile Include="Yandex\Maps\Repository\QueueEntry`2.cs" />
+    <Compile Include="Yandex\Maps\Repository\TileMemoryCache`1.cs" />
+    <Compile Include="Yandex\Maps\Repository\TileMetadataReader.cs" />
+    <Compile Include="Yandex\Maps\Repository\TileQueueEntry.cs" />
+    <Compile Include="Yandex\Maps\Repository\TileQueueState.cs" />
+    <Compile Include="Yandex\Maps\Repository\TileReader.cs" />
+    <Compile Include="Yandex\Maps\Repository\TileRectangleBreaker.cs" />
+    <Compile Include="Yandex\Maps\Repository\TileRepository.cs" />
     <Compile Include="Yandex\Maps\Resources\ResourceWrapper.cs" />
-    <Compile Include="Yandex\Maps\TileWeighting\TileWeightCalculator.cs" />
+    <Compile Include="Yandex\Maps\ScaleRuleControl.cs" />
+    <Compile Include="Yandex\Maps\StaticMap.cs" />
+    <Compile Include="Yandex\Maps\TileManager.cs" />
+    <Compile Include="Yandex\Maps\TileManagerBase`1.cs" />
     <Compile Include="Yandex\Maps\TileWeighting\ITileWeight.cs" />
     <Compile Include="Yandex\Maps\TileWeighting\ITileWeightCalculator.cs" />
     <Compile Include="Yandex\Maps\TileWeighting\TileWeight.cs" />
+    <Compile Include="Yandex\Maps\TileWeighting\TileWeightCalculator.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DataAdapters\ITrackAdapter.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DataAdapters\JamTilesDataAdapter.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DataAdapters\TrackAdapter.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Collect\JamCollectPoint.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Collect\JamCollectPoints.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Styles\JamArrow.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Styles\JamStyle.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Styles\JamStyles.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Styles\JamZoom.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamColors.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamInformer.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamMeta.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamTrack.cs" />
+    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamTracks.cs" />
     <Compile Include="Yandex\Maps\Traffic\DummyJamTilesRepository.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamCollectManager.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamCollectPostDataBuilder.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamCollectQueryBuilder.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamCollectSender.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamInformerManager.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamManager.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamQueryBuilder.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamRender.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamStyle.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamStyles.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamStylesManager.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamTile.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamTileBuilder.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamTileMemoryCache.cs" />
+    <Compile Include="Yandex\Maps\Traffic\Interfaces\ITrafficCommunicator.cs" />
     <Compile Include="Yandex\Maps\Traffic\JamCollectCommunicator.cs" />
     <Compile Include="Yandex\Maps\Traffic\JamCollectManager.cs" />
     <Compile Include="Yandex\Maps\Traffic\JamCollectPointData.cs" />
@@ -547,337 +745,267 @@
     <Compile Include="Yandex\Maps\Traffic\JamTilesRepository.cs" />
     <Compile Include="Yandex\Maps\Traffic\JamTracksSerializer.cs" />
     <Compile Include="Yandex\Maps\Traffic\Track.cs" />
-    <Compile Include="Yandex\Maps\Traffic\TrafficInformer.cs" />
-    <Compile Include="Yandex\Maps\Traffic\WeakTileHolder`1.cs" />
     <Compile Include="Yandex\Maps\Traffic\TrafficCommunicator.cs" />
+    <Compile Include="Yandex\Maps\Traffic\TrafficInformer.cs" />
     <Compile Include="Yandex\Maps\Traffic\TrafficRequestParameters.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DataAdapters\ITrackAdapter.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DataAdapters\JamTilesDataAdapter.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DataAdapters\TrackAdapter.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Collect\JamCollectPoint.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Collect\JamCollectPoints.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Styles\JamArrow.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Styles\JamStyle.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Styles\JamStyles.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Styles\JamZoom.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamColors.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamInformer.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamMeta.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamTrack.cs" />
-    <Compile Include="Yandex\Maps\Traffic\DTO\Tracks\JamTracks.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamStyle.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamStyles.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamCollectManager.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamCollectPostDataBuilder.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamCollectQueryBuilder.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamCollectSender.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamInformerManager.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamManager.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamRender.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamStylesManager.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamTile.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamTileBuilder.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamTileMemoryCache.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\IJamQueryBuilder.cs" />
-    <Compile Include="Yandex\Maps\Traffic\Interfaces\ITrafficCommunicator.cs" />
-    <Compile Include="Yandex\Maps\TwilightMode\TwilightModeTileRenderPreprocessor.cs" />
-    <Compile Include="Yandex\Maps\TwilightMode\ITileRenderPreprocessor.cs" />
+    <Compile Include="Yandex\Maps\Traffic\WeakTileHolder`1.cs" />
     <Compile Include="Yandex\Maps\TwilightMode\DummyTileRenderPreprocessor.cs" />
+    <Compile Include="Yandex\Maps\TwilightMode\ITileRenderPreprocessor.cs" />
     <Compile Include="Yandex\Maps\TwilightMode\TwilightHelper.cs" />
+    <Compile Include="Yandex\Maps\TwilightMode\TwilightModeTileRenderPreprocessor.cs" />
     <Compile Include="Yandex\Maps\TypeConverters\GeoCoordinatesConverter.cs" />
-    <Compile Include="Yandex\Maps\WebUtils\MapWebClientFactory.cs" />
-    <Compile Include="Yandex\Maps\WebUtils\MapKitWebClientFactory.cs" />
-    <Compile Include="Yandex\Maps\Wrappers\FrameworkElementWrapper.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\GeocodeCommunicator.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\GeocodeManager.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\GeocodeQueryBuilder.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\GeocodeRequestParameters.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\GeocodeUrlProvider.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\Dto\GeocodeObject.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\Dto\GeocodeResult.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\Interfaces\IGeocodeManager.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\Interfaces\IGeocodeQueryBuilder.cs" />
-    <Compile Include="Yandex\Maps\Geocoding\Interfaces\IGeocodeUrlProvider.cs" />
-    <Compile Include="Yandex\Maps\Controls\AnimationLevel.cs" />
-    <Compile Include="Yandex\Maps\Controls\InterimPointsHelper.cs" />
-    <Compile Include="Yandex\Maps\Controls\LayerCommandTypes.cs" />
-    <Compile Include="Yandex\Maps\Controls\PositionManagerRestictions.cs" />
-    <Compile Include="Yandex\Maps\Controls\ProjectionUpdateLevel.cs" />
-    <Compile Include="Yandex\Maps\Controls\ContentLayers\IContentContainer.cs" />
-    <Compile Include="Yandex\Maps\Controls\ContentLayers\ITileZoomLayerManager.cs" />
-    <Compile Include="Yandex\Maps\Controls\Events\TrafficAvailableChangedArgs.cs" />
-    <Compile Include="Yandex\Maps\Controls\Events\TrafficValueChangedArgs.cs" />
-    <Compile Include="Yandex\Maps\Controls\PositionManager\Event\PositionMoveEventArgs.cs" />
-    <Compile Include="Yandex\Maps\API\BaseLayers.cs" />
-    <Compile Include="Yandex\Maps\API\PublicTransport.cs" />
-    <Compile Include="Yandex\Maps\API\DisplayTileSize.cs" />
-    <Compile Include="Yandex\Maps\API\MobileYandexMapsZoomInfo.cs" />
-    <Compile Include="Yandex\Maps\API\PublicTransportStop.cs" />
-    <Compile Include="Yandex\Maps\API\Tile.cs" />
-    <Compile Include="Yandex\Maps\API\TileBlock.cs" />
-    <Compile Include="Yandex\Maps\API\TileFactory.cs" />
-    <Compile Include="Yandex\Maps\API\TileInfo.cs" />
-    <Compile Include="Yandex\Maps\API\TileMetadata.cs" />
-    <Compile Include="Yandex\Maps\API\TileMetaFeatures.cs" />
-    <Compile Include="Yandex\Maps\API\TileRecord.cs" />
-    <Compile Include="Yandex\Maps\API\TileSize.cs" />
-    <Compile Include="Yandex\Maps\API\TileStatus.cs" />
-    <Compile Include="Yandex\Maps\API\TileType.cs" />
-    <Compile Include="Yandex\Maps\API\ViewportPoint.cs" />
-    <Compile Include="Yandex\Maps\API\ViewportRect.cs" />
-    <Compile Include="Yandex\Maps\API\Adapters\LayerAdapter.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\IGeoPixelConverter.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\IGeoTileConverter.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\ITileInfoNormalizer.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\IViewportPointConveter.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\IViewportTileConverter.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\IZoomLevelConverter.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\ITileSize.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\IDisplayTileSize.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\ITile.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\ITileBlock.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\ITileFactory`1.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\ITileInfo.cs" />
-    <Compile Include="Yandex\Maps\API\Interfaces\IZoomInfo.cs" />
-    <Compile Include="Yandex\Maps\API\Converters\GeoPixelConverter.cs" />
-    <Compile Include="Yandex\Maps\API\Converters\GeoTileConverter.cs" />
-    <Compile Include="Yandex\Maps\API\Converters\TileInfoNormalizer.cs" />
-    <Compile Include="Yandex\Maps\API\Converters\ViewportPointConverter.cs" />
-    <Compile Include="Yandex\Maps\API\Converters\ViewportTileConverter.cs" />
-    <Compile Include="Yandex\Maps\API\Converters\ZoomLevelConverter.cs" />
-    <Compile Include="Yandex\Maps\API\Extensions\ViewportRectExtensions.cs" />
-    <Compile Include="Yandex\Maps\Config\QueryHosts.cs" />
-    <Compile Include="Yandex\Maps\Config\ObjectShowInterval.cs" />
-    <Compile Include="Yandex\Maps\Config\ConfigMediator.cs" />
-    <Compile Include="Yandex\Maps\Config\HostTypes.cs" />
-    <Compile Include="Yandex\Maps\Config\JamCollectConfig.cs" />
-    <Compile Include="Yandex\Maps\Config\PrinterUrlProvider.cs" />
-    <Compile Include="Yandex\Maps\Config\MapKitPrinterUrlProvider.cs" />
-    <Compile Include="Yandex\Maps\Config\MapLayer.cs" />
-    <Compile Include="Yandex\Maps\Config\OperatorConfig.cs" />
-    <Compile Include="Yandex\Maps\Config\OperatorName.cs" />
-    <Compile Include="Yandex\Maps\Config\HeroismPrinterUrlProvider.cs" />
-    <Compile Include="Yandex\Maps\Config\UnstablePrinterUrlProvider.cs" />
-    <Compile Include="Yandex\Maps\Config\Interfaces\IConfigMediator.cs" />
-    <Compile Include="Yandex\Maps\Config\Interfaces\IPrinterUrlProvider.cs" />
-    <Compile Include="Yandex\Maps\Events\PositionChangeType.cs" />
-    <Compile Include="Yandex\Maps\Events\PositionChangedEventArgs.cs" />
-    <Compile Include="Yandex\Maps\Events\OperationStatusChangedEventArgs.cs" />
-    <Compile Include="Yandex\Maps\Events\GroupKeyArgs.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\DummyPositionWatcherWraper.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\ManipulationWrapper.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\PositionDispatcherBase.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\PositionDispatcher.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\StaticPositionDispatcher.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\PositionWatcherWrapper.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\KineticPositionManager.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IPositionWatcherWrapper.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IManipulationWrapperInitializable.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IPositionDispatcherBase.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IPositionDispatcher.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IManipulationWrapper.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Interfaces\IPositionManager.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Interfaces\ITouchHandlerInitializable.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\PhisicalVelocityInterimPointsEnumerator.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\PowerVelocityInterimPointsEnumerator.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\SimpleInterimPointsEnumerator.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\LinearVelocityInterimPointsEnumerator.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\InterimPointsEnumerators\Interfaces\IInterimPointsEnumerator.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Event\ManipulationMoveEventArgs.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Event\ManipulationCompletedEventArgs.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Event\ManipulationZoomEventArgs.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Operations\PositionOperation.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Operations\JumpToCurrentPositionOperation.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Operations\MovePositionOperation.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Operations\ResendEventOperation.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Operations\PositionOperationType.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Operations\PositionOperationSource.cs" />
-    <Compile Include="Yandex\Maps\PositionManager\Operations\ZoomPositionOperation.cs" />
-    <Compile Include="Yandex\Maps\Repository\QueueEntry`2.cs" />
-    <Compile Include="Yandex\Maps\Repository\TileQueueEntry.cs" />
-    <Compile Include="Yandex\Maps\Repository\TileQueueState.cs" />
-    <Compile Include="Yandex\Maps\Repository\DummyFileCache`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\MappingTileQueue.cs" />
-    <Compile Include="Yandex\Maps\Repository\QueryQueueManager.cs" />
-    <Compile Include="Yandex\Maps\Repository\TileMemoryCache`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\TileMetadataReader.cs" />
-    <Compile Include="Yandex\Maps\Repository\TileReader.cs" />
-    <Compile Include="Yandex\Maps\Repository\TileRectangleBreaker.cs" />
-    <Compile Include="Yandex\Maps\Repository\TileRepository.cs" />
-    <Compile Include="Yandex\Maps\Repository\Adapters\MapLayersAdapter.cs" />
-    <Compile Include="Yandex\Maps\Repository\Config\CacheConfigDataRepository.cs" />
-    <Compile Include="Yandex\Maps\Repository\Config\ICacheConfigManager.cs" />
-    <Compile Include="Yandex\Maps\Repository\Config\CacheConfigManager.cs" />
-    <Compile Include="Yandex\Maps\Repository\Config\MapLayer.cs" />
-    <Compile Include="Yandex\Maps\Repository\Config\MapLayers.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\GeoObject.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\PointDto.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\StopMetaData.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\TransportDto.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\AnyMetadataDto.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\AnyMetdataFeaturesDto.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\GeoObjectDto.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\FeatureMembersDto.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\FeaturesDto.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\MetadataPropertyDto.cs" />
-    <Compile Include="Yandex\Maps\Repository\Dto\TileMetadataDto.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\IStateQueue`2.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileStorage`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\IAsyncTileStorage`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileCache`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileFileCache`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\IClearableTileCache.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ICacheRootDirectoryBuilder.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\IMappingTileQueue.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\IQueryQueueManager`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileFetcher`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileFileNameConstructor.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileManager`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileMemoryCache`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileMetadataReader.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileSerializer.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileRectangleBreaker.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ITileRepository`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\IZoomTreeHeightCalculator.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ICacheStorageUpdater.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\ICacheFolderNameConstructor.cs" />
-    <Compile Include="Yandex\Maps\Repository\Interfaces\IHeaderBlockSerializer.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheMetaDataGenerator.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheMetaDataRepository.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheFileHeader.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\IdSortComparer.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheStorage.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheStorageAsync.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\BlockType.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheStorageUpdater.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheFolderNameConstructor.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheMetaData.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\DummyCacheStorageUpdater.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\ZoomTreeHeightCalculator.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\CacheFileNameConstructor.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\HeaderBlock.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\HeaderBlockSerializer.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\ObjectSize.cs" />
-    <Compile Include="Yandex\Maps\Repository\MapLoader\Utils.cs" />
-    <Compile Include="Yandex\Maps\Repository\EventArgs\AddTilesCompleteEventArgs`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\EventArgs\TileBlocksReadyEventArgs.cs" />
-    <Compile Include="Yandex\Maps\Repository\Events\TilesReadyEventArgs`1.cs" />
-    <Compile Include="Yandex\Maps\Repository\Events\TileRequestFailedEventArgs.cs" />
     <Compile Include="Yandex\Maps\Units\DistanceXY.cs" />
+    <Compile Include="Yandex\Maps\Units\Interfaces\ISegment.cs" />
     <Compile Include="Yandex\Maps\Units\Meters.cs" />
     <Compile Include="Yandex\Maps\Units\PointXY.cs" />
     <Compile Include="Yandex\Maps\Units\Segment.cs" />
-    <Compile Include="Yandex\Maps\Units\Interfaces\ISegment.cs" />
+    <Compile Include="Yandex\Maps\ViewModels\MapItemViewModel.cs" />
+    <Compile Include="Yandex\Maps\ViewModels\ViewModelBase.cs" />
+    <Compile Include="Yandex\Maps\ViewModel\EmptyPushPinBaloonViewModel.cs" />
+    <Compile Include="Yandex\Maps\ViewModel\PushPinViewModelBase.cs" />
+    <Compile Include="Yandex\Maps\ViewModel\PushPinViewModel`1.cs" />
+    <Compile Include="Yandex\Maps\VirtualizingMapItemsControl.cs" />
+    <Compile Include="Yandex\Maps\WebUtils\MapKitWebClientFactory.cs" />
+    <Compile Include="Yandex\Maps\WebUtils\MapWebClientFactory.cs" />
+    <Compile Include="Yandex\Maps\Wrappers\FrameworkElementWrapper.cs" />
+    <Compile Include="Yandex\Media\Animation\ExponentialEase.cs" />
+    <Compile Include="Yandex\Media\Animation\IEasingFunction.cs" />
+    <Compile Include="Yandex\Media\ColorHelper.cs" />
+    <Compile Include="Yandex\Media\Imaging\BitmapFactory.cs" />
+    <Compile Include="Yandex\Media\Imaging\BitmapRenderer.cs" />
+    <Compile Include="Yandex\Media\Imaging\Blitting.cs" />
+    <Compile Include="Yandex\Media\Imaging\BulkWriteableBitmapBuilder.cs" />
+    <Compile Include="Yandex\Media\Imaging\Cache\DiskToMemoryImageCache.cs" />
+    <Compile Include="Yandex\Media\Imaging\Cache\IDiskToMemoryImageCache.cs" />
+    <Compile Include="Yandex\Media\Imaging\DispatcheredPool`1.cs" />
+    <Compile Include="Yandex\Media\Imaging\ImagePool.cs" />
+    <Compile Include="Yandex\Media\Imaging\Interfaces\IBitmapFactory.cs" />
+    <Compile Include="Yandex\Media\Imaging\Interfaces\IBitmapRenderer.cs" />
+    <Compile Include="Yandex\Media\Imaging\Interfaces\IBulkWriteableBitmapBuilder.cs" />
+    <Compile Include="Yandex\Media\Imaging\Interfaces\IImagePool.cs" />
+    <Compile Include="Yandex\Media\Imaging\Interfaces\IPool`1.cs" />
+    <Compile Include="Yandex\Media\Imaging\Interfaces\IWriteableBitmapBuilder.cs" />
+    <Compile Include="Yandex\Media\Imaging\Interfaces\IWriteableBitmapPool.cs" />
+    <Compile Include="Yandex\Media\Imaging\Lines.cs" />
+    <Compile Include="Yandex\Media\Imaging\PngUtil.cs" />
+    <Compile Include="Yandex\Media\Imaging\Polygons.cs" />
+    <Compile Include="Yandex\Media\Imaging\RenderContentMode.cs" />
+    <Compile Include="Yandex\Media\Imaging\WriteableBitmapBuilder.cs" />
+    <Compile Include="Yandex\Media\Imaging\WriteableBitmapPool.cs" />
     <Compile Include="Yandex\Media\Point.cs" />
     <Compile Include="Yandex\Media\Position.cs" />
     <Compile Include="Yandex\Media\Rect.cs" />
     <Compile Include="Yandex\Media\Size.cs" />
     <Compile Include="Yandex\Media\Thickness.cs" />
-    <Compile Include="Yandex\Media\ColorHelper.cs" />
-    <Compile Include="Yandex\Media\Animation\IEasingFunction.cs" />
-    <Compile Include="Yandex\Media\Animation\ExponentialEase.cs" />
-    <Compile Include="Yandex\Media\Imaging\Blitting.cs" />
-    <Compile Include="Yandex\Media\Imaging\Lines.cs" />
-    <Compile Include="Yandex\Media\Imaging\Polygons.cs" />
-    <Compile Include="Yandex\Media\Imaging\RenderContentMode.cs" />
-    <Compile Include="Yandex\Media\Imaging\BitmapFactory.cs" />
-    <Compile Include="Yandex\Media\Imaging\BitmapRenderer.cs" />
-    <Compile Include="Yandex\Media\Imaging\BulkWriteableBitmapBuilder.cs" />
-    <Compile Include="Yandex\Media\Imaging\DispatcheredPool`1.cs" />
-    <Compile Include="Yandex\Media\Imaging\ImagePool.cs" />
-    <Compile Include="Yandex\Media\Imaging\PngUtil.cs" />
-    <Compile Include="Yandex\Media\Imaging\WriteableBitmapBuilder.cs" />
-    <Compile Include="Yandex\Media\Imaging\WriteableBitmapPool.cs" />
-    <Compile Include="Yandex\Media\Imaging\Interfaces\IBitmapFactory.cs" />
-    <Compile Include="Yandex\Media\Imaging\Interfaces\IBitmapRenderer.cs" />
-    <Compile Include="Yandex\Media\Imaging\Interfaces\IBulkWriteableBitmapBuilder.cs" />
-    <Compile Include="Yandex\Media\Imaging\Interfaces\IPool`1.cs" />
-    <Compile Include="Yandex\Media\Imaging\Interfaces\IImagePool.cs" />
-    <Compile Include="Yandex\Media\Imaging\Interfaces\IWriteableBitmapBuilder.cs" />
-    <Compile Include="Yandex\Media\Imaging\Interfaces\IWriteableBitmapPool.cs" />
-    <Compile Include="Yandex\Media\Imaging\Cache\IDiskToMemoryImageCache.cs" />
-    <Compile Include="Yandex\Media\Imaging\Cache\DiskToMemoryImageCache.cs" />
     <Compile Include="Yandex\Media\Transformations\AffineMatrix.cs" />
     <Compile Include="Yandex\Media\Transformations\AffineTransform.cs" />
     <Compile Include="Yandex\Media\Transformations\Interfaces\IAffineMatrix.cs" />
-    <Compile Include="Yandex\Media\Transformations\Interfaces\IGeneralTransform.cs" />
     <Compile Include="Yandex\Media\Transformations\Interfaces\IAffineTransform.cs" />
-    <Compile Include="Yandex\Globalization\CultureInfoExt.cs" />
+    <Compile Include="Yandex\Media\Transformations\Interfaces\IGeneralTransform.cs" />
+    <Compile Include="Yandex\Memory\DummyMemoryPlanner.cs" />
+    <Compile Include="Yandex\Memory\IMemoryPlanner.cs" />
+    <Compile Include="Yandex\Memory\IMemoryUsageMonitor.cs" />
+    <Compile Include="Yandex\Memory\MemoryPlanner.cs" />
+    <Compile Include="Yandex\Memory\MemoryPressure.cs" />
+    <Compile Include="Yandex\Memory\MemoryUsageMonitor.cs" />
+    <Compile Include="Yandex\Net\HttpStatusCode.cs" />
+    <Compile Include="Yandex\Observable\ObservableExtension.cs" />
+    <Compile Include="Yandex\Observable\ObservableRequestsWrapper.cs" />
+    <Compile Include="Yandex\Observable\WrappedObservableException.cs" />
+    <Compile Include="Yandex\PAL\Interfaces\IStopwatch.cs" />
+    <Compile Include="Yandex\PAL\IO\FileAccess.cs" />
+    <Compile Include="Yandex\PAL\IO\FileShare.cs" />
+    <Compile Include="Yandex\PAL\IO\IsolatedStorageFileWrapper.cs" />
+    <Compile Include="Yandex\PAL\Stopwatch.cs" />
+    <Compile Include="Yandex\Patterns\IFlusheable.cs" />
+    <Compile Include="Yandex\Patterns\IInitializable.cs" />
+    <Compile Include="Yandex\Patterns\IStateService.cs" />
+    <Compile Include="Yandex\Patterns\ServiceState.cs" />
+    <Compile Include="Yandex\Patterns\StateChangedEventArgs.cs" />
+    <Compile Include="Yandex\Patterns\StateServiceExtensions.cs" />
     <Compile Include="Yandex\Positioning\DistanceCalculator.cs" />
     <Compile Include="Yandex\Positioning\DummyPositionWatcher.cs" />
-    <Compile Include="Yandex\Positioning\PositionChangedEventArgs.cs" />
+    <Compile Include="Yandex\Positioning\Events\PositionWatcherStatusChangedEventArgs.cs" />
     <Compile Include="Yandex\Positioning\GeoCoordinate.cs" />
     <Compile Include="Yandex\Positioning\GeoCoordinatesExtension.cs" />
     <Compile Include="Yandex\Positioning\GeoCoordinatesRect.cs" />
     <Compile Include="Yandex\Positioning\GeoPosition.cs" />
     <Compile Include="Yandex\Positioning\GeoPositionStatus.cs" />
+    <Compile Include="Yandex\Positioning\Interfaces\IDistanceCalculator.cs" />
+    <Compile Include="Yandex\Positioning\Interfaces\IPositionWatcher.cs" />
+    <Compile Include="Yandex\Positioning\PositionChangedEventArgs.cs" />
     <Compile Include="Yandex\Positioning\RelativeRect.cs" />
     <Compile Include="Yandex\Positioning\Wp7PositionWatcher.cs" />
     <Compile Include="Yandex\Positioning\WpHighAccuracyPositionWatcher.cs" />
     <Compile Include="Yandex\Positioning\WpLowAccuracyPositionWatcher.cs" />
-    <Compile Include="Yandex\Positioning\Interfaces\IDistanceCalculator.cs" />
-    <Compile Include="Yandex\Positioning\Interfaces\IPositionWatcher.cs" />
-    <Compile Include="Yandex\Positioning\Events\PositionWatcherStatusChangedEventArgs.cs" />
-    <Compile Include="Yandex\Heroism\IHeroismSettings.cs" />
-    <Compile Include="Yandex\Heroism\HeroismSettings.cs" />
-    <Compile Include="Yandex\Observable\ObservableExtension.cs" />
-    <Compile Include="Yandex\Observable\ObservableRequestsWrapper.cs" />
-    <Compile Include="Yandex\Observable\WrappedObservableException.cs" />
-    <Compile Include="TinyIoC\SafeDictionary`2.cs" />
-    <Compile Include="TinyIoC\AssemblyExtensions.cs" />
-    <Compile Include="TinyIoC\TypeExtensions.cs" />
-    <Compile Include="TinyIoC\PropertyInfoExtensions.cs" />
-    <Compile Include="TinyIoC\TinyIoCResolutionException.cs" />
-    <Compile Include="TinyIoC\TinyIoCRegistrationTypeException.cs" />
-    <Compile Include="TinyIoC\TinyIoCRegistrationException.cs" />
-    <Compile Include="TinyIoC\TinyIoCWeakReferenceException.cs" />
-    <Compile Include="TinyIoC\TinyIoCConstructorResolutionException.cs" />
-    <Compile Include="TinyIoC\TinyIoCAutoRegistrationException.cs" />
-    <Compile Include="TinyIoC\NamedParameterOverloads.cs" />
-    <Compile Include="TinyIoC\UnregisteredResolutionActions.cs" />
-    <Compile Include="TinyIoC\NamedResolutionFailureActions.cs" />
-    <Compile Include="TinyIoC\ResolveOptions.cs" />
-    <Compile Include="TinyIoC\TinyIoCContainer.cs" />
-    <Compile Include="WP7Contrib\Collections\ITrickleToCollection`1.cs" />
-    <Compile Include="WP7Contrib\Collections\BaseTrickleToCollection`1.cs" />
-    <Compile Include="WP7Contrib\Collections\TrickleAllToCollection`1.cs" />
-    <Compile Include="DanielVaughan\WindowsPhone7Unleashed\DependencyPropertyListener.cs" />
-    <Compile Include="DanielVaughan\WindowsPhone7Unleashed\BindingChangedEventArgs.cs" />
-    <Compile Include="DanielVaughan\WindowsPhone7Unleashed\ScrollViewerMonitor.cs" />
-    <Compile Include="Clarity\Phone\Extensions\VisualTreeExtensions.cs" />
-    <Compile Include="Clarity\Phone\Extensions\TransformCreationMode.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Yandex\Properties\Resources.cs" />
+    <Compile Include="Yandex\Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Yandex\Serialization\DataRepositoryBase`1.cs" />
+    <Compile Include="Yandex\Serialization\GenericCompressedXmlSerializer`1.cs" />
+    <Compile Include="Yandex\Serialization\GenericCompressingSerializer`1.cs" />
+    <Compile Include="Yandex\Serialization\GenericXmlSerializer`1.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IDataRepository`1.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IGenericXmlSerializer`1.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IModelRepositoryBase`1.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IPreprocessor`1.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IReadOnlyRepositoryBase`1.cs" />
+    <Compile Include="Yandex\Serialization\Interfaces\IRepositoryBase`1.cs" />
+    <Compile Include="Yandex\Serialization\ModelRepositoryBase`1.cs" />
+    <Compile Include="Yandex\Serialization\RepositoryBase`1.cs" />
+    <Compile Include="Yandex\Serialization\SharpXmlSerializer`1.cs" />
+    <Compile Include="Yandex\Serialization\UnixTimestampConverter.cs" />
+    <Compile Include="Yandex\ShellHelper.cs" />
+    <Compile Include="Yandex\StringUtils\AnnotatedObject.cs" />
+    <Compile Include="Yandex\StringUtils\AnnotatedValue`1.cs" />
+    <Compile Include="Yandex\StringUtils\Common.cs" />
+    <Compile Include="Yandex\StringUtils\Crc32Util.cs" />
+    <Compile Include="Yandex\StringUtils\CropUtil.cs" />
+    <Compile Include="Yandex\StringUtils\DistanceFormatterUtil.cs" />
+    <Compile Include="Yandex\StringUtils\HexString.cs" />
+    <Compile Include="Yandex\StringUtils\Interfaces\IDistanceFormatterUtil.cs" />
+    <Compile Include="Yandex\StringUtils\Interfaces\ITimeFormatterUtil.cs" />
+    <Compile Include="Yandex\StringUtils\MetricDistanceFormatterUtil.cs" />
+    <Compile Include="Yandex\StringUtils\Plurals\EnglishPlurals.cs" />
+    <Compile Include="Yandex\StringUtils\Plurals\Interfaces\IPlurals.cs" />
+    <Compile Include="Yandex\StringUtils\Plurals\RussianPlurals.cs" />
+    <Compile Include="Yandex\StringUtils\Plurals\TurkishPlurals.cs" />
+    <Compile Include="Yandex\StringUtils\TimeFormatterUtil.cs" />
+    <Compile Include="Yandex\StringUtils\XorUtil.cs" />
+    <Compile Include="Yandex\Threading\Interfaces\IMonitor.cs" />
+    <Compile Include="Yandex\Threading\Interfaces\IThread.cs" />
+    <Compile Include="Yandex\Threading\Interfaces\IThreadPool.cs" />
+    <Compile Include="Yandex\Threading\Interfaces\IUiDispatcher.cs" />
+    <Compile Include="Yandex\Threading\Monitor.cs" />
+    <Compile Include="Yandex\Threading\Thread.cs" />
+    <Compile Include="Yandex\Threading\ThreadPool.cs" />
+    <Compile Include="Yandex\Threading\UiDispatcher.cs" />
+    <Compile Include="Yandex\Threading\WaitCallback.cs" />
+    <Compile Include="Yandex\Touch\Events\TapHoldEventArgs.cs" />
+    <Compile Include="Yandex\WebUtils\CacheValidators.cs" />
+    <Compile Include="Yandex\WebUtils\CommunicatorBase`3.cs" />
+    <Compile Include="Yandex\WebUtils\ContentCompressor.cs" />
+    <Compile Include="Yandex\WebUtils\DefaultCommunicatorBase`3.cs" />
+    <Compile Include="Yandex\WebUtils\DiversityCommunicator`4.cs" />
+    <Compile Include="Yandex\WebUtils\Events\RequestCompletedEventArgs`2.cs" />
+    <Compile Include="Yandex\WebUtils\Events\RequestCompletedEventHandler`2.cs" />
+    <Compile Include="Yandex\WebUtils\Events\RequestFailedEventArgs`1.cs" />
+    <Compile Include="Yandex\WebUtils\HttpWebRequestWrapper.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\ICommunicator`2.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IContentCompressor.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IDataManager`2.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IDiversityCommunicator`3.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IHttpWebRequest.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IMapWebClientFactory.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\INetworkInterfaceWrapper.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IObservableCommunicator`2.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IQueryBuilder.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IQueryBuilder`1.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IWebClientFactory.cs" />
+    <Compile Include="Yandex\WebUtils\Interfaces\IWebResponse.cs" />
+    <Compile Include="Yandex\WebUtils\NetworkInterfaceType.cs" />
+    <Compile Include="Yandex\WebUtils\NetworkInterfaceWrapper.cs" />
+    <Compile Include="Yandex\WebUtils\ObservableCommunicatorBase`2.cs" />
+    <Compile Include="Yandex\WebUtils\PostData.cs" />
+    <Compile Include="Yandex\WebUtils\QueryStringUtil.cs" />
+    <Compile Include="Yandex\WebUtils\StreamCommunicatorBase`3.cs" />
+    <Compile Include="Yandex\WebUtils\UrlValidator.cs" />
+    <Compile Include="Yandex\WebUtils\WebClientFactory.cs" />
+    <Compile Include="Yandex\WebUtils\WebResponseWrapper.cs" />
+    <EmbeddedResource Include="Properties\Yandex.Maps.rd.xml" />
+    <EmbeddedResource Include="Yandex\MapKit\Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <DependentUpon>Resources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yandex\Maps\Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <DependentUpon>Resources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yandex\Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <DependentUpon>Resources.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\no_map_image.png" />
-    <Resource Include="resources\ru-ru\map_background_tile.png" />
-    <Resource Include="resources\ru-ru\map_background_twilight_tile.png" />
-    <Resource Include="resources\ru-ru\no_map_image.png" />
-    <Resource Include="resources\ru-ru\org.png" />
-    <Resource Include="resources\ru-ru\ruler_texture.png" />
-    <Resource Include="resources\ru-ru\user_location_gps.png" />
-    <Resource Include="resources\ru-ru\user_location_lbs.png" />
-    <Resource Include="resources\ru-ru\yandex_logo.png" />
-    <Resource Include="resources\tr-tr\no_map_image_tr.png" />
-    <Resource Include="resources\uk-ua\no_map_image_uk.png" />
-    <Resource Include="resources\user_location_gps.png" />
-    <Resource Include="resources\user_location_lbs.png" />
-    <Resource Include="resources\yandex_logo.png" />
-    <Resource Include="themes\generic.xaml" />
-    <Resource Include="themes\generic.xaml" />
-    <Resource Include="themes\map.xaml" />
-    <Resource Include="themes\mapitemscontrol.xaml" />
-    <Resource Include="themes\mapshapes.xaml" />
-    <Resource Include="themes\positionaccuracycontrol.xaml" />
-    <Resource Include="themes\positioncontrol.xaml" />
-    <Resource Include="themes\pushpin.xaml" />
-    <Resource Include="themes\scalerulecontrol.xaml" />
-    <Resource Include="themes\staticmap.xaml" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Yandex\MapKit\Properties\Resources.resx" />
-    <EmbeddedResource Include="Yandex\Maps\Properties\Resources.resx" />
-    <EmbeddedResource Include="Yandex\Properties\Resources.resx" />
+    <ProjectReference Include="..\ZLib\ZLib.csproj">
+      <Project>{49887a7c-01a3-4fcf-a1f4-3e92a4bd915e}</Project>
+      <Name>ZLib</Name>
+    </ProjectReference>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="resources\no_map_image.png" />
+    <Content Include="resources\ru-ru\map_background_tile.png" />
+    <Content Include="resources\ru-ru\map_background_twilight_tile.png" />
+    <Content Include="resources\ru-ru\no_map_image.png" />
+    <Content Include="resources\ru-ru\org.png" />
+    <Content Include="resources\ru-ru\ruler_texture.png" />
+    <Content Include="resources\ru-ru\user_location_gps.png" />
+    <Content Include="resources\ru-ru\user_location_lbs.png" />
+    <Content Include="resources\ru-ru\yandex_logo.png" />
+    <Content Include="resources\tr-tr\no_map_image_tr.png" />
+    <Content Include="resources\uk-ua\no_map_image_uk.png" />
+    <Content Include="resources\user_location_gps.png" />
+    <Content Include="resources\user_location_lbs.png" />
+    <Content Include="resources\yandex_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="themes\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="themes\map.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="themes\mapitemscontrol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="themes\mapshapes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="themes\positionaccuracycontrol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="themes\positioncontrol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="themes\pushpin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="themes\scalerulecontrol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="themes\staticmap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

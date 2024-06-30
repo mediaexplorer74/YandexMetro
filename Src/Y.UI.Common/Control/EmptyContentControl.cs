@@ -1,27 +1,35 @@
-﻿// Decompiled with JetBrains decompiler
-// Type: Y.UI.Common.Control.EmptyContentControl
-// Assembly: Y.UI.Common, Version=1.0.6124.20830, Culture=neutral, PublicKeyToken=null
-// MVID: 5D744A46-B2F9-409E-8109-6E29AB154B4E
-// Assembly location: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Y.UI.Common.dll
+﻿// Y.UI.Common.Control.EmptyContentControl
+
 
 using System.Collections;
 using System.Collections.Specialized;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Markup;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Markup;
+//using System.Windows.Markup;
 
 namespace Y.UI.Common.Control
 {
-  [ContentProperty("InnerControl")]
-  public class EmptyContentControl : System.Windows.Controls.Control
+  //[ContentProperty("InnerControl")]
+  public class EmptyContentControl : UserControl
   {
     private Grid _layoutRoot;
     private TextBlock _txtMessage;
     private bool _firstVisibilityUpdate = true;
     private bool _loaded;
-    public static readonly DependencyProperty MessageProperty = DependencyProperty.Register(nameof (Message), typeof (string), typeof (EmptyContentControl), new PropertyMetadata((PropertyChangedCallback) null));
-    public static readonly DependencyProperty InnerControlProperty = DependencyProperty.Register(nameof (InnerControl), typeof (FrameworkElement), typeof (EmptyContentControl), new PropertyMetadata((object) null, new PropertyChangedCallback(EmptyContentControl.OnInnerControlChanged)));
-    public static readonly DependencyProperty ItemsSourceProperty = DependencyProperty.Register(nameof (ItemsSource), typeof (ICollection), typeof (EmptyContentControl), new PropertyMetadata((object) null, new PropertyChangedCallback(EmptyContentControl.OnItemsSourceChanged)));
+    public static readonly DependencyProperty MessageProperty 
+            = DependencyProperty.Register(nameof (Message), typeof (string), 
+                typeof (EmptyContentControl), new PropertyMetadata((PropertyChangedCallback) null));
+    public static readonly DependencyProperty InnerControlProperty 
+            = DependencyProperty.Register(nameof (InnerControl), typeof (FrameworkElement), 
+                typeof (EmptyContentControl), new PropertyMetadata((object) null, 
+                    new PropertyChangedCallback(EmptyContentControl.OnInnerControlChanged)));
+    public static readonly DependencyProperty ItemsSourceProperty 
+            = DependencyProperty.Register(nameof (ItemsSource), typeof (ICollection), 
+                typeof (EmptyContentControl), new PropertyMetadata((object) null, 
+                    new PropertyChangedCallback(EmptyContentControl.OnItemsSourceChanged)));
 
     public EmptyContentControl() => this.DefaultStyleKey = (object) typeof (EmptyContentControl);
 
@@ -41,7 +49,8 @@ namespace Y.UI.Common.Control
       DependencyObject d,
       DependencyPropertyChangedEventArgs e)
     {
-      ((EmptyContentControl) d).OnInnerControlChanged(e.NewValue as FrameworkElement, e.OldValue as FrameworkElement);
+      ((EmptyContentControl) d).OnInnerControlChanged(e.NewValue as FrameworkElement, 
+          e.OldValue as FrameworkElement);
     }
 
     public ICollection ItemsSource
@@ -61,7 +70,7 @@ namespace Y.UI.Common.Control
     {
       this._layoutRoot = this.GetTemplateChild("LayoutRoot") as Grid;
       this._txtMessage = this.GetTemplateChild("txtMessage") as TextBlock;
-      ((FrameworkElement) this).OnApplyTemplate();
+      this.OnApplyTemplate();
       this._loaded = true;
       this.UpdateUI();
     }
@@ -70,8 +79,8 @@ namespace Y.UI.Common.Control
     {
       if (!this._loaded || this.InnerControl == null || this._layoutRoot == null)
         return;
-      if (!((PresentationFrameworkCollection<UIElement>) ((Panel) this._layoutRoot).Children).Contains((UIElement) this.InnerControl))
-        ((PresentationFrameworkCollection<UIElement>) ((Panel) this._layoutRoot).Children).Add((UIElement) this.InnerControl);
+      if (!( ((Panel) this._layoutRoot).Children).Contains((UIElement) this.InnerControl))
+        ( ((Panel) this._layoutRoot).Children).Add((UIElement) this.InnerControl);
       this.ConfigureVisibility(this.ItemsSource);
     }
 
@@ -135,9 +144,12 @@ namespace Y.UI.Common.Control
       collectionChanged.CollectionChanged += new NotifyCollectionChangedEventHandler(this.ICollectionChanged);
     }
 
-    private void ICollectionChanged(object sender, NotifyCollectionChangedEventArgs e) => this.ConfigureVisibility(sender as ICollection);
+        private void ICollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            this.ConfigureVisibility(sender as ICollection);
+        }
 
-    private void ConfigureVisibility(ICollection col)
+        private void ConfigureVisibility(ICollection col)
     {
       if (col == null)
         return;

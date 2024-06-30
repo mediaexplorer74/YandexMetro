@@ -1,4 +1,5 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:Maps="clr-namespace:Yandex.Maps"
@@ -20,10 +21,15 @@
                                 <VisualState x:Name="TwilightModeDisabled"/>
                                 <VisualState x:Name="TwilightModeEnabled">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BackgroundLayer" Storyboard.TargetProperty="TileImageSourceUri">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="/Yandex.Maps;component/Resources/ru-RU/map_background_twilight_tile.png"/>
+                                        <ObjectAnimationUsingKeyFrames 
+                                            Storyboard.TargetName="BackgroundLayer" 
+                                            Storyboard.TargetProperty="TileImageSourceUri">
+                                            <DiscreteObjectKeyFrame 
+                                                KeyTime="0" 
+                                                Value="/Yandex.Maps;component/Resources/ru-RU/map_background_twilight_tile.png"/>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Background">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LayoutRoot" 
+                                                                       Storyboard.TargetProperty="Background">
                                             <DiscreteObjectKeyFrame KeyTime="0">
                                                 <DiscreteObjectKeyFrame.Value>
                                                     <SolidColorBrush Color="#020202"/>
@@ -37,12 +43,13 @@
                         <ya:Touch.TouchWrapper>
                             <ya:TouchWrapper x:Name="TouchWrapper"/>
                         </ya:Touch.TouchWrapper>
-                        <ya:TiledImagePanel x:Name="BackgroundLayer" TileImageSourceUri="/Yandex.Maps;component/Resources/ru-RU/map_background_tile.png"
-                                                                               TileImageWidth="128"
-                                                                               TileImageHeight="128"
-                                                                               HorizontalPeriod="16"
-                                                                               VerticalPeriod="16"
-                                                                               CacheMode="BitmapCache">
+                        <ya:TiledImagePanel x:Name="BackgroundLayer" 
+                            TileImageSourceUri="/Yandex.Maps;component/Resources/ru-RU/map_background_tile.png"
+                            TileImageWidth="128"
+                            TileImageHeight="128"
+                            HorizontalPeriod="16"
+                            VerticalPeriod="16"
+                            CacheMode="BitmapCache">
                             <ya:TiledImagePanel.RenderTransform>
                                 <TranslateTransform />
                             </ya:TiledImagePanel.RenderTransform>

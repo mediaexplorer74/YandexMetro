@@ -1,8 +1,9 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c="clr-namespace:Y.UI.Common"
-    xmlns:Control="clr-namespace:Y.UI.Common.Control">
-    <Style x:Name="AppBarText" TargetType="ContentControl">
+    xmlns:Control="using:Y.UI.Common.Control">
+    <!--clr-namespace-->
+        <Style x:Name="AppBarText" TargetType="ContentControl">
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="Padding" Value="0" />
@@ -69,9 +70,9 @@
                                 x:Name="ButtonForeground" 
                                 Fill="{TemplateBinding Foreground}" 
                                 Margin="{TemplateBinding ImageMargin}">
-                                <Ellipse.OpacityMask>
+                                <!--Ellipse.OpacityMask>
                                     <ImageBrush x:Name="OpacityImageBrush" Stretch="None" />
-                                </Ellipse.OpacityMask>
+                                </Ellipse.OpacityMask-->
                             </Ellipse>
                         </Grid>
 
@@ -102,9 +103,9 @@
                                    HorizontalAlignment="Left" 
                                    />
                         <Rectangle Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Fill="{TemplateBinding Background}">
-                            <Rectangle.OpacityMask>
+                            <!--Rectangle.OpacityMask>
                                 <ImageBrush x:Name="imgBrush"/>
-                            </Rectangle.OpacityMask>
+                            </Rectangle.OpacityMask-->
                         </Rectangle>
                     </Canvas>
                 </ControlTemplate>

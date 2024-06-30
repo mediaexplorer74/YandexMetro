@@ -1,14 +1,11 @@
-﻿// Decompiled with JetBrains decompiler
-// Type: Y.UI.Common.BaseApplicationService`2
-// Assembly: Y.UI.Common, Version=1.0.6124.20830, Culture=neutral, PublicKeyToken=null
-// MVID: 5D744A46-B2F9-409E-8109-6E29AB154B4E
-// Assembly location: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Y.UI.Common.dll
+﻿// Y.UI.Common.BaseApplicationService`2
+
 
 using GalaSoft.MvvmLight.Messaging;
-using Microsoft.Phone.Shell;
+//using Microsoft.Phone.Shell;
 using System;
 using System.Windows;
-using System.Windows.Navigation;
+//using System.Windows.Navigation;
 using Y.UI.Common.Utility;
 
 namespace Y.UI.Common
@@ -34,28 +31,36 @@ namespace Y.UI.Common
       this.AppState = new TAppState();
     }
 
-    public void ApplicationLaunching(LaunchingEventArgs e) => this.OnApplicationLoading();
+        /*
+    public void ApplicationLaunching(LaunchingEventArgs e) 
+            => this.OnApplicationLoading();
 
-    public void ApplicationActivated(ActivatedEventArgs e) => this.OnApplicationActivated(e.IsApplicationInstancePreserved);
+    public void ApplicationActivated(ActivatedEventArgs e) 
+            => this.OnApplicationActivated(e.IsApplicationInstancePreserved);
 
-    public void ApplicationDeactivated(DeactivatedEventArgs e) => this.OnApplicationDeactivated();
+    public void ApplicationDeactivated(DeactivatedEventArgs e) 
+            => this.OnApplicationDeactivated();
 
-    public void ApplicationClosing(ClosingEventArgs e) => this.OnApplicationClosing();
+    public void ApplicationClosing(ClosingEventArgs e) 
+            => this.OnApplicationClosing();
 
-    public void HandleException(ApplicationUnhandledExceptionEventArgs e) => e.Handled = this.OnHandleException(e.ExceptionObject);
+    public void HandleException(ApplicationUnhandledExceptionEventArgs e) 
+            => e.Handled = this.OnHandleException(e.ExceptionObject);
 
-    public void HandleException(NavigationFailedEventArgs e) => e.Handled = this.OnHandleException(e.Exception);
+    public void HandleException(NavigationFailedEventArgs e) 
+            => e.Handled = this.OnHandleException(e.Exception);
+        */
 
     public void HandleException(Exception ex) => this.OnHandleException(ex);
 
-    protected virtual void OnApplicationLoading()
+    protected /*override*/ void OnApplicationLoading()
     {
       this._isAppActive = true;
       this.LoadSettings();
       Messenger.Default.Send<ApplicationActivatedMessage>(new ApplicationActivatedMessage());
     }
 
-    protected virtual void OnApplicationClosing()
+    protected /*override*/ void OnApplicationClosing()
     {
       if (this._appClosingFinished)
         return;
@@ -64,7 +69,7 @@ namespace Y.UI.Common
       this._isAppActive = false;
     }
 
-    protected virtual void OnApplicationActivated(bool isInstancePreserved)
+    protected /*override*/ void OnApplicationActivated(bool isInstancePreserved)
     {
       this._isAppActive = true;
       if (!isInstancePreserved)
@@ -73,26 +78,29 @@ namespace Y.UI.Common
       Messenger.Default.Send<ApplicationActivatedMessage>(new ApplicationActivatedMessage());
     }
 
-    protected virtual void OnApplicationDeactivated()
+    protected /*override*/ void OnApplicationDeactivated()
     {
       this.SaveState();
       this.SaveSettings();
       this._isAppActive = false;
     }
 
-    protected virtual void LoadSettings()
+    protected /*override*/ void LoadSettings()
     {
     }
 
-    protected virtual void SaveSettings()
+    protected /*override*/ void SaveSettings()
     {
     }
 
-    protected virtual void LoadState() => this.AppState = StateKeeper.Load<TAppState>("ApplicationState");
+    protected /*override*/ void LoadState() 
+            => this.AppState = StateKeeper.Load<TAppState>("ApplicationState");
 
-    protected virtual void SaveState() => StateKeeper.Save<TAppState>(this.AppState, "ApplicationState");
+    protected /*override*/ void SaveState() 
+            => StateKeeper.Save<TAppState>(this.AppState, "ApplicationState");
 
-    protected virtual bool OnHandleException(Exception exception) => this.ProcessException(exception);
+    protected /*override*/ bool OnHandleException(Exception exception) 
+            => this.ProcessException(exception);
 
     private bool ProcessException(Exception exception)
     {

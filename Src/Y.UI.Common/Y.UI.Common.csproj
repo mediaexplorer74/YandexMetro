@@ -1,17 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Y.UI.Common.dll-->
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{379BE86D-B896-4103-8953-014A9A315C71}</ProjectGuid>
+    <ProjectGuid>{676E0A7B-340B-4B37-87AC-9AE962172D07}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Y.UI.Common</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
-    <ApplicationVersion>1.0.6124.20830</ApplicationVersion>
-    <FileAlignment>512</FileAlignment>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Y.UI.Common</RootNamespace>
+    <AssemblyName>Y.UI.Common</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -19,7 +23,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -28,78 +32,147 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GalaSoft.MvvmLight.WP71">
-      <HintPath>lib\GalaSoft.MvvmLight.WP71.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Phone.Controls">
-      <HintPath>lib\Microsoft.Phone.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Phone.Controls.Toolkit">
-      <HintPath>lib\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel.Web" />
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Windows.Interactivity">
-      <HintPath>lib\System.Windows.Interactivity.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="System\Windows\FrameworkElementExtensions.cs" />
-    <Compile Include="System\Windows\Controls\VisualTreeHelperExtensions.cs" />
     <Compile Include="ApplicationActivatedMessage.cs" />
-    <Compile Include="CommonConstants.cs" />
-    <Compile Include="GroupById`1.cs" />
-    <Compile Include="GroupByTitle`1.cs" />
-    <Compile Include="Navigate.cs" />
-    <Compile Include="BasePage.cs" />
-    <Compile Include="PageNavigationService.cs" />
-    <Compile Include="StateManager.cs" />
     <Compile Include="BaseApplicationService`2.cs" />
-    <Compile Include="WeakDelegateCommand.cs" />
-    <Compile Include="WeakDelegateCommand`1.cs" />
-    <Compile Include="WeakEventHandlerManager.cs" />
-    <Compile Include="Behaviors\ExecuteCommandOnEnterAutoComplete.cs" />
+    <Compile Include="BasePage.cs" />
     <Compile Include="Behaviors\ExecuteCommandOnEnter.cs" />
+    <Compile Include="Behaviors\ExecuteCommandOnEnterAutoComplete.cs" />
     <Compile Include="Behaviors\FlyInOutImageBehavior.cs" />
     <Compile Include="Behaviors\FocusBehavior.cs" />
     <Compile Include="Behaviors\SmartTrimmingTextBlockBehavior.cs" />
     <Compile Include="Behaviors\TriggerAnimationBehavior.cs" />
     <Compile Include="Behaviors\UpdateBindingOnTextChange.cs" />
+    <Compile Include="CommonConstants.cs" />
     <Compile Include="Control\BindableApplicationBar.cs" />
+    <Compile Include="Control\BindableApplicationBarExtensions.cs" />
     <Compile Include="Control\BindableApplicationBarIconButton.cs" />
     <Compile Include="Control\BindableApplicationBarMenuItem.cs" />
-    <Compile Include="Control\BindableApplicationBarExtensions.cs" />
     <Compile Include="Control\BindableApplicationMenuExtensions.cs" />
     <Compile Include="Control\EmptyContentControl.cs" />
     <Compile Include="Control\FastLoadPivot.cs" />
+    <Compile Include="Control\GestureEventArgs.cs" />
     <Compile Include="Control\ImplicitDataTemplateControl.cs" />
     <Compile Include="Control\InvertButton.cs" />
     <Compile Include="Control\ReadonlyRating.cs" />
     <Compile Include="Control\RoundButton.cs" />
     <Compile Include="Control\TapButton.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="Converters\ToUpperCaseConverter.cs" />
-    <Compile Include="Converters\RelativeTimeConverter.cs" />
     <Compile Include="Converters\DateTimeFormatHelper.cs" />
-    <Compile Include="Converters\ToLowCaseConverter.cs" />
     <Compile Include="Converters\DebugConverter.cs" />
     <Compile Include="Converters\EqualityToBoolConverter.cs" />
     <Compile Include="Converters\EqualsToVisibilityConverter.cs" />
     <Compile Include="Converters\InvertBoolConverter.cs" />
+    <Compile Include="Converters\RelativeTimeConverter.cs" />
     <Compile Include="Converters\StringNullToVisibilityConverter.cs" />
     <Compile Include="Converters\TextPrependConverter.cs" />
+    <Compile Include="Converters\ToLowCaseConverter.cs" />
+    <Compile Include="Converters\ToUpperCaseConverter.cs" />
     <Compile Include="Extensions\ListBoxExtension.cs" />
     <Compile Include="Extensions\LongListSelectorExtension.cs" />
     <Compile Include="Extensions\TaskHelper.cs" />
     <Compile Include="Extensions\TextExtensions.cs" />
+    <Compile Include="GroupById`1.cs" />
+    <Compile Include="GroupByTitle`1.cs" />
+    <Compile Include="Navigate.cs" />
+    <Compile Include="PageNavigationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\RelativeTimeConverter\ControlResources.cs" />
+    <Compile Include="Resources\RelativeTimeConverter\ControlResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StateManager.cs" />
+    <Compile Include="System\Windows\Controls\VisualTreeHelperExtensions.cs" />
+    <Compile Include="System\Windows\FrameworkElementExtensions.cs" />
     <Compile Include="Utility\AppSettingsProvider.cs" />
     <Compile Include="Utility\DispatcherHelper.cs" />
     <Compile Include="Utility\DoubleUtil.cs" />
@@ -108,13 +181,39 @@
     <Compile Include="Utility\ResourcesHelper.cs" />
     <Compile Include="Utility\StateKeeper.cs" />
     <Compile Include="Utility\Theme.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="WeakDelegateCommand.cs" />
+    <Compile Include="WeakDelegateCommand`1.cs" />
+    <Compile Include="WeakEventHandlerManager.cs" />
+    <EmbeddedResource Include="Properties\Y.UI.Common.rd.xml" />
+    <EmbeddedResource Include="Resources\RelativeTimeConverter\ControlResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ControlResources.Designer.cs</LastGenOutput>
+      <DependentUpon>ControlResources.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="themes\generic.xaml" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmLightLibsStd10">
+      <Version>5.4.1.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\RelativeTimeConverter\ControlResources.resx" />
+    <Page Include="themes\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

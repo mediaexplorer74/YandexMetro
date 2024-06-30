@@ -1,17 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!--Project was exported from assembly: C:\Users\Admin\Desktop\re\Yandex.Metro_WP8\Yandex.App.Information.WP.dll-->
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD8FDA8A-83F7-4D1B-BE7B-C1ED5D27E17F}</ProjectGuid>
+    <ProjectGuid>{3A98BC07-0706-4471-BD20-315E30F1CE21}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yandex.App.Information.WP</RootNamespace>
     <AssemblyName>Yandex.App.Information.WP</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
-    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
-    <RootNamespace>Yandex</RootNamespace>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -19,7 +23,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -28,80 +32,193 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Yandex.Portable">
-      <HintPath>lib\Yandex.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Yandex.Serialization.WP">
-      <HintPath>lib\Yandex.Serialization.WP.dll</HintPath>
-    </Reference>
-    <Reference Include="Yandex.WP">
-      <HintPath>lib\Yandex.WP.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Controls\Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="App\Information\ApplicationInformationBase.cs" />
-    <Compile Include="App\Information\IManifestInformationProvider.cs" />
-    <Compile Include="App\Information\ManifestInformation.cs" />
-    <Compile Include="App\Information\ManifestInformationProvider.cs" />
-    <Compile Include="App\Information\Resources.cs" />
-    <Compile Include="App\Information\ResourceWrapper.cs" />
-    <Compile Include="App\Information\Interfaces\IApplicationInformation.cs" />
-    <Compile Include="App\Information\Interfaces\ILiceseAgreementQueryBuilder.cs" />
-    <Compile Include="App\Information\AppList\IAppListCommunicator.cs" />
     <Compile Include="App\Information\AppList\AppListCommunicator.cs" />
     <Compile Include="App\Information\AppList\AppListManager.cs" />
+    <Compile Include="App\Information\AppList\AppListParameters.cs" />
     <Compile Include="App\Information\AppList\AppListQueryBuilder.cs" />
     <Compile Include="App\Information\AppList\AppListRequestParameters.cs" />
-    <Compile Include="App\Information\AppList\AppListParameters.cs" />
-    <Compile Include="App\Information\AppList\IAppListUrlProvider.cs" />
-    <Compile Include="App\Information\AppList\ProductionAppListUrlProvider.cs" />
-    <Compile Include="App\Information\AppList\HeroismAppListUrlProvider.cs" />
-    <Compile Include="App\Information\AppList\IAppListParameters.cs" />
+    <Compile Include="App\Information\AppList\DataAdapters\AppListDataAdapter.cs" />
+    <Compile Include="App\Information\AppList\DataAdapters\IAppListDataAdapter.cs" />
     <Compile Include="App\Information\AppList\Dto\Apps.cs" />
     <Compile Include="App\Information\AppList\Dto\appsApp.cs" />
-    <Compile Include="App\Information\AppList\DataAdapters\IAppListDataAdapter.cs" />
-    <Compile Include="App\Information\AppList\DataAdapters\AppListDataAdapter.cs" />
+    <Compile Include="App\Information\AppList\HeroismAppListUrlProvider.cs" />
+    <Compile Include="App\Information\AppList\IAppListCommunicator.cs" />
+    <Compile Include="App\Information\AppList\IAppListParameters.cs" />
+    <Compile Include="App\Information\AppList\IAppListUrlProvider.cs" />
+    <Compile Include="App\Information\AppList\ProductionAppListUrlProvider.cs" />
     <Compile Include="App\Information\Converters\IsNullConverter.cs" />
     <Compile Include="App\Information\Dto\AppDto.cs" />
     <Compile Include="App\Information\Dto\ImageIriDto.cs" />
     <Compile Include="App\Information\Dto\ManifestDto.cs" />
     <Compile Include="App\Information\Dto\PrimaryTokenDto.cs" />
     <Compile Include="App\Information\Dto\TemplateType5Dto.cs" />
+    <Compile Include="App\Information\IManifestInformationProvider.cs" />
+    <Compile Include="App\Information\Interfaces\IApplicationInformation.cs" />
+    <Compile Include="App\Information\Interfaces\ILiceseAgreementQueryBuilder.cs" />
+    <Compile Include="App\Information\ManifestInformation.cs" />
+    <Compile Include="App\Information\ManifestInformationProvider.cs" />
+    <Compile Include="App\Information\Models\AppItem.cs" />
     <Compile Include="App\Information\Public\DefaultApplicationInformation.cs" />
     <Compile Include="App\Information\Public\DefaultApplicationInformationViewModel.cs" />
+    <Compile Include="App\Information\Resources.cs" />
+    <Compile Include="App\Information\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Information\ResourceWrapper.cs" />
     <Compile Include="App\Information\Views\AboutView.cs" />
     <Compile Include="App\Information\Views\ApplicationInformationControl.cs" />
     <Compile Include="App\Information\Views\ApplicationsView.cs" />
     <Compile Include="App\Information\Views\AppListControl.cs" />
-    <Compile Include="App\Information\Views\ViewModels\ApplicationInformationViewModel.cs" />
     <Compile Include="App\Information\Views\ViewModels\AboutViewModelBase.cs" />
-    <Compile Include="App\Information\Views\ViewModels\IAppListViewModel.cs" />
+    <Compile Include="App\Information\Views\ViewModels\ApplicationInformationViewModel.cs" />
     <Compile Include="App\Information\Views\ViewModels\AppListViewModel.cs" />
-    <Compile Include="App\Information\Views\ViewModels\YandexApplicationsViewModel.cs" />
-    <Compile Include="App\Information\Views\ViewModels\Interfaces\IApplicationInformationViewModel.cs" />
+    <Compile Include="App\Information\Views\ViewModels\IAppListViewModel.cs" />
     <Compile Include="App\Information\Views\ViewModels\Interfaces\IAboutViewModel.cs" />
+    <Compile Include="App\Information\Views\ViewModels\Interfaces\IApplicationInformationViewModel.cs" />
     <Compile Include="App\Information\Views\ViewModels\Interfaces\IApplicationsViewModel.cs" />
-    <Compile Include="App\Information\Models\AppItem.cs" />
-    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="App\Information\Views\ViewModels\YandexApplicationsViewModel.cs" />
+    <Compile Include="Controls\Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="App\Information\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <DependentUpon>Resources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Yandex.App.Information.WP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\aboutview.xaml" />
-    <Resource Include="views\applicationinformationcontrol.xaml" />
-    <Resource Include="views\applicationsview.xaml" />
-    <Resource Include="views\applistcontrol.xaml" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App\Information\Resources.resx" />
+    <Page Include="views\aboutview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\applicationinformationcontrol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\applicationsview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\applistcontrol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Yandex.Portable\Yandex.Portable.csproj">
+      <Project>{83c3e112-3649-4e8d-abc1-6252d97d2d95}</Project>
+      <Name>Yandex.Portable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yandex.Serialization.WP\Yandex.Serialization.WP.csproj">
+      <Project>{bfb8c729-0754-4bab-acbe-60849ca79ad7}</Project>
+      <Name>Yandex.Serialization.WP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>
